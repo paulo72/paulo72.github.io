@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ui &#8211; Actino</title>
+	<atom:link href="/tag/ui/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Fri, 12 May 2017 18:40:18 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.3</generator>
+	<item>
+		<title>Grid Systems with Mark Boulton</title>
+		<link>/design/grid-systems-workshop-with-mark-boulton/</link>
+					<comments>/design/grid-systems-workshop-with-mark-boulton/#respond</comments>
+		
+		<dc:creator><![CDATA[Mr Administrator]]></dc:creator>
+		<pubDate>Thu, 27 Jun 2013 21:41:42 +0000</pubDate>
+				<category><![CDATA[Design]]></category>
+		<category><![CDATA[typography]]></category>
+		<category><![CDATA[ui]]></category>
+		<guid isPermaLink="false">http://paulo72.com/?p=1014</guid>
+
+					<description><![CDATA[<p>A fast-paced and practical workshop on getting to grips with grids.</p>
+<p>The post <a rel="nofollow" href="/design/grid-systems-workshop-with-mark-boulton/">Grid Systems with Mark Boulton</a> appeared first on <a rel="nofollow" href="/">Actino</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<h2 id="return-on-investment"><a href="#return-on-investment" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>Return On Investment</h2>
+<p>In 2010 I passed up on the opportunity to attend Mark Boulton’s design workshop at dContruct. It was £350 and I didn&#8217;t feel that I could justify the expense. I later came to feel that I had been shortsighted, and that I had missed the opportunity to learn from an expert whose perspective I admired.</p>
+<p>I’ve spent a good bit of time studying grid systems, read key books by <a href="http://www.amazon.co.uk/Grid-Systems-Graphic-Design-Typographers/dp/3721201450/">Josef Müller-Brockmann</a>, <a href="http://www.amazon.co.uk/Making-Breaking-Grid-Layout-Workshop/dp/1592531253/">Timothy Samara</a> and <a href="http://www.amazon.co.uk/Ordering-Disorder-Principles-Design-Interaction/dp/0321703537/">Khoi Vinh</a>.</p>
+<p>These books are great, however when I tried to apply what I had learned I had trouble with niggly edge cases and realised there were gaps in my understanding. I found workarounds but I have always had nagging doubts about them. So when I saw that Mark Boulton was presenting a workshop on grids at this years dConstruct I decided to take a risk. And I am so glad that I did.</p>
+<p>Despite being only a day long, a third of which seemed to be tea-breaks, I learned a lot. Many of the gaps in my knowledge have been filled and that I have a strong practical foundation to take my work forward in this area.</p>
+<h2 id="work-and-critique"><a href="#work-and-critique" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>Work and Critique</h2>
+<p>After a whistle-stop primer on the history, benefits, goals and challenges of implementing grids we got down to work. Most of the day was spent working on a layout task, putting together a web page using a compound grid.</p>
+<p>For most of us this was the first time that we had used a compound grid. While we worked Mark wandered around the room providing pointers and answering questions.</p>
+<p>There were two rounds of iteration and critique on the layouts. Initially I bottled putting any work forward for critique, noting that there was some serious design talent in the room. I realised however that the best bit of the day was the opportunity to to get peer review and critique from a room full of designers led by Mark Boulton. So, with a degree of trepidation, I put my work up for the second round of critique. And I am so glad that I did. Apart from being pleasantly surprised with the positive response, I got some useful critique about an aberrant pull-quote that had been bugging me and was able to quickly fix it as a result of the crit.</p>
+<p>The format was great: Fast-paced, practical and challenging. Critiquing a bunch of different solutions to the problem you spent the day trying to solve is a great way to consolidate your learning. It also proved to be a catalyst for Mark and the other designers in the room to share tips, tricks and solutions to common problems and niggly edge-cases.</p>
+<p>The post <a rel="nofollow" href="/design/grid-systems-workshop-with-mark-boulton/">Grid Systems with Mark Boulton</a> appeared first on <a rel="nofollow" href="/">Actino</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/design/grid-systems-workshop-with-mark-boulton/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

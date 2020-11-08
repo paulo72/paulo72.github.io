@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>marketing &#8211; Actino</title>
+	<atom:link href="/tag/marketing/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Wed, 17 May 2017 22:18:22 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.3</generator>
+	<item>
+		<title>Foggs Behaviour Model</title>
+		<link>/design/foggs-behaviour-model/</link>
+					<comments>/design/foggs-behaviour-model/#respond</comments>
+		
+		<dc:creator><![CDATA[Mr Administrator]]></dc:creator>
+		<pubDate>Sun, 19 May 2013 20:45:53 +0000</pubDate>
+				<category><![CDATA[Design]]></category>
+		<category><![CDATA[marketing]]></category>
+		<category><![CDATA[product design]]></category>
+		<guid isPermaLink="false">http://paulo72.com/?p=940</guid>
+
+					<description><![CDATA[<p>A model for describing when an individual will be suitably motivated to act.</p>
+<p>The post <a rel="nofollow" href="/design/foggs-behaviour-model/">Foggs Behaviour Model</a> appeared first on <a rel="nofollow" href="/">Actino</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<h2 id="what-is-it"><a href="#what-is-it" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>What is it?</h2>
+<p class="standfirst">A model for describing when an individual will be suitably motivated to act.</p>
+<p>We encounter many triggers to action. Sometimes we act, and heed the call to action, sometimes we don&#8217;t. This framework attempts to describe the circumstances under which an individual may be motivated to enact a behaviour.</p>
+<p>The Fogg Behaviour Model was published by Dr. BJ Fogg in 2009 and revised in 2010. Dr Fogg founded the Persuasive Technology Lab at Stanford University, where he directs research in “Behaviour Design”: a systematised way of changing human behaviour.</p>
+<h2 id="the-model"><a href="#the-model" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>The model</h2>
+<p><em class="formula" style="font-size: 6em;">B=mat</em></p>
+<p>In a given context a behaviour <em class="formula">(B)</em> occurs when there is sufficient <a href="#motivation">motivation <em class="formula">(m)</em></a>, a <a href="#trigger">trigger <em class="formula">(t)</em></a> is experienced and they have sufficient <a href="#ability">ability <em class="formula">(a)</em></a>.  To put it another way: The individual needs to be sufficiently motivated to act when prompted — if the cost is not too great.</p>
+<h3 id="motivation">Motivation</h3>
+<p>The factors that may cause an individual to act.</p>
+<ul>
+<li>Pleasure / Pain</li>
+<li>Hope / Fear</li>
+<li>Social acceptance / Rejection</li>
+</ul>
+<p>Levels of motivation are not constant and come in waves: People are keener to diet having watched an inspiring programme about a new diet (hope) rather than when they are grocery shopping a hangover (pain). Peaks of motivation are rare and present a great opportunity to promote future engagement.</p>
+<h3 id="trigger">Trigger</h3>
+<p>Prompts an action. The action prompted should be tailored to the ease with which the user can take it and their level of motivation.</p>
+<ul>
+<li><strong>High motivation : Low ability.</strong> Provide a lightweight way for the individual to engage with you at some level. They may be short of time but keen to try your service so maybe get them to sign up for a newsletter / launch update email.</li>
+<li><strong>Low motivation : High ability.</strong> Provide a high level of incentive/motivation to get your potential user over the hump. Maybe a bit of social proof combined with a time limited offer will encourage action. The greater the incentive the more you can potentially ask of the user.</li>
+<li><strong>High motivation : High ability.</strong> If we feel that the user is be highly motivated this is the time to make a big ask that will structure future behaviour, or reduce the barriers to it. This could be something like setting up and personalising your account, arranging an appointment or similar.</li>
+</ul>
+<h3 id="ability">Ability</h3>
+<p>The scarcity or abundance of the following resources in the given context:</p>
+<ul>
+<li>Time</li>
+<li>Money</li>
+<li>Physical Effort</li>
+<li>Mental Effort</li>
+<li>Social Deviance – Is this a socially accepted behaviour?</li>
+<li>Routine – Doing something for the first time will have some attendant cost in terms of time to get set-up, getting your head around it etc.</li>
+</ul>
+<h2 id="examples"><a href="#examples" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>Examples</h2>
+<h3 id="less-motivation-greater-ability"><a href="#less-motivation-greater-ability" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>Less Motivation : Greater Ability</h3>
+<p>For example Jenny is a designer and she sees some new design software that will be released soon. The software looks like it has potential, and may prove useful. She isn&#8217;t hugely motivated however and is undecided about whether to invest time and attention learning more about it. Because the effort involved in being notified when it launches very low – just enter your email address – she decides to go ahead and give them her email.</p>
+<p>The marketers have succeeded despite not being able to offer any great motivation because they made the cost of action so low. If they had asked Jenny to fill out a longer form they may not have succeeded because the cost in terms of cognitive effort and time required may have tipped the scales too far for the motivation to have been sufficient.</p>
+<h3 id="more-motivation-less-ability"><a href="#more-motivation-less-ability" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>More Motivation : Less Ability</h3>
+<p>Company X has a caption competition running on their website; the prize is an iPad. In order to to enter a competitor must like Company X on Facebook and then fill out an entry form that requires you to think up a witty caption.</p>
+<p>The cost is quite high:</p>
+<ul>
+<li>Time: It requires a at least a couple of minutes to be invested in the process, more if a witty caption does not spring to mind.</li>
+<li>Mental effort: You cannot simply click a button or just enter an email address. In order to win the competition a degree of inventiveness will be required.</li>
+<li>Social Deviance: You will be publicly liking Company X. This may well appear in your friends timelines. Will you lose friends or respect by spamming them with a corporate like?</li>
+</ul>
+<p>If the trigger catches you at the right time the motivation may be high enough to persuade you to stop what you were doing, risk social stigma, and put some thought into winning this valuable prize.</p>
+<h2 id="further-reading-viewing"><a href="#further-reading-viewing" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>Further reading &amp; viewing</h2>
+<ul>
+<li><a href="http://youtu.be/_0wHvrLK6AA?t=24m35s">Video: BJ Fogg at PARC on how to really change your habits</a></li>
+<li><a href="http://www.behaviormodel.org/index.html">behaviourmodel.org</a></li>
+<li><a href="http://captology.stanford.edu/">Stanford Persuasive Technology Lab</a></li>
+</ul>
+<p>The post <a rel="nofollow" href="/design/foggs-behaviour-model/">Foggs Behaviour Model</a> appeared first on <a rel="nofollow" href="/">Actino</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/design/foggs-behaviour-model/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

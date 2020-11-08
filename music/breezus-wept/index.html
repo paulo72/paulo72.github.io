@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en-GB" prefix="og: http://ogp.me/ns#" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>var htmlElement = document.getElementsByTagName('html')[0]; htmlElement.className = 'has-js';</script>
+
+  <!-- Critical, over-the-fold styles -->
+    <style>
+    
+    body{margin:0;padding:0;line-height:1.25;font-size:18px;box-sizing:border-box;overflow-x:hidden;overflow-y:scroll;font-family:"freight-text-pro","Georgia",Times,serif,"Arial Unicode MS","DejaVu Sans","Lucida Sans Unicode","Segoe UI Symbol","FreeSans","Meiryo UI","MS UI Gothic","Everson Mono Unicode",Meiryo,"MS Gothic","MS Mincho","MS PGothic","MS PMincho","Meslo LG L","Meslo LG L DZ","Meslo M L","Meslo M L DZ","Meslo S L","Meslo S L DZ","Symbola","DejaVu Sans Condensed","DejaVu Sans Mono",Code2000,"Everson Mono",Quivira,sans-serif;box-sizing:border-box;background:#f9f9f8}.cover{display:block !important;height:100vh;overflow:hidden;position:relative;z-index:100;left:0;top:0;bottom:0;right:0;cursor:pointer}.cover-inner{border:30px solid #fff;position:absolute;top:0;left:0;width:100%;height:100%;bottom:0;display:block;margin:0 auto;background-size:cover;background-position:center;box-sizing:border-box}.cover-inner--archive__logo-wrap{width:38%;min-width:200px;top:65px;position:relative;left:-6px}.cover-inner--archive__logo-wrap svg{width:100%;color:#fff}.cover-masthead{position:absolute;left:0;bottom:0;right:0;overflow:hidden;z-index:2;text-shadow:1px 2px 0 rgba(0,0,0,0.2);padding:0 18px}.cover-masthead span{background-color:rgba(0,0,0,0.4)}@media only screen and (min-width: 701px){.cover-masthead{padding:30px 35px}}@media only screen and (min-width: 951px){.cover-masthead{padding:30px 35px;top:0;right:auto;max-width:38%}}.cover-heading{font-family:"freight-sans-pro",-apple-system,BlinkMacSystemFont,"avenir next",avenir,helvetica,"helvetica neue",ubuntu,roboto,noto,"segoe ui","Arial Unicode MS","DejaVu Sans","Lucida Sans Unicode","Segoe UI Symbol","FreeSans","Meiryo UI","MS UI Gothic","Everson Mono Unicode",Meiryo,"MS Gothic","MS Mincho","MS PGothic","MS PMincho","Meslo LG L","Meslo LG L DZ","Meslo M L","Meslo M L DZ","Meslo S L","Meslo S L DZ","Symbola","DejaVu Sans Condensed","DejaVu Sans Mono",Code2000,"Everson Mono",Quivira,sans-serif;color:#fff;font-size:36px;line-height:0.9;text-transform:uppercase;font-weight:900;left:-3px;position:relative}@media only screen and (min-width: 701px){.cover-heading{font-size:48px}}@media only screen and (min-width: 951px){.cover-heading{font-size:60px}}body.category-photos .cover-heading:after{width:30px;height:6px;top:5px;left:5px;background:#E86146;position:relative;content:"";display:inline-block;box-shadow:1px 2px 0 rgba(0,0,0,0.2)}@media only screen and (min-width: 701px){body.category-photos .cover-heading:after{width:42px;height:9px;top:8px}}@media only screen and (min-width: 951px){body.category-photos .cover-heading:after{width:60px;height:12px;top:12px}}.category-design .cover-heading:after{content:'...'}.category-music .cover-heading:after{content:'»';left:0.2em;position:relative;top:-0.05em}.category-other .cover-heading:after{content:'*'}.category-design .cover-heading:after,.category-music .cover-heading:after,.category-other .cover-heading:after{color:#e86146}.cover-summary{font-family:"freight-micro-pro","freight-text-pro","Georgia",Times,serif,"Arial Unicode MS","DejaVu Sans","Lucida Sans Unicode","Segoe UI Symbol","FreeSans","Meiryo UI","MS UI Gothic","Everson Mono Unicode",Meiryo,"MS Gothic","MS Mincho","MS PGothic","MS PMincho","Meslo LG L","Meslo LG L DZ","Meslo M L","Meslo M L DZ","Meslo S L","Meslo S L DZ","Symbola","DejaVu Sans Condensed","DejaVu Sans Mono",Code2000,"Everson Mono",Quivira,sans-serif;font-style:italic;color:#fff;font-size:18px;padding:1em 0}@media only screen and (min-width: 701px){.cover-summary{font-size:24px}}@media only screen and (min-width: 951px){.cover-summary{font-size:30px}}
+/*# sourceMappingURL=over-the-fold--cover-image.css.map */  
+
+    @keyframes fade{ 0% {opacity:0;} 100% {opacity:1;} }
+
+    @keyframes fadeAndHide{ 0% {opacity:1;} 99% {opacity:0;} 100% {display: none; height:0; width:0; overflow: hidden;} }
+
+
+    /* Loading logo: size and position */
+      .loader-logo svg {
+        color: #000;
+        width: 38% !important;
+        max-width: 200px !important;
+        top: 50%;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        animation:fadeAndHide 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.5s 1 normal forwards;     
+      }
+
+
+    /* Home Page: Content: animation */
+      body.home .primary-content {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.3s 1 normal forwards;
+      }
+
+      body.search div, body.search footer,
+      body.error404 div, body.error404 footer {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.6s 1 normal forwards;
+      } 
+
+    /*  Archive, 
+        Single,
+        Page: 
+
+        content: animation 
+    */
+      body.single .page-hd,
+      body.single .page-bd,
+      body.single .page-ft,
+      body.archive .page-hd,
+      body.archive .page-bd,
+      body.archive .page-ft {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.9s 1 normal forwards;
+      } 
+
+    /* Archive: cover: animation */
+      body.archive .cover-inner {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        /*animation:fade 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.3s 1 normal forwards;*/
+        animation:fade 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.7s 1 normal forwards;
+      }
+
+    /* Single: cover: animation */
+      body.single .cover-inner {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        /*animation:fade 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s 1 normal forwards;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s 1 normal forwards;
+      }
+
+    /* Archive: cover: animation */
+    /*body.archive .cover__logo-wrap .logo-with-strap {
+      animation:fade 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.3s 1 reverse forwards;     
+    }*/
+
+  </style>  
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="//use.typekit.net">
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'kck4dwb',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+  <!-- Icons -->
+  
+<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/photo/favicons/music/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/photo/favicons/music/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/themes/photo/favicons/music/favicon-16x16.png">
+<link rel="manifest" href="/wp-content/themes/photo/favicons/music/manifest.json">
+<link rel="mask-icon" href="/wp-content/themes/photo/favicons/music/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/wp-content/themes/photo/favicons/music/favicon.ico">
+<meta name="msapplication-config" content="/wp-content/themes/photo/favicons/music/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+  <!-- WP Head stuff -->
+  <title>Breezus Wept - Actino</title>
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v4.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Disappointing debuts aside, here’s what I’ve been listening to. Music from 3 continents."/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/music/breezus-wept/" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Breezus Wept - Actino" />
+<meta property="og:description" content="Disappointing debuts aside, here’s what I’ve been listening to. Music from 3 continents." />
+<meta property="og:url" content="http://actino.local/music/breezus-wept/" />
+<meta property="og:site_name" content="Actino" />
+<meta property="article:tag" content="Six of the best" />
+<meta property="article:section" content="Music" />
+<meta property="article:published_time" content="2017-02-27T07:41:35+00:00" />
+<meta property="article:modified_time" content="2017-05-20T17:06:35+01:00" />
+<meta property="og:updated_time" content="2017-05-20T17:06:35+01:00" />
+<meta property="og:image" content="http://actino.local/wp-content/uploads/2017/02/P1040155.jpg" />
+<meta property="og:image:width" content="4272" />
+<meta property="og:image:height" content="2856" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Disappointing debuts aside, here’s what I’ve been listening to. Music from 3 continents." />
+<meta name="twitter:title" content="Breezus Wept - Actino" />
+<meta name="twitter:image" content="http://actino.local/wp-content/uploads/2017/02/P1040155.jpg" />
+<meta property="DC.date.issued" content="2017-02-27T07:41:35+00:00" />
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Actino &raquo; Breezus Wept Comments Feed" href="/music/breezus-wept/feed/" />
+<link rel='stylesheet' id='wp-block-library-css'  href='/wp-includes/css/dist/block-library/style.min.css?ver=5.5.3' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="/wp-json/" /><link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/1159" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='/?p=1159' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fmusic%2Fbreezus-wept%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fmusic%2Fbreezus-wept%2F&#038;format=xml" />
+  <!-- Art Direction Styles -->
+
+
+
+</head>
+
+
+
+<body class="post-template-default single single-post postid-1159 single-format-standard  category-music" id="top">
+  <!-- Get SVG as symbol so we can use in several places without adding to page weight -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="logo-with-strap" class="logo-with-strap"  viewbox="0 0 715 264">
+  <title>Listening</title>
+  <g fill="none" fill-rule="evenodd">
+    <path class="logo-with-strap__main" fill="currentColor"
+        
+      d="M70.424 161v-23.184H35.72V71H7.352v90h63.072zm39.192 0V71H81.248v90h28.368zm46.68-20.736c-11.376 0-23.472-3.6-33.12-8.352l-4.32 23.184c8.208 4.464 22.176 8.064 37.008 8.064 26.064 0 39.6-12.384 39.6-30.384 0-17.28-14.976-23.472-29.232-27.504-8.928-2.448-17.568-4.464-17.568-8.64 0-3.6 3.168-4.752 8.64-4.752 9.36 0 21.6 3.312 31.68 8.208l4.464-23.184c-8.64-4.32-20.304-7.92-36.288-7.92-24.624 0-36.864 11.52-36.864 29.088 0 18.288 16.704 24.624 29.952 28.368 10.512 3.024 16.848 4.32 16.848 8.64 0 3.744-4.32 5.184-10.8 5.184zm124.44-46.08V71h-82.8v23.184h27.216V161h28.368V94.184h27.216zM359.816 161v-22.032h-42.624v-12.096h33.696V104.84h-33.696V93.032h42.624V71h-70.272v90h70.272zm73.752-38.88L401.6 71h-30.528v90h26.352v-50.976l32.4 51.84h30.096V71h-26.352v51.12zM502.136 161V71h-28.368v90h28.368zm76.344-38.88L546.512 71h-30.528v90h26.352v-50.976l32.4 51.84h30.096V71H578.48v51.12zm124.584 32.832v-47.088h-45.792v21.744h20.592v9.072c-2.88 1.152-7.776 1.728-11.664 1.728-15.84 0-22.752-8.784-22.752-24.624 0-13.68 8.784-23.184 23.328-23.184 8.352 0 16.56 2.16 25.92 7.344l8.784-23.328c-9.216-5.328-23.76-7.776-35.856-7.776-31.248 0-50.4 17.568-50.4 47.52 0 30.24 20.016 46.8 50.112 46.8 14.832 0 27.792-3.168 37.728-8.208zM89.256 194.184V171h-82.8v23.184h27.216V261H62.04v-66.816h27.216zm100.392 21.456c0 29.376-21.456 47.52-48.384 47.52s-47.952-15.552-47.952-46.944c0-29.376 21.456-47.376 48.384-47.376s47.952 15.408 47.952 46.8zm-28.512.576c0-14.832-6.768-25.056-19.872-25.056s-19.44 10.08-19.44 24.48c0 14.832 6.768 25.2 19.872 25.2 12.96 0 19.44-10.224 19.44-24.624zm146.64-22.032V171h-82.8v23.184h27.216V261h28.368v-66.816h27.216zM402.696 261v-90h-28.368v32.832h-29.376V171h-28.368v90h28.368v-33.552h29.376V261h28.368zm42.216 0v-90h-28.368v90h28.368zm46.68-20.736c-11.376 0-23.472-3.6-33.12-8.352l-4.32 23.184c8.208 4.464 22.176 8.064 37.008 8.064 26.064 0 39.6-12.384 39.6-30.384 0-17.28-14.976-23.472-29.232-27.504-8.928-2.448-17.568-4.464-17.568-8.64 0-3.6 3.168-4.752 8.64-4.752 9.36 0 21.6 3.312 31.68 8.208l4.464-23.184c-8.64-4.32-20.304-7.92-36.288-7.92-24.624 0-36.864 11.52-36.864 29.088 0 18.288 16.704 24.624 29.952 28.368 10.512 3.024 16.848 4.32 16.848 8.64 0 3.744-4.32 5.184-10.8 5.184z"/>
+    <path class="logo-with-strap__accent" fill="#E86145" 
+
+      d="M604.416 237.528v-20.16l-36.576-22.896-4.896 16.848 16.128 15.984v.288l-16.128 15.84 4.896 16.848M647.04 236.952v-19.296l-36-21.744-5.184 16.56 16.128 14.832v.288l-16.128 14.688 5.184 16.56"/>
+    <path class="logo-with-strap__strap" fill="#998F52"
+      
+      d="M43.12 46H26.8l.612-4.896h4.896l.068-.272-1.632-8.84H15.24l-3.808 8.228.204.34 4.896 1.7-.476 3.74H.688l.612-4.896h4.692l.136-.272L22.38 6.56l.408-2.584 7.752-1.428 7.616 37.74.272.34 5.168 1.7L43.12 46zM29.928 27.64L26.8 9.144h-1.02L17.212 27.64h12.716zM53.02 16.012l-7.344 1.972.34 2.04 5.712 1.7c-.544 2.312-5.1 22.372-5.1 22.576-.068.748 4.352 2.584 4.828 2.584 3.128 0 6.732-3.876 8.908-7.48l-.612-.544-7.276 2.652-.34-.476 4.624-20.4h8.5l.884-4.284H57.78L60.092 6.22h-3.06l-4.012 9.792zm35.78 0l4.012-9.792h3.06L93.56 16.352h8.364l-.884 4.284h-8.5l-4.624 20.4.34.476 7.276-2.652.612.544c-2.176 3.604-5.78 7.48-8.908 7.48-.476 0-4.896-1.836-4.828-2.584 0-.204 4.556-20.264 5.1-22.576l-5.712-1.7-.34-2.04 7.344-1.972zm45.056 23.596c-2.176 3.604-5.78 7.276-8.908 7.276-.476 0-5.236-.952-5.236-1.428 0-1.564 2.312-7.616 3.604-11.832.952-3.264 3.332-9.86 3.332-11.288 0-.884-4.012-3.672-5.78-3.672-3.468 0-7.004 4.964-11.696 17.204L106.996 46l-6.052.34 2.924-10.744 4.76-26.588-.136-.272-5.78-2.38v-1.7L115.836.1l-2.992 14.756-4.284 14.348h.68c2.38-3.944 5.712-10.132 8.432-12.852 1.836-1.836 4.148-2.312 6.596-2.312 2.448 0 7.616 3.944 7.616 6.188 0 1.972-.884 4.42-1.768 7.004 0 0-4.556 14.212-4.556 14.348l.204.476 7.48-2.992.612.544zm7.452-4.624c-.068.544-.136 1.224-.136 1.972 0 3.06 5.236 6.324 6.936 6.324 1.224 0 8.636-5.372 12.104-7.616l.748.68c-3.808 6.256-9.792 10.608-14.212 10.608-4.012 0-10.812-3.876-10.812-10.336 0-12.308 8.908-22.576 18.088-22.576 5.644 0 9.452 3.06 9.452 6.188 0 5.168-4.284 5.984-22.168 14.756zm0-2.652h.68c12.036-6.46 16.252-8.364 16.252-10.676 0-1.768-3.468-4.148-7.276-4.148-.884 0-1.904.612-2.652 1.36-2.72 2.72-5.848 8.024-7.004 13.464zm90.248 7.276l-.612-.544-7.48 2.992-.204-.476c0-.136 4.692-14.892 4.692-14.892.884-2.652 1.496-5.168 1.496-7.14 0-2.652-5.78-5.508-7.48-5.508-1.768 0-4.148 1.02-5.712 2.584-2.72 2.72-6.052 8.636-8.432 12.92h-.612c1.428-4.828 2.856-8.772 2.856-10.54 0-2.584-3.944-4.964-5.576-4.964-3.196 0-4.896.816-6.324 2.312-2.788 2.72-6.12 8.908-8.704 13.192h-.68c1.496-4.896 3.332-12.036 3.332-13.396 0-.408-3.74-2.108-4.284-2.108-3.06 0-7.004 3.944-9.248 7.548l.612.612 7.208-2.516.272.476-2.38 15.436-2.72 10.744 6.052-.34 1.972-10.132c2.924-8.568 8.228-16.864 11.152-16.864 1.36 0 4.964 1.972 4.964 3.06 0 1.428-1.904 8.636-2.584 11.56l-3.4 12.716 6.12-.34 1.972-10.132c2.992-8.568 8.296-16.864 11.22-16.864 1.292 0 5.1 1.972 5.1 3.06 0 1.428-2.04 7.684-2.992 10.948-1.292 4.284-3.74 10.88-3.74 12.444 0 .476 4.76 1.428 5.236 1.428 3.128 0 6.732-3.672 8.908-7.276zm31.864-13.872c0 7.48-6.188 21.216-16.388 21.216-6.596 0-13.396-4.896-13.396-11.696 0-7.412 6.188-21.216 16.32-21.216 6.596 0 13.464 4.964 13.464 11.696zm-5.236-.544c0-4.556-6.324-7.412-10.268-7.412-2.924 0-6.392 6.528-7.956 12.104-.68 2.72-1.088 5.236-1.088 6.12 0 4.488 6.324 7.14 10.268 7.14 2.924 0 6.392-6.392 7.956-12.036.68-2.652 1.088-5.032 1.088-5.916zm59.132 14.416l-.612-.544-7.48 2.992-.204-.476c0-.136 4.692-14.892 4.692-14.892.884-2.652 1.496-5.168 1.496-7.14 0-2.652-5.78-5.508-7.48-5.508-1.768 0-4.148 1.02-5.712 2.584-2.72 2.72-6.052 8.636-8.432 12.92h-.612c1.428-4.828 2.856-8.772 2.856-10.54 0-2.584-3.944-4.964-5.576-4.964-3.196 0-4.896.816-6.324 2.312-2.788 2.72-6.12 8.908-8.704 13.192h-.68c1.496-4.896 3.332-12.036 3.332-13.396 0-.408-3.74-2.108-4.284-2.108-3.06 0-7.004 3.944-9.248 7.548l.612.612 7.208-2.516.272.476-2.38 15.436-2.72 10.744 6.052-.34 1.972-10.132c2.924-8.568 8.228-16.864 11.152-16.864 1.36 0 4.964 1.972 4.964 3.06 0 1.428-1.904 8.636-2.584 11.56l-3.4 12.716 6.12-.34 1.972-10.132c2.992-8.568 8.296-16.864 11.22-16.864 1.292 0 5.1 1.972 5.1 3.06 0 1.428-2.04 7.684-2.992 10.948-1.292 4.284-3.74 10.88-3.74 12.444 0 .476 4.76 1.428 5.236 1.428 3.128 0 6.732-3.672 8.908-7.276zm6.908-4.624c-.068.544-.136 1.224-.136 1.972 0 3.06 5.236 6.324 6.936 6.324 1.224 0 8.636-5.372 12.104-7.616l.748.68c-3.808 6.256-9.792 10.608-14.212 10.608-4.012 0-10.812-3.876-10.812-10.336 0-12.308 8.908-22.576 18.088-22.576 5.644 0 9.452 3.06 9.452 6.188 0 5.168-4.284 5.984-22.168 14.756zm0-2.652h.68c12.036-6.46 16.252-8.364 16.252-10.676 0-1.768-3.468-4.148-7.276-4.148-.884 0-1.904.612-2.652 1.36-2.72 2.72-5.848 8.024-7.004 13.464zm57.976 7.276l-.612-.544-7.48 2.992-.204-.476c0-.136 4.556-14.348 4.556-14.348.884-2.584 1.768-5.032 1.768-7.004 0-2.244-5.168-6.188-7.616-6.188-2.448 0-4.76.476-6.596 2.312-2.72 2.72-6.052 8.908-8.432 12.852h-.68c1.36-4.556 3.128-11.696 3.128-13.056 0-.408-3.74-2.108-4.284-2.108-3.06 0-7.004 3.944-9.248 7.548l.612.612 7.208-2.516.272.476-2.38 15.436-2.924 10.744 6.052-.34 2.176-10.132c4.692-12.24 8.772-17.204 11.696-17.204 1.768 0 5.78 2.788 5.78 3.672 0 1.428-2.38 8.024-3.332 11.288-1.292 4.216-3.604 10.268-3.604 11.832 0 .476 4.76 1.428 5.236 1.428 3.128 0 6.732-3.672 8.908-7.276zm9.9-23.596l4.012-9.792h3.06l-2.312 10.132h8.364l-.884 4.284h-8.5l-4.624 20.4.34.476 7.276-2.652.612.544c-2.176 3.604-5.78 7.48-8.908 7.48-.476 0-4.896-1.836-4.828-2.584 0-.204 4.556-20.264 5.1-22.576l-5.712-1.7-.34-2.04 7.344-1.972zm19.42 27.744c0 5.372-4.896 9.384-13.464 13.668l-.68-1.632c4.896-3.332 8.024-5.848 7.956-9.044-.068-2.04-1.36-3.468-4.216-4.148.204-2.312 1.972-4.08 5.032-4.08 3.264 0 5.372 1.7 5.372 5.236zM448.116 46l.476-3.672-6.664-2.04-.068-.272 4.148-31.348.136-.272h6.188l.612-4.896h-18.768l-.476 3.672 6.664 2.04.136.272-4.216 31.348-.136.272h-6.188L429.348 46h18.768zm19.352-39.44c-.068 5.372-4.896 9.384-13.532 13.668l-.68-1.632c4.964-3.332 8.092-5.848 8.024-9.044-.068-2.108-1.36-3.536-4.216-4.148.204-2.312 1.972-4.08 5.032-4.08 3.264 0 5.44 1.768 5.372 5.236zm49.952 33.048c-2.176 3.604-5.78 7.276-8.908 7.276-.476 0-5.236-.952-5.236-1.428 0-1.564 2.448-8.16 3.74-12.444.952-3.264 2.992-9.52 2.992-10.948 0-1.088-3.808-3.06-5.1-3.06-2.924 0-8.228 8.296-11.22 16.864L491.716 46l-6.12.34 3.4-12.716c.68-2.924 2.584-10.132 2.584-11.56 0-1.088-3.604-3.06-4.964-3.06-2.924 0-8.228 8.296-11.152 16.864L473.492 46l-6.052.34 2.72-10.744 2.38-15.436-.272-.476-7.208 2.516-.612-.612c2.244-3.604 6.188-7.548 9.248-7.548.544 0 4.284 1.7 4.284 2.108 0 1.36-1.836 8.5-3.332 13.396h.68c2.584-4.284 5.916-10.472 8.704-13.192 1.428-1.496 3.128-2.312 6.324-2.312 1.632 0 5.576 2.38 5.576 4.964 0 1.768-1.428 5.712-2.856 10.54h.612c2.38-4.284 5.712-10.2 8.432-12.92 1.564-1.564 3.944-2.584 5.712-2.584 1.7 0 7.48 2.856 7.48 5.508 0 1.972-.612 4.488-1.496 7.14 0 0-4.692 14.756-4.692 14.892l.204.476 7.48-2.992.612.544zm68.148 0l-.612-.544-7.48 2.992-.204-.476c0-.136 4.692-14.892 4.692-14.892.884-2.652 1.496-5.168 1.496-7.14 0-2.652-5.78-5.508-7.48-5.508-1.768 0-4.148 1.02-5.712 2.584-2.72 2.72-6.052 8.636-8.432 12.92h-.612c1.428-4.828 2.856-8.772 2.856-10.54 0-2.584-3.944-4.964-5.576-4.964-3.196 0-4.896.816-6.324 2.312-2.788 2.72-6.12 8.908-8.704 13.192h-.68c1.496-4.896 3.332-12.036 3.332-13.396 0-.408-3.74-2.108-4.284-2.108-3.06 0-7.004 3.944-9.248 7.548l.612.612 7.208-2.516.272.476-2.38 15.436-2.72 10.744 6.052-.34 1.972-10.132c2.924-8.568 8.228-16.864 11.152-16.864 1.36 0 4.964 1.972 4.964 3.06 0 1.428-1.904 8.636-2.584 11.56l-3.4 12.716 6.12-.34 1.972-10.132c2.992-8.568 8.296-16.864 11.22-16.864 1.292 0 5.1 1.972 5.1 3.06 0 1.428-2.04 7.684-2.992 10.948-1.292 4.284-3.74 10.88-3.74 12.444 0 .476 4.76 1.428 5.236 1.428 3.128 0 6.732-3.672 8.908-7.276zm31.864-13.872c0 7.48-6.188 21.216-16.388 21.216-6.596 0-13.396-4.896-13.396-11.696 0-7.412 6.188-21.216 16.32-21.216 6.596 0 13.464 4.964 13.464 11.696zm-5.236-.544c0-4.556-6.324-7.412-10.268-7.412-2.924 0-6.392 6.528-7.956 12.104-.68 2.72-1.088 5.236-1.088 6.12 0 4.488 6.324 7.14 10.268 7.14 2.924 0 6.392-6.392 7.956-12.036.68-2.652 1.088-5.032 1.088-5.916zm17.72 7.004c3.672 2.584 6.324 4.284 6.324 6.732 0 2.448-2.244 4.488-3.196 4.964-2.516.068-7.888-1.292-9.452-2.04.204-.272.612-1.496.612-2.312 0-2.04-.68-2.652-3.06-2.652-1.904 0-3.332 1.36-3.332 3.944 0 3.808 3.944 6.188 10.812 6.188 6.936 0 12.648-4.012 12.648-9.588 0-3.604-2.516-5.508-7.276-8.772-4.08-2.788-6.46-4.488-6.46-7.004-.068-2.244 1.564-3.876 2.448-4.42 2.516-.136 7.888 1.224 9.452 1.972-.204.272-.612 1.36-.612 2.176 0 2.04.612 2.652 2.992 2.652 1.972 0 3.264-1.36 3.264-3.944 0-3.536-4.488-6.324-10.676-6.324-7.412 0-11.9 4.42-11.832 9.52 0 3.672 2.516 5.372 7.344 8.908zm23.772-16.184L657.7 6.22h3.06l-2.312 10.132h8.364l-.884 4.284h-8.5l-4.624 20.4.34.476 7.276-2.652.612.544c-2.176 3.604-5.78 7.48-8.908 7.48-.476 0-4.896-1.836-4.828-2.584 0-.204 4.556-20.264 5.1-22.576l-5.712-1.7-.34-2.04 7.344-1.972zm26.152 23.392c-2.176 3.604-5.848 7.48-8.908 7.48-.544 0-5.032-1.972-4.828-2.584l8.636-35.292c0-.068-.068-.272-.068-.272l-6.052-2.38v-1.7L681.608.1s-9.996 40.8-9.996 40.936l.272.476 7.344-2.652.612.544zm34.312-23.256l-17.748 28.764-.34.952c-4.08 10.88-7.412 15.3-14.076 15.3-3.468 0-5.576-1.632-5.576-4.964 0-1.632.748-2.584 2.856-2.584 1.836 0 3.944.952 5.508 4.624l1.7-.544c.476-.952 6.46-11.152 6.46-11.152l-3.264-.612-2.04-25.772-.272-.476-7.208 2.516-.612-.612c2.244-3.604 5.916-7.548 9.044-7.548.544 0 3.876 1.564 3.876 1.972l1.904 26.18h.884l14.348-28.356 4.556 2.312z"/>
+  </g>
+</symbol>
+      </svg>
+  
+  
+
+  
+
+  
+          <a href="#page" class="cover cover-article">
+
+
+
+        <style>
+          /* larger, high density screen and print */
+          @media  
+            (-webkit-min-device-pixel-ratio: 2) and (min-width: 960px), 
+            (min-resolution: 192dpi) and (min-width: 960px) 
+          { 
+            .cover-inner { 
+              background-image: url("/wp-content/uploads/2017/02/P1040155-2800x1872.jpg")
+            }
+          }
+          /* larger, low density screen */
+          /* small, high density screen */
+          @media  
+            only screen and (-webkit-max-device-pixel-ratio: 1.99) and (min-width: 960px), 
+            only screen and (max-resolution: 191dpi) and (min-width: 960px),
+            only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 959px), 
+            only screen and (min-resolution: 192dpi) and (max-width: 960px)
+          {
+            .cover-inner { 
+              background-image: url("/wp-content/uploads/2017/02/P1040155-1400x936.jpg")
+            }
+          }
+          /* small, low density screen */
+          @media  
+            only screen and (-webkit-max-device-pixel-ratio: 1.99) and (max-width: 960px), 
+            only screen and (max-resolution: 191dpi) and (max-width: 960px)
+          {
+            .cover-inner { 
+              background-image: url("/wp-content/uploads/2017/02/P1040155-1400x936.jpg")
+            }
+          }
+        </style>
+
+        
+        <div class="cover-inner">
+          <header class="cover-masthead">
+            <h1 class="cover-heading">Breezus Wept</h1>
+            <div class="cover-summary">
+              <div class="hidden-under-m">
+                <p>Disappointing debuts aside, here’s what I’ve been listening to. Music from 3 continents.</p>
+              </div>
+              <div>Read More ...</div>
+              
+            </div>
+          </header>
+        </div><!-- cover-inner -->
+      </a><!-- cover -->
+    
+    <div class="min-vh-100 cf main-container" id="page">
+    
+  <header role="banner" class="page-hd">
+
+    <!-- menu button -->
+    <div class="right gutter-right">
+      <a class="nav-main__trigger js-nav-main__trigger uppercase track-loose" href="#" >
+        <span class="burger">
+          <span></span><span></span><span></span><span></span>          
+        </span>
+        Menu
+      </a>
+    </div>
+    
+    <!-- icon -->
+    <div class="branding left gutters category-music">
+      <a  class="logo__link block" style="max-width: 250px" href="/music/" rel="home">
+        <svg>
+          <use xlink:href="#logo-with-strap" />
+        </svg>         
+      </a>
+    </div><!-- branding -->
+
+
+    <!-- dropdown nav -->
+    <nav class="nav-main">
+
+      <ul>
+        <li class="h6 text-center mv0 gutters" style="color:#eee;">
+          <div class="clearfix width-s center">
+            <form class="block clearfix pv2 search" role="search" method="get" id="searchform" action="/">
+  <div>
+    <label class="screen-reader-text" for="s">Search for:</label>
+    <input class="button--search right relative uppercase track-loose" type="submit" id="searchsubmit" value="Search">
+    <div class="overflow-hidden">
+      <input class="fill" type="text" value="" name="s" id="s">
+    </div>
+  </div>
+</form>          </div>
+        </li>
+        <li class="h3 uppercase text-center link--heading-color border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 font-sans heavy  gutter-left gutter-right" href="/">
+            Home <span style="color:#e86146;"></span>
+          </a>
+        </li>
+        <li class="h3 uppercase text-center border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 gutter-left gutter-right font-sans heavy link--heading-color" href="/design">
+            Notes on Design<span style="color:#e86146;">...</span>
+          </a>
+        </li>
+                <li class="h3 uppercase text-center border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 gutter-left gutter-right font-sans heavy link--heading-color" href="/photos">
+            Photos<span style="color:#e86146;font-weight: 900">_</span>
+          </a>
+        </li>
+                <li class="h3 uppercase text-center border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 gutter-left gutter-right font-sans heavy link--heading-color" href="/music">
+            What I’m Listening To<span style="color:#e86146;">»</span>
+          </a>
+        </li>
+        <ul class="nav-main__sub" style="background: #fafafa;margin-top:-1px;">
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/music/july-2/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">July 2</div>
+      <div class="info">
+        <!-- <time datetime="Monday, July 24th, 2017" pubdate>Monday 24th July 2017</time> -->
+        <span class="tag">Six of the best </span>      </div>
+    </a>            
+  </li>
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/music/month7/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">July 1</div>
+      <div class="info">
+        <!-- <time datetime="Wednesday, July 19th, 2017" pubdate>Wednesday 19th July 2017</time> -->
+        <span class="tag">Six of the best </span>      </div>
+    </a>            
+  </li>
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/music/june/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">June</div>
+      <div class="info">
+        <!-- <time datetime="Friday, June 30th, 2017" pubdate>Friday 30th June 2017</time> -->
+        <span class="tag">Six of the best </span>      </div>
+    </a>            
+  </li>
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/music/humblewave/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">Humblewave</div>
+      <div class="info">
+        <!-- <time datetime="Wednesday, May 3rd, 2017" pubdate>Wednesday 3rd May 2017</time> -->
+        <span class="tag">Six of the best </span>      </div>
+    </a>            
+  </li>
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/music/six-in-the-cloud/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">Six in the cloud</div>
+      <div class="info">
+        <!-- <time datetime="Thursday, March 9th, 2017" pubdate>Thursday 9th March 2017</time> -->
+        <span class="tag">Six of the best </span>      </div>
+    </a>            
+  </li>
+    
+</ul>
+        <li class="h3 uppercase text-center border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 gutter-left gutter-right font-sans heavy link--heading-color" href="/other">
+            Other Matters<span style="color:#e86146;">*</span>
+          </a>
+        </li>
+              </ul>
+    </nav><!-- nav-main -->  
+         
+  </header><!-- page-hd -->
+    <main class="page-bd">
+  
+
+
+<div class="cf wrap">
+  
+
+
+      
+    
+    <article class="gutters post type-post hentry">
+
+      <header>
+        <div class="info entry-meta size-s">
+          <a href="/tag/six-of-the-best/" rel="tag">Six of the best</a>        </div>
+        <h1 class="mt0">
+          Breezus Wept        </h1>
+        <time class="info" datetime="Monday, February 27th, 2017" pubdate>Monday, 2th Feb 2017</time>
+      </header>
+
+      <footer class="">
+        <div>
+          <!-- Posted on  --> 
+        </div> 
+      </footer>   
+
+            
+      <div class="cf entry-content">
+        <p class="standfirst">Disappointing debuts aside, here’s what I’ve been listening to &#8230;</p>
+<p><iframe width="500" height="281" src="https://www.youtube.com/embed/videoseries?list=PLbUcx670uC8FSBK_AXNZDV4Ohz2n2TWuL" frameborder="0" allowfullscreen></iframe></p>
+<p class="info">Play the video above to start the playlist or jump to individual songs by clicking the icon in the top left</p>
+<hr/>
+<ol>
+<li><strong>Kcee ft Tekno – ‘Tender’</strong>
+<p class="color-info">Quite the most infectious pop tune I’ve heard in a bit from Nigeria’s Tekno.</p>
+</li>
+<li><strong>Los Wemblers – ‘La Danza Del Petrolero’</strong>
+<p class="color-info">Psychedelic Cumbia from Peru, released in 1976. I heard this last year on a <a href="https://www.native-instruments.com/en/specials/tropical-frequencies/">Native Instruments “Tropical Frequencies” documentary about Dengue Dengue Dengue!</a> last year and have had it lodged in my head ever since.</p>
+</li>
+<li><strong>Sam Gelliatry – ‘Jungle Waters’</strong>
+<p class="color-info">Lush strings and punishing bass. A winner.</p>
+</li>
+<li><strong>Distruction Boyz – ‘Shut Up &amp; Groove’</strong>
+<p class="color-info">An absolute banger. The best Gqom record I have heard thus far. Video is great too.</p>
+</li>
+<li><strong>Ray BLK – ‘5050’</strong>
+<p class="color-info">Another tune that’s been lodged in my head since last year. A rich tune with an imaginative structure, simple melody, sparse rhythm, beautiful vocal, and a great bassline.</p>
+</li>
+<li><strong>Aidona – ‘Banga(Raw)[2face Riddim]’</strong>
+<p class="color-info">Not exactly revolutionary, but still, it is a top flow on a top riddim.</p>
+</li>
+</ol>
+              </div>
+
+      
+            
+      <nav class="cf border-top border-bottom grey-10 mt4 pv2">
+        <ul class="navigation flex post-suggestion">
+          <li class="post-suggestion__older left pr1 border-right u1of2 flex">
+                      </li> 
+          <li class="post-suggestion__newer relative right pl1 u1of2 flex text-right">
+            <div class="block fill">
+              <a href="/music/half-measures/" rel="next"><span class="info block">Newer &rarr;</span> <span class="visually-hidden-under-m bold">Half-measures</span> </a>              
+            </div>
+
+          </li>
+        </ul>        
+      </nav>
+
+      <style>
+        .post-suggestion__newer a {
+          float: right;
+        }
+      </style>
+      
+      <!-- <nav class="cf entry-comments">
+              </nav> -->
+
+    </article>
+
+    
+</div><!-- cf wrap -->
+
+        
+  
+      </main><!-- page-bd -->
+    </div><!-- main-container -->
+
+    <footer role="contentinfo" class="page-ft cf pv5 mt5 gutters" style="background:#fff">
+      <div class="wrap">
+        &copy;2020 <a class="" href="/">Paul Davison</a> 
+         - <a class="grey-70" href="/design">Design</a>
+         - <a class="grey-70" href="/photos">Photos</a> 
+         - <a class="grey-70 is-active" href="/music">Music</a> 
+         - <a class="grey-70" href="/other">Other Matters</a> 
+         <!-- <a class="right button" style="color:white;margin-top: -12px" href="#page" title="Jump back to top">&#8593; TOP</a> -->    
+      </div><!-- wrap -->
+    </footer>
+
+  
+  <noscript id="deferred-styles">
+    <link rel="stylesheet" type="text/css" href="/wp-content/themes/photo/stylesheets-1-0-1/css/style.css"/>
+      </noscript>
+  <script>
+    var loadDeferredStyles = function() {
+      var addStylesNode = document.getElementById("deferred-styles");
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+  </script>
+  
+  <!-- wp_footer -->
+  <script type='text/javascript' src='/wp-content/plugins/ab-audio-sync-master/libs/device/device.min.js?ver=5.5.3' id='device-js-js'></script>
+<script type='text/javascript' src='/wp-content/plugins/ab-audio-sync-master/libs/howler/howler.core.min.js?ver=5.5.3' id='howler-js-js'></script>
+<script type='text/javascript' src='/wp-content/themes/photo/javascripts-1-0-1/min/general.js' id='jquery-js'></script>
+<script type='text/javascript' src='/wp-content/plugins/ab-audio-sync-master/ab-audio-sync.js?ver=5.5.3' id='ab-audio-sync-js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=5.5.3' id='wp-embed-js'></script>
+  <!-- / wp_footer -->
+  
+  
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-99105445-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

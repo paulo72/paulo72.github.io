@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en-GB" prefix="og: http://ogp.me/ns#" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>var htmlElement = document.getElementsByTagName('html')[0]; htmlElement.className = 'has-js';</script>
+
+  <!-- Critical, over-the-fold styles -->
+    <style>
+    
+    body{margin:0;padding:0;line-height:1.25;font-size:18px;box-sizing:border-box;overflow-x:hidden;overflow-y:scroll;font-family:"freight-text-pro","Georgia",Times,serif,"Arial Unicode MS","DejaVu Sans","Lucida Sans Unicode","Segoe UI Symbol","FreeSans","Meiryo UI","MS UI Gothic","Everson Mono Unicode",Meiryo,"MS Gothic","MS Mincho","MS PGothic","MS PMincho","Meslo LG L","Meslo LG L DZ","Meslo M L","Meslo M L DZ","Meslo S L","Meslo S L DZ","Symbola","DejaVu Sans Condensed","DejaVu Sans Mono",Code2000,"Everson Mono",Quivira,sans-serif;box-sizing:border-box;background:#f9f9f8}.cover{display:block !important;height:100vh;overflow:hidden;position:relative;z-index:100;left:0;top:0;bottom:0;right:0;cursor:pointer}.cover-inner{border:30px solid #fff;position:absolute;top:0;left:0;width:100%;height:100%;bottom:0;display:block;margin:0 auto;background-size:cover;background-position:center;box-sizing:border-box}.cover-inner--archive__logo-wrap{width:38%;min-width:200px;top:65px;position:relative;left:-6px}.cover-inner--archive__logo-wrap svg{width:100%;color:#fff}.cover-masthead{position:absolute;left:0;bottom:0;right:0;overflow:hidden;z-index:2;text-shadow:1px 2px 0 rgba(0,0,0,0.2);padding:0 18px}.cover-masthead span{background-color:rgba(0,0,0,0.4)}@media only screen and (min-width: 701px){.cover-masthead{padding:30px 35px}}@media only screen and (min-width: 951px){.cover-masthead{padding:30px 35px;top:0;right:auto;max-width:38%}}.cover-heading{font-family:"freight-sans-pro",-apple-system,BlinkMacSystemFont,"avenir next",avenir,helvetica,"helvetica neue",ubuntu,roboto,noto,"segoe ui","Arial Unicode MS","DejaVu Sans","Lucida Sans Unicode","Segoe UI Symbol","FreeSans","Meiryo UI","MS UI Gothic","Everson Mono Unicode",Meiryo,"MS Gothic","MS Mincho","MS PGothic","MS PMincho","Meslo LG L","Meslo LG L DZ","Meslo M L","Meslo M L DZ","Meslo S L","Meslo S L DZ","Symbola","DejaVu Sans Condensed","DejaVu Sans Mono",Code2000,"Everson Mono",Quivira,sans-serif;color:#fff;font-size:36px;line-height:0.9;text-transform:uppercase;font-weight:900;left:-3px;position:relative}@media only screen and (min-width: 701px){.cover-heading{font-size:48px}}@media only screen and (min-width: 951px){.cover-heading{font-size:60px}}body.category-photos .cover-heading:after{width:30px;height:6px;top:5px;left:5px;background:#E86146;position:relative;content:"";display:inline-block;box-shadow:1px 2px 0 rgba(0,0,0,0.2)}@media only screen and (min-width: 701px){body.category-photos .cover-heading:after{width:42px;height:9px;top:8px}}@media only screen and (min-width: 951px){body.category-photos .cover-heading:after{width:60px;height:12px;top:12px}}.category-design .cover-heading:after{content:'...'}.category-music .cover-heading:after{content:'»';left:0.2em;position:relative;top:-0.05em}.category-other .cover-heading:after{content:'*'}.category-design .cover-heading:after,.category-music .cover-heading:after,.category-other .cover-heading:after{color:#e86146}.cover-summary{font-family:"freight-micro-pro","freight-text-pro","Georgia",Times,serif,"Arial Unicode MS","DejaVu Sans","Lucida Sans Unicode","Segoe UI Symbol","FreeSans","Meiryo UI","MS UI Gothic","Everson Mono Unicode",Meiryo,"MS Gothic","MS Mincho","MS PGothic","MS PMincho","Meslo LG L","Meslo LG L DZ","Meslo M L","Meslo M L DZ","Meslo S L","Meslo S L DZ","Symbola","DejaVu Sans Condensed","DejaVu Sans Mono",Code2000,"Everson Mono",Quivira,sans-serif;font-style:italic;color:#fff;font-size:18px;padding:1em 0}@media only screen and (min-width: 701px){.cover-summary{font-size:24px}}@media only screen and (min-width: 951px){.cover-summary{font-size:30px}}
+/*# sourceMappingURL=over-the-fold--cover-image.css.map */  
+
+    @keyframes fade{ 0% {opacity:0;} 100% {opacity:1;} }
+
+    @keyframes fadeAndHide{ 0% {opacity:1;} 99% {opacity:0;} 100% {display: none; height:0; width:0; overflow: hidden;} }
+
+
+    /* Loading logo: size and position */
+      .loader-logo svg {
+        color: #000;
+        width: 38% !important;
+        max-width: 200px !important;
+        top: 50%;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        animation:fadeAndHide 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.5s 1 normal forwards;     
+      }
+
+
+    /* Home Page: Content: animation */
+      body.home .primary-content {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.3s 1 normal forwards;
+      }
+
+      body.search div, body.search footer,
+      body.error404 div, body.error404 footer {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.6s 1 normal forwards;
+      } 
+
+    /*  Archive, 
+        Single,
+        Page: 
+
+        content: animation 
+    */
+      body.single .page-hd,
+      body.single .page-bd,
+      body.single .page-ft,
+      body.archive .page-hd,
+      body.archive .page-bd,
+      body.archive .page-ft {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.9s 1 normal forwards;
+      } 
+
+    /* Archive: cover: animation */
+      body.archive .cover-inner {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        /*animation:fade 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.3s 1 normal forwards;*/
+        animation:fade 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.7s 1 normal forwards;
+      }
+
+    /* Single: cover: animation */
+      body.single .cover-inner {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        /*animation:fade 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s 1 normal forwards;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s 1 normal forwards;
+      }
+
+    /* Archive: cover: animation */
+    /*body.archive .cover__logo-wrap .logo-with-strap {
+      animation:fade 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.3s 1 reverse forwards;     
+    }*/
+
+  </style>  
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="//use.typekit.net">
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'kck4dwb',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+  <!-- Icons -->
+  
+<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/photo/favicons/design/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/photo/favicons/design/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/themes/photo/favicons/design/favicon-16x16.png">
+<link rel="manifest" href="/wp-content/themes/photo/favicons/design/manifest.json">
+<link rel="mask-icon" href="/wp-content/themes/photo/favicons/design/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/wp-content/themes/photo/favicons/design/favicon.ico">
+<meta name="msapplication-config" content="/wp-content/themes/photo/favicons/design/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+  <!-- WP Head stuff -->
+  <title>Foggs Behaviour Model - Actino</title>
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v4.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="/design/foggs-behaviour-model/" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Foggs Behaviour Model - Actino" />
+<meta property="og:description" content="A model for describing when an individual will be suitably motivated to act." />
+<meta property="og:url" content="http://actino.local/design/foggs-behaviour-model/" />
+<meta property="og:site_name" content="Actino" />
+<meta property="article:tag" content="marketing" />
+<meta property="article:tag" content="product design" />
+<meta property="article:section" content="Design" />
+<meta property="article:published_time" content="2013-05-19T21:45:53+01:00" />
+<meta property="article:modified_time" content="2017-05-17T23:18:22+01:00" />
+<meta property="og:updated_time" content="2017-05-17T23:18:22+01:00" />
+<meta property="og:image" content="http://actino.local/wp-content/uploads/2017/02/P1040197.jpg" />
+<meta property="og:image:width" content="4209" />
+<meta property="og:image:height" content="2814" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="A model for describing when an individual will be suitably motivated to act." />
+<meta name="twitter:title" content="Foggs Behaviour Model - Actino" />
+<meta name="twitter:image" content="http://actino.local/wp-content/uploads/2017/02/P1040197.jpg" />
+<meta property="DC.date.issued" content="2013-05-19T21:45:53+01:00" />
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Actino &raquo; Foggs Behaviour Model Comments Feed" href="/design/foggs-behaviour-model/feed/" />
+<link rel='stylesheet' id='wp-block-library-css'  href='/wp-includes/css/dist/block-library/style.min.css?ver=5.5.3' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="/wp-json/" /><link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/940" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='/?p=940' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fdesign%2Ffoggs-behaviour-model%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fdesign%2Ffoggs-behaviour-model%2F&#038;format=xml" />
+  <!-- Art Direction Styles -->
+
+
+
+</head>
+
+
+
+<body class="post-template-default single single-post postid-940 single-format-standard  category-design" id="top">
+  <!-- Get SVG as symbol so we can use in several places without adding to page weight -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="logo-with-strap" class="logo-with-strap" viewbox="0 0 684 271">
+  <title>Notes on design</title>
+  <g fill="none" fill-rule="evenodd">
+    <path class="logo-with-strap__main" fill="currentColor"
+      d="M66.848 129.12L34.88 78H4.352v90h26.352v-50.976l32.4 51.84H93.2V78H66.848v51.12zm133.08-6.48c0 29.376-21.456 47.52-48.384 47.52s-47.952-15.552-47.952-46.944c0-29.376 21.456-47.376 48.384-47.376s47.952 15.408 47.952 46.8zm-28.512.576c0-14.832-6.768-25.056-19.872-25.056s-19.44 10.08-19.44 24.48c0 14.832 6.768 25.2 19.872 25.2 12.96 0 19.44-10.224 19.44-24.624zm111.768-22.032V78h-82.8v23.184H227.6V168h28.368v-66.816h27.216zM362.264 168v-22.032H319.64v-12.096h33.696V111.84H319.64v-11.808h42.624V78h-70.272v90h70.272zm44.088-20.736c-11.376 0-23.472-3.6-33.12-8.352l-4.32 23.184c8.208 4.464 22.176 8.064 37.008 8.064 26.064 0 39.6-12.384 39.6-30.384 0-17.28-14.976-23.472-29.232-27.504-8.928-2.448-17.568-4.464-17.568-8.64 0-3.6 3.168-4.752 8.64-4.752 9.36 0 21.6 3.312 31.68 8.208l4.464-23.184c-8.64-4.32-20.304-7.92-36.288-7.92-24.624 0-36.864 11.52-36.864 29.088 0 18.288 16.704 24.624 29.952 28.368 10.512 3.024 16.848 4.32 16.848 8.64 0 3.744-4.32 5.184-10.8 5.184zm172.272-24.624c0 29.376-21.456 47.52-48.384 47.52s-47.952-15.552-47.952-46.944c0-29.376 21.456-47.376 48.384-47.376s47.952 15.408 47.952 46.8zm-28.512.576c0-14.832-6.768-25.056-19.872-25.056s-19.44 10.08-19.44 24.48c0 14.832 6.768 25.2 19.872 25.2 12.96 0 19.44-10.224 19.44-24.624zm101.4 5.904L619.544 78h-30.528v90h26.352v-50.976l32.4 51.84h30.096V78h-26.352v51.12zM92.336 222.352C92.336 250 73.616 268 39.632 268H4.352v-90h37.296c32.688 0 50.688 17.568 50.688 44.352zm-28.512.864c0-16.704-7.488-23.472-24.048-23.472H32.72v46.512h8.496c14.112 0 22.608-7.056 22.608-23.04zM172.424 268v-22.032H129.8v-12.096h33.696V211.84H129.8v-11.808h42.624V178h-70.272v90h70.272zm44.088-20.736c-11.376 0-23.472-3.6-33.12-8.352l-4.32 23.184c8.208 4.464 22.176 8.064 37.008 8.064 26.064 0 39.6-12.384 39.6-30.384 0-17.28-14.976-23.472-29.232-27.504-8.928-2.448-17.568-4.464-17.568-8.64 0-3.6 3.168-4.752 8.64-4.752 9.36 0 21.6 3.312 31.68 8.208l4.464-23.184c-8.64-4.32-20.304-7.92-36.288-7.92-24.624 0-36.864 11.52-36.864 29.088 0 18.288 16.704 24.624 29.952 28.368 10.512 3.024 16.848 4.32 16.848 8.64 0 3.744-4.32 5.184-10.8 5.184zM294.44 268v-90h-28.368v90h28.368zm98.376-6.048v-47.088h-45.792v21.744h20.592v9.072c-2.88 1.152-7.776 1.728-11.664 1.728-15.84 0-22.752-8.784-22.752-24.624 0-13.68 8.784-23.184 23.328-23.184 8.352 0 16.56 2.16 25.92 7.344l8.784-23.328c-9.216-5.328-23.76-7.776-35.856-7.776-31.248 0-50.4 17.568-50.4 47.52 0 30.24 20.016 46.8 50.112 46.8 14.832 0 27.792-3.168 37.728-8.208zm74.328-32.832L435.176 178h-30.528v90H431v-50.976l32.4 51.84h30.096V178h-26.352v51.12z"
+      />
+    <path class="logo-with-strap__strap" fill="#998F52" 
+      
+      d="M36.74 35.54l-4.27-.21-3.5 7.49c-2.17.56-5.67 1.05-8.82 1.05-4.48 0-8.4-1.19-10.64-3.36-2.1-2.17-3.15-5.32-3.15-10.36 0-13.58 5.6-21.56 15.33-21.56 4.41 0 8.89 1.12 11.55 2.38l.42 5.88h4.48l2.03-12.6-5.04 2.03c-2.52-1.19-7.35-2.66-12.81-2.66-7 0-11.55 2.24-14.98 5.67C3.49 13.14.13 20.56.13 30.5c0 12.18 7 18.41 18.9 18.41 4.41 0 8.19-.84 11.34-1.82l3.29 1.75 3.08-13.3zm35.45-8.4c0 7.7-6.37 21.84-16.87 21.84-6.79 0-13.79-5.04-13.79-12.04 0-7.63 6.37-21.84 16.8-21.84 6.79 0 13.86 5.11 13.86 12.04zm-5.39-.56c0-4.69-6.51-7.63-10.57-7.63-3.01 0-6.58 6.72-8.19 12.46-.7 2.8-1.12 5.39-1.12 6.3 0 4.62 6.51 7.35 10.57 7.35 3.01 0 6.58-6.58 8.19-12.39.7-2.73 1.12-5.18 1.12-6.09zm43.15 14.84l-.63-.56-7.7 3.08-.21-.49c0-.14 4.69-14.77 4.69-14.77.91-2.66 1.82-5.18 1.82-7.21 0-2.31-5.32-6.37-7.84-6.37-2.52 0-4.9.49-6.79 2.38-2.8 2.8-6.23 9.17-8.68 13.23h-.7c1.4-4.69 3.22-12.04 3.22-13.44 0-.42-3.85-2.17-4.41-2.17-3.15 0-7.21 4.06-9.52 7.77l.63.63 7.42-2.59.28.49-2.45 15.89-3.01 11.06L82.3 48l2.24-10.43c4.83-12.6 9.03-17.71 12.04-17.71 1.82 0 5.95 2.87 5.95 3.78 0 1.47-2.45 8.26-3.43 11.62-1.33 4.34-3.71 10.57-3.71 12.18 0 .49 4.9 1.47 5.39 1.47 3.22 0 6.93-3.78 9.17-7.49zm12.7-7.63c3.78 2.66 6.51 4.41 6.51 6.93 0 2.52-2.31 4.62-3.29 5.11-2.59.07-8.12-1.33-9.73-2.1.21-.28.63-1.54.63-2.38 0-2.1-.7-2.73-3.15-2.73-1.96 0-3.43 1.4-3.43 4.06 0 3.92 4.06 6.37 11.13 6.37 7.14 0 13.02-4.13 13.02-9.87 0-3.71-2.59-5.67-7.49-9.03-4.2-2.87-6.65-4.62-6.65-7.21-.07-2.31 1.61-3.99 2.52-4.55 2.59-.14 8.12 1.26 9.73 2.03-.21.28-.63 1.4-.63 2.24 0 2.1.63 2.73 3.08 2.73 2.03 0 3.36-1.4 3.36-4.06 0-3.64-4.62-6.51-10.99-6.51-7.63 0-12.25 4.55-12.18 9.8 0 3.78 2.59 5.53 7.56 9.17zm24.53-16.66l4.13-10.08h3.15l-2.38 10.43h8.61l-.91 4.41h-8.75l-4.76 21 .35.49 7.49-2.73.63.56c-2.24 3.71-5.95 7.7-9.17 7.7-.49 0-5.04-1.89-4.97-2.66 0-.21 4.69-20.86 5.25-23.24l-5.88-1.75-.35-2.1 7.56-2.03zm34.12 3.78l-1.26.42-9.52 16.31L168.28 48l-6.23.35 3.01-11.06 2.45-15.89-.28-.49-7.42 2.59-.63-.63c2.31-3.71 6.37-7.77 9.52-7.77.56 0 4.41 1.75 4.41 2.17 0 1.4-1.96 9.45-4.06 17.99h.7c4.41-8.68 8.47-15.68 9.8-17.22 1.33-1.61 2.73-2.94 5.53-2.94 1.96 0 3.99 1.47 3.99 3.99 0 3.22-1.05 4.41-3.15 4.41-2.45 0-3.99-.63-4.62-2.59zm7.17 1.68c2.24-3.64 5.95-7.49 9.17-7.49.49 0 5.39.98 5.39 1.54 0 1.61-2.38 7.77-3.71 12.11-.98 3.43-3.36 10.22-3.36 11.69 0 .91 4.13 3.71 5.88 3.71 3.01 0 7.21-5.11 12.04-17.71l2.24-10.36 6.23-.35-3.01 11.06-2.45 15.82.35.56 7.35-2.59.63.56c-2.31 3.71-6.37 7.77-9.52 7.77-.56 0-4.41-1.75-4.41-2.17 0-1.4 1.82-8.68 3.22-13.37h-.7c-2.38 4.06-5.88 10.36-8.68 13.16-1.89 1.89-4.27 2.38-6.79 2.38-2.52 0-7.77-4.06-7.77-6.3 0-2.1.91-4.55 1.75-7.28 0 0 4.69-14.63 4.76-14.77l-.28-.49-7.7 3.15-.63-.63zm60.51-1.89c-.28.49-.63 1.26-.63 1.96 0 2.1.7 2.59 3.01 2.59 1.96 0 3.36-1.54 3.36-4.13 0-3.71-3.99-6.02-9.8-6.02-9.59 0-18.76 10.57-18.76 23.24 0 6.65 7 10.64 11.13 10.64 4.55 0 10.71-4.48 14.63-10.92l-.77-.7c-3.57 2.31-11.2 7.84-12.46 7.84-1.75 0-7.14-3.36-7.14-6.51 0-7.21 4.27-15.54 7.28-18.48.84-.91 1.75-1.47 2.59-1.47 2.03 0 6.72 1.05 7.56 1.96zm14.66-3.57l4.13-10.08h3.15l-2.38 10.43h8.61l-.91 4.41h-8.75l-4.76 21 .35.49 7.49-2.73.63.56c-2.24 3.71-5.95 7.7-9.17 7.7-.49 0-5.04-1.89-4.97-2.66 0-.21 4.69-20.86 5.25-23.24l-5.88-1.75-.35-2.1 7.56-2.03zM294.47 5.3c0-3.43-.77-4.55-4.13-4.55-3.5 0-4.34 1.12-4.34 4.41 0 3.43.91 4.69 4.34 4.69 3.43 0 4.13-1.26 4.13-4.55zm-2.24 35.91c-2.31 3.71-5.95 7.7-9.17 7.7-.49 0-5.11-2.03-4.97-2.66l7.07-24.85-.42-.49-7.42 2.59-.63-.63c2.31-3.71 6.44-7.77 9.66-7.77 1.61 0 5.04 2.03 4.9 2.52l-7.56 25.27.42.49 7.42-2.73.7.56zm25.72-6.93l-9.24 14.35-5.74-.21-2.24-27.09-.49-.42-7.28 2.59-.63-.63c2.31-3.71 6.09-7.77 9.31-7.77.56 0 3.99 1.61 3.99 2.03l2.38 26.67h.77l7.28-12.39c1.61-2.87 4.06-6.79 4.62-8.61l-4.13-2.59c.77-2.73 2.45-5.18 5.11-5.18 3.57 0 4.27 1.4 4.27 3.64 0 3.5-2.03 5.67-7.98 15.61zM331 36.66c-.07.56-.14 1.26-.14 2.03 0 3.15 5.39 6.51 7.14 6.51 1.26 0 8.89-5.53 12.46-7.84l.77.7c-3.92 6.44-10.08 10.92-14.63 10.92-4.13 0-11.13-3.99-11.13-10.64 0-12.67 9.17-23.24 18.62-23.24 5.81 0 9.73 3.15 9.73 6.37 0 5.32-4.41 6.16-22.82 15.19zm0-2.73h.7c12.39-6.65 16.73-8.61 16.73-10.99 0-1.82-3.57-4.27-7.49-4.27-.91 0-1.96.63-2.73 1.4-2.8 2.8-6.02 8.26-7.21 13.86zm81.96-10.71c0 7.49-2.52 14.14-6.72 18.41C402.11 45.69 397 48 385.66 48h-16.1l.7-5.04h5.46l.14-.28 4.27-32.27-.14-.28-5.88-2.17.42-3.71h16.94c15.19 0 21.49 7.14 21.49 18.97zm-5.95.91c0-9.73-4.2-14.7-16.45-15.05l-4.69-.14-4.27 33.46 6.3 1.26c11.55 0 19.11-6.72 19.11-19.53zM433.08 5.3c0-3.43-.77-4.55-4.13-4.55-3.5 0-4.34 1.12-4.34 4.41 0 3.43.91 4.69 4.34 4.69 3.43 0 4.13-1.26 4.13-4.55zm-2.24 35.91l-.7-.56-7.42 2.73-.42-.49 7.56-25.27c.14-.49-3.29-2.52-4.9-2.52-3.22 0-7.35 4.06-9.66 7.77l.63.63 7.42-2.59.42.49-7.07 24.85c-.14.63 4.48 2.66 4.97 2.66 3.22 0 6.86-3.99 9.17-7.7zm12.56-7.42c3.78 2.66 6.51 4.41 6.51 6.93 0 2.52-2.31 4.62-3.29 5.11-2.59.07-8.12-1.33-9.73-2.1.21-.28.63-1.54.63-2.38 0-2.1-.7-2.73-3.15-2.73-1.96 0-3.43 1.4-3.43 4.06 0 3.92 4.06 6.37 11.13 6.37 7.14 0 13.02-4.13 13.02-9.87 0-3.71-2.59-5.67-7.49-9.03-4.2-2.87-6.65-4.62-6.65-7.21-.07-2.31 1.61-3.99 2.52-4.55 2.59-.14 8.12 1.26 9.73 2.03-.21.28-.63 1.4-.63 2.24 0 2.1.63 2.73 3.08 2.73 2.03 0 3.36-1.4 3.36-4.06 0-3.64-4.62-6.51-10.99-6.51-7.63 0-12.25 4.55-12.18 9.8 0 3.78 2.59 5.53 7.56 9.17zm39.3-13.09c-.28.49-.63 1.26-.63 1.96 0 2.1.7 2.59 3.01 2.59 1.96 0 3.36-1.54 3.36-4.13 0-3.71-3.99-6.02-9.8-6.02-9.59 0-18.76 10.57-18.76 23.24 0 6.65 7 10.64 11.13 10.64 4.55 0 10.71-4.48 14.63-10.92l-.77-.7c-3.57 2.31-11.2 7.84-12.46 7.84-1.75 0-7.14-3.36-7.14-6.51 0-7.21 4.27-15.54 7.28-18.48.84-.91 1.75-1.47 2.59-1.47 2.03 0 6.72 1.05 7.56 1.96zm37.83 6.44c0 7.7-6.37 21.84-16.87 21.84-6.79 0-13.79-5.04-13.79-12.04 0-7.63 6.37-21.84 16.8-21.84 6.79 0 13.86 5.11 13.86 12.04zm-5.39-.56c0-4.69-6.51-7.63-10.57-7.63-3.01 0-6.58 6.72-8.19 12.46-.7 2.8-1.12 5.39-1.12 6.3 0 4.62 6.51 7.35 10.57 7.35 3.01 0 6.58-6.58 8.19-12.39.7-2.73 1.12-5.18 1.12-6.09zm43.15 14.84l-.63-.56-7.7 3.08-.21-.49c0-.14 4.69-14.77 4.69-14.77.91-2.66 1.82-5.18 1.82-7.21 0-2.31-5.32-6.37-7.84-6.37-2.52 0-4.9.49-6.79 2.38-2.8 2.8-6.23 9.17-8.68 13.23h-.7c1.4-4.69 3.22-12.04 3.22-13.44 0-.42-3.85-2.17-4.41-2.17-3.15 0-7.21 4.06-9.52 7.77l.63.63 7.42-2.59.28.49-2.45 15.89-3.01 11.06 6.23-.35 2.24-10.43c4.83-12.6 9.03-17.71 12.04-17.71 1.82 0 5.95 2.87 5.95 3.78 0 1.47-2.45 8.26-3.43 11.62-1.33 4.34-3.71 10.57-3.71 12.18 0 .49 4.9 1.47 5.39 1.47 3.22 0 6.93-3.78 9.17-7.49zm10.25-24.29l4.13-10.08h3.15l-2.38 10.43h8.61l-.91 4.41h-8.75l-4.76 21 .35.49 7.49-2.73.63.56c-2.24 3.71-5.95 7.7-9.17 7.7-.49 0-5.04-1.89-4.97-2.66 0-.21 4.69-20.86 5.25-23.24l-5.88-1.75-.35-2.1 7.56-2.03zm18.93 19.53c-.07.56-.14 1.26-.14 2.03 0 3.15 5.39 6.51 7.14 6.51 1.26 0 8.89-5.53 12.46-7.84l.77.7c-3.92 6.44-10.08 10.92-14.63 10.92-4.13 0-11.13-3.99-11.13-10.64 0-12.67 9.17-23.24 18.62-23.24 5.81 0 9.73 3.15 9.73 6.37 0 5.32-4.41 6.16-22.82 15.19zm0-2.73h.7c12.39-6.65 16.73-8.61 16.73-10.99 0-1.82-3.57-4.27-7.49-4.27-.91 0-1.96.63-2.73 1.4-2.8 2.8-6.02 8.26-7.21 13.86zm59.74 7.49l-.63-.56-7.7 3.08-.21-.49c0-.14 4.69-14.77 4.69-14.77.91-2.66 1.82-5.18 1.82-7.21 0-2.31-5.32-6.37-7.84-6.37-2.52 0-4.9.49-6.79 2.38-2.8 2.8-6.23 9.17-8.68 13.23h-.7c1.4-4.69 3.22-12.04 3.22-13.44 0-.42-3.85-2.17-4.41-2.17-3.15 0-7.21 4.06-9.52 7.77l.63.63 7.42-2.59.28.49-2.45 15.89-3.01 11.06 6.23-.35 2.24-10.43c4.83-12.6 9.03-17.71 12.04-17.71 1.82 0 5.95 2.87 5.95 3.78 0 1.47-2.45 8.26-3.43 11.62-1.33 4.34-3.71 10.57-3.71 12.18 0 .49 4.9 1.47 5.39 1.47 3.22 0 6.93-3.78 9.17-7.49zm10.25-24.29l4.13-10.08h3.15l-2.38 10.43h8.61l-.91 4.41h-8.75l-4.76 21 .35.49 7.49-2.73.63.56c-2.24 3.71-5.95 7.7-9.17 7.7-.49 0-5.04-1.89-4.97-2.66 0-.21 4.69-20.86 5.25-23.24l-5.88-1.75-.35-2.1 7.56-2.03zm25.86 5.67c.07-3.15-.84-4.34-4.27-4.34-3.5 0-4.41 1.19-4.41 4.34 0 3.22.91 4.48 4.41 4.48 3.43 0 4.27-1.26 4.27-4.48zm-4.9 21.84c0 3.15-.84 4.48-4.27 4.48-3.5 0-4.41-1.33-4.41-4.48 0-3.15.98-4.34 4.48-4.34 3.43 0 4.2 1.19 4.2 4.34z" 
+        />
+    <path class="logo-with-strap__accent" fill="#E86145"
+      
+      d="M549.272 255.76c0-8.928-6.768-14.4-14.976-14.4-8.208 0-14.976 5.472-14.976 14.4s6.768 14.4 14.976 14.4c8.208 0 14.976-5.472 14.976-14.4zM592.616 255.76c0-8.928-6.768-14.4-14.976-14.4-8.208 0-14.976 5.472-14.976 14.4s6.768 14.4 14.976 14.4c8.208 0 14.976-5.472 14.976-14.4zM635.96 255.76c0-8.928-6.768-14.4-14.976-14.4-8.208 0-14.976 5.472-14.976 14.4s6.768 14.4 14.976 14.4c8.208 0 14.976-5.472 14.976-14.4z"
+      />
+  </g>
+</symbol>
+      </svg>
+  
+  
+
+  
+
+  
+          <a href="#page" class="cover cover-article">
+
+
+
+        <style>
+          /* larger, high density screen and print */
+          @media  
+            (-webkit-min-device-pixel-ratio: 2) and (min-width: 960px), 
+            (min-resolution: 192dpi) and (min-width: 960px) 
+          { 
+            .cover-inner { 
+              background-image: url("/wp-content/uploads/2017/02/P1040197-2800x1872.jpg")
+            }
+          }
+          /* larger, low density screen */
+          /* small, high density screen */
+          @media  
+            only screen and (-webkit-max-device-pixel-ratio: 1.99) and (min-width: 960px), 
+            only screen and (max-resolution: 191dpi) and (min-width: 960px),
+            only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 959px), 
+            only screen and (min-resolution: 192dpi) and (max-width: 960px)
+          {
+            .cover-inner { 
+              background-image: url("/wp-content/uploads/2017/02/P1040197-1400x936.jpg")
+            }
+          }
+          /* small, low density screen */
+          @media  
+            only screen and (-webkit-max-device-pixel-ratio: 1.99) and (max-width: 960px), 
+            only screen and (max-resolution: 191dpi) and (max-width: 960px)
+          {
+            .cover-inner { 
+              background-image: url("/wp-content/uploads/2017/02/P1040197-1400x936.jpg")
+            }
+          }
+        </style>
+
+        
+        <div class="cover-inner">
+          <header class="cover-masthead">
+            <h1 class="cover-heading">Foggs Behaviour Model</h1>
+            <div class="cover-summary">
+              <div class="hidden-under-m">
+                <p>A model for describing when an individual will be suitably motivated to act.</p>
+              </div>
+              <div>Read More ...</div>
+              
+            </div>
+          </header>
+        </div><!-- cover-inner -->
+      </a><!-- cover -->
+    
+    <div class="min-vh-100 cf main-container" id="page">
+    
+  <header role="banner" class="page-hd">
+
+    <!-- menu button -->
+    <div class="right gutter-right">
+      <a class="nav-main__trigger js-nav-main__trigger uppercase track-loose" href="#" >
+        <span class="burger">
+          <span></span><span></span><span></span><span></span>          
+        </span>
+        Menu
+      </a>
+    </div>
+    
+    <!-- icon -->
+    <div class="branding left gutters category-design">
+      <a  class="logo__link block" style="max-width: 250px" href="/design/" rel="home">
+        <svg>
+          <use xlink:href="#logo-with-strap" />
+        </svg>         
+      </a>
+    </div><!-- branding -->
+
+
+    <!-- dropdown nav -->
+    <nav class="nav-main">
+
+      <ul>
+        <li class="h6 text-center mv0 gutters" style="color:#eee;">
+          <div class="clearfix width-s center">
+            <form class="block clearfix pv2 search" role="search" method="get" id="searchform" action="/">
+  <div>
+    <label class="screen-reader-text" for="s">Search for:</label>
+    <input class="button--search right relative uppercase track-loose" type="submit" id="searchsubmit" value="Search">
+    <div class="overflow-hidden">
+      <input class="fill" type="text" value="" name="s" id="s">
+    </div>
+  </div>
+</form>          </div>
+        </li>
+        <li class="h3 uppercase text-center link--heading-color border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 font-sans heavy  gutter-left gutter-right" href="/">
+            Home <span style="color:#e86146;"></span>
+          </a>
+        </li>
+        <li class="h3 uppercase text-center border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 gutter-left gutter-right font-sans heavy link--heading-color" href="/design">
+            Notes on Design<span style="color:#e86146;">...</span>
+          </a>
+        </li>
+        <ul class="nav-main__sub" style="background: #fafafa;margin-top:-1px;">
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/design/grices-maxims/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">Grice’s Maxims</div>
+      <div class="info">
+        <!-- <time datetime="Friday, November 1st, 2019" pubdate>Friday 1st November 2019</time> -->
+        <span class="tag">communication </span> - <span class="tag">voice ui </span> - <span class="tag">writing </span>      </div>
+    </a>            
+  </li>
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/design/advance-organiser/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">Advance Organiser</div>
+      <div class="info">
+        <!-- <time datetime="Thursday, October 31st, 2013" pubdate>Thursday 31st October 2013</time> -->
+        <span class="tag">instructional design </span> - <span class="tag">usability </span>      </div>
+    </a>            
+  </li>
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/design/grid-systems-workshop-with-mark-boulton/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">Grid Systems with Mark Boulton</div>
+      <div class="info">
+        <!-- <time datetime="Thursday, June 27th, 2013" pubdate>Thursday 27th June 2013</time> -->
+        <span class="tag">typography </span> - <span class="tag">ui </span>      </div>
+    </a>            
+  </li>
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/design/foggs-behaviour-model/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">Foggs Behaviour Model</div>
+      <div class="info">
+        <!-- <time datetime="Sunday, May 19th, 2013" pubdate>Sunday 19th May 2013</time> -->
+        <span class="tag">marketing </span> - <span class="tag">product design </span>      </div>
+    </a>            
+  </li>
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/design/dr-lionel-tigers-four-pleasure-model/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">Dr Lionel Tiger’s Four Pleasure Model</div>
+      <div class="info">
+        <!-- <time datetime="Thursday, November 17th, 2011" pubdate>Thursday 17th November 2011</time> -->
+        <span class="tag">frameworks </span> - <span class="tag">pleasure </span> - <span class="tag">product design </span>      </div>
+    </a>            
+  </li>
+    
+</ul>
+        <li class="h3 uppercase text-center border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 gutter-left gutter-right font-sans heavy link--heading-color" href="/photos">
+            Photos<span style="color:#e86146;font-weight: 900">_</span>
+          </a>
+        </li>
+                <li class="h3 uppercase text-center border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 gutter-left gutter-right font-sans heavy link--heading-color" href="/music">
+            What I’m Listening To<span style="color:#e86146;">»</span>
+          </a>
+        </li>
+                <li class="h3 uppercase text-center border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 gutter-left gutter-right font-sans heavy link--heading-color" href="/other">
+            Other Matters<span style="color:#e86146;">*</span>
+          </a>
+        </li>
+              </ul>
+    </nav><!-- nav-main -->  
+         
+  </header><!-- page-hd -->
+    <main class="page-bd">
+  
+
+
+<div class="cf wrap">
+  
+
+
+      
+    
+    <article class="gutters post type-post hentry">
+
+      <header>
+        <div class="info entry-meta size-s">
+          <a href="/tag/marketing/" rel="tag">marketing</a> - <a href="/tag/product-design/" rel="tag">product design</a>        </div>
+        <h1 class="mt0">
+          Foggs Behaviour Model        </h1>
+        <time class="info" datetime="Sunday, May 19th, 2013" pubdate>Sunday, 5th May 2013</time>
+      </header>
+
+      <footer class="">
+        <div>
+          <!-- Posted on  --> 
+        </div> 
+      </footer>   
+
+            
+      <div class="cf entry-content">
+        <h2 id="what-is-it"><a href="#what-is-it" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>What is it?</h2>
+<p class="standfirst">A model for describing when an individual will be suitably motivated to act.</p>
+<p>We encounter many triggers to action. Sometimes we act, and heed the call to action, sometimes we don&#8217;t. This framework attempts to describe the circumstances under which an individual may be motivated to enact a behaviour.</p>
+<p>The Fogg Behaviour Model was published by Dr. BJ Fogg in 2009 and revised in 2010. Dr Fogg founded the Persuasive Technology Lab at Stanford University, where he directs research in “Behaviour Design”: a systematised way of changing human behaviour.</p>
+<h2 id="the-model"><a href="#the-model" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>The model</h2>
+<p><em class="formula" style="font-size: 6em;">B=mat</em></p>
+<p>In a given context a behaviour <em class="formula">(B)</em> occurs when there is sufficient <a href="#motivation">motivation <em class="formula">(m)</em></a>, a <a href="#trigger">trigger <em class="formula">(t)</em></a> is experienced and they have sufficient <a href="#ability">ability <em class="formula">(a)</em></a>.  To put it another way: The individual needs to be sufficiently motivated to act when prompted — if the cost is not too great.</p>
+<h3 id="motivation">Motivation</h3>
+<p>The factors that may cause an individual to act.</p>
+<ul>
+<li>Pleasure / Pain</li>
+<li>Hope / Fear</li>
+<li>Social acceptance / Rejection</li>
+</ul>
+<p>Levels of motivation are not constant and come in waves: People are keener to diet having watched an inspiring programme about a new diet (hope) rather than when they are grocery shopping a hangover (pain). Peaks of motivation are rare and present a great opportunity to promote future engagement.</p>
+<h3 id="trigger">Trigger</h3>
+<p>Prompts an action. The action prompted should be tailored to the ease with which the user can take it and their level of motivation.</p>
+<ul>
+<li><strong>High motivation : Low ability.</strong> Provide a lightweight way for the individual to engage with you at some level. They may be short of time but keen to try your service so maybe get them to sign up for a newsletter / launch update email.</li>
+<li><strong>Low motivation : High ability.</strong> Provide a high level of incentive/motivation to get your potential user over the hump. Maybe a bit of social proof combined with a time limited offer will encourage action. The greater the incentive the more you can potentially ask of the user.</li>
+<li><strong>High motivation : High ability.</strong> If we feel that the user is be highly motivated this is the time to make a big ask that will structure future behaviour, or reduce the barriers to it. This could be something like setting up and personalising your account, arranging an appointment or similar.</li>
+</ul>
+<h3 id="ability">Ability</h3>
+<p>The scarcity or abundance of the following resources in the given context:</p>
+<ul>
+<li>Time</li>
+<li>Money</li>
+<li>Physical Effort</li>
+<li>Mental Effort</li>
+<li>Social Deviance – Is this a socially accepted behaviour?</li>
+<li>Routine – Doing something for the first time will have some attendant cost in terms of time to get set-up, getting your head around it etc.</li>
+</ul>
+<h2 id="examples"><a href="#examples" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>Examples</h2>
+<h3 id="less-motivation-greater-ability"><a href="#less-motivation-greater-ability" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>Less Motivation : Greater Ability</h3>
+<p>For example Jenny is a designer and she sees some new design software that will be released soon. The software looks like it has potential, and may prove useful. She isn&#8217;t hugely motivated however and is undecided about whether to invest time and attention learning more about it. Because the effort involved in being notified when it launches very low – just enter your email address – she decides to go ahead and give them her email.</p>
+<p>The marketers have succeeded despite not being able to offer any great motivation because they made the cost of action so low. If they had asked Jenny to fill out a longer form they may not have succeeded because the cost in terms of cognitive effort and time required may have tipped the scales too far for the motivation to have been sufficient.</p>
+<h3 id="more-motivation-less-ability"><a href="#more-motivation-less-ability" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>More Motivation : Less Ability</h3>
+<p>Company X has a caption competition running on their website; the prize is an iPad. In order to to enter a competitor must like Company X on Facebook and then fill out an entry form that requires you to think up a witty caption.</p>
+<p>The cost is quite high:</p>
+<ul>
+<li>Time: It requires a at least a couple of minutes to be invested in the process, more if a witty caption does not spring to mind.</li>
+<li>Mental effort: You cannot simply click a button or just enter an email address. In order to win the competition a degree of inventiveness will be required.</li>
+<li>Social Deviance: You will be publicly liking Company X. This may well appear in your friends timelines. Will you lose friends or respect by spamming them with a corporate like?</li>
+</ul>
+<p>If the trigger catches you at the right time the motivation may be high enough to persuade you to stop what you were doing, risk social stigma, and put some thought into winning this valuable prize.</p>
+<h2 id="further-reading-viewing"><a href="#further-reading-viewing" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>Further reading &amp; viewing</h2>
+<ul>
+<li><a href="http://youtu.be/_0wHvrLK6AA?t=24m35s">Video: BJ Fogg at PARC on how to really change your habits</a></li>
+<li><a href="http://www.behaviormodel.org/index.html">behaviourmodel.org</a></li>
+<li><a href="http://captology.stanford.edu/">Stanford Persuasive Technology Lab</a></li>
+</ul>
+              </div>
+
+      
+            
+      <nav class="cf border-top border-bottom grey-10 mt4 pv2">
+        <ul class="navigation flex post-suggestion">
+          <li class="post-suggestion__older left pr1 border-right u1of2 flex">
+            <a href="/design/dr-lionel-tigers-four-pleasure-model/" rel="prev"><span class="info block">&larr; Older</span> <span class="visually-hidden-under-m bold">Dr Lionel Tiger’s Four Pleasure Model</span></a>          </li> 
+          <li class="post-suggestion__newer relative right pl1 u1of2 flex text-right">
+            <div class="block fill">
+              <a href="/design/grid-systems-workshop-with-mark-boulton/" rel="next"><span class="info block">Newer &rarr;</span> <span class="visually-hidden-under-m bold">Grid Systems with Mark Boulton</span> </a>              
+            </div>
+
+          </li>
+        </ul>        
+      </nav>
+
+      <style>
+        .post-suggestion__newer a {
+          float: right;
+        }
+      </style>
+      
+      <!-- <nav class="cf entry-comments">
+              </nav> -->
+
+    </article>
+
+    
+</div><!-- cf wrap -->
+
+        
+  
+      </main><!-- page-bd -->
+    </div><!-- main-container -->
+
+    <footer role="contentinfo" class="page-ft cf pv5 mt5 gutters" style="background:#fff">
+      <div class="wrap">
+        &copy;2020 <a class="" href="/">Paul Davison</a> 
+         - <a class="grey-70 is-active" href="/design">Design</a>
+         - <a class="grey-70" href="/photos">Photos</a> 
+         - <a class="grey-70" href="/music">Music</a> 
+         - <a class="grey-70" href="/other">Other Matters</a> 
+         <!-- <a class="right button" style="color:white;margin-top: -12px" href="#page" title="Jump back to top">&#8593; TOP</a> -->    
+      </div><!-- wrap -->
+    </footer>
+
+  
+  <noscript id="deferred-styles">
+    <link rel="stylesheet" type="text/css" href="/wp-content/themes/photo/stylesheets-1-0-1/css/style.css"/>
+      </noscript>
+  <script>
+    var loadDeferredStyles = function() {
+      var addStylesNode = document.getElementById("deferred-styles");
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+  </script>
+  
+  <!-- wp_footer -->
+  <script type='text/javascript' src='/wp-content/plugins/ab-audio-sync-master/libs/device/device.min.js?ver=5.5.3' id='device-js-js'></script>
+<script type='text/javascript' src='/wp-content/plugins/ab-audio-sync-master/libs/howler/howler.core.min.js?ver=5.5.3' id='howler-js-js'></script>
+<script type='text/javascript' src='/wp-content/themes/photo/javascripts-1-0-1/min/general.js' id='jquery-js'></script>
+<script type='text/javascript' src='/wp-content/plugins/ab-audio-sync-master/ab-audio-sync.js?ver=5.5.3' id='ab-audio-sync-js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=5.5.3' id='wp-embed-js'></script>
+  <!-- / wp_footer -->
+  
+  
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-99105445-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

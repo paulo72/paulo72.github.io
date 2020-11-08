@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>instructional design &#8211; Actino</title>
+	<atom:link href="/tag/instructional-design/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Thu, 18 May 2017 21:06:24 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.3</generator>
+	<item>
+		<title>Advance Organiser</title>
+		<link>/design/advance-organiser/</link>
+					<comments>/design/advance-organiser/#respond</comments>
+		
+		<dc:creator><![CDATA[Mr Administrator]]></dc:creator>
+		<pubDate>Thu, 31 Oct 2013 23:51:30 +0000</pubDate>
+				<category><![CDATA[Design]]></category>
+		<category><![CDATA[instructional design]]></category>
+		<category><![CDATA[usability]]></category>
+		<guid isPermaLink="false">http://www.paulo72.com/?p=596</guid>
+
+					<description><![CDATA[<p>‘A brief abstract of a concept that is introduced first, before a full explanation.’</p>
+<p>The post <a rel="nofollow" href="/design/advance-organiser/">Advance Organiser</a> appeared first on <a rel="nofollow" href="/">Actino</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p class="standfirst">An Advance Organiser is a brief outline or abstract of a concept that is introduced prior to more elaborate explanations.</p>
+<p>It provides the learner with a descriptive model or schema of the information that is to be presented. This helps the learner to contextualise and file away the information that follows.<br />
+The name was coined by <a href="http://en.wikipedia.org/wiki/David_Ausubel">David Ausubel</a>, an Educational Psychologist from New York.</p>
+<h2 id="how-they-work"><a href="#how-they-work" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>How They Work</h2>
+<p>Ausubel believed that <q cite="http://www.learningandteaching.info/teaching/advance_organisers.htm#ixzz2Rf4rMboC">the most important determinant of learning is what the learner already knows</q>. Therefore, it is more difficult to describe something that is new, novel or outside of your learner&#8217;s experience.</p>
+<p>One of the challenges of creating innovative apps and services is that we need to explain to the user how to use them in an easily understandable and memorable fashion.</p>
+<h2 id="two-types-of-advance-organiser"><a href="#two-types-of-advance-organiser" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>Two Types of Advance Organiser</h2>
+<h3 id="1-comparative-advance-organiser"><a href="#1-comparative-advance-organiser" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>1. Comparative Advance Organiser</h3>
+<p>Comparing the subject to another subject that the learner is already familiar with. Useful for for when the learners have some knowledge of similar things that can be built upon.</p>
+<h4 class="uppercase" style="color: #998f52; letter-spacing: 1px; font-size: 14px;" class="uppercase" style="color: #998f52; letter-spacing: 1px; font-size: 14px;" id="example"><a href="#example" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>Example</h4>
+<p><q>VizEat is like Airbnb, but for restaurants.</q></p>
+<p>Comparative Advance Organisers are often based on analogy and metaphor.</p>
+<h3 id="2-expository-advance-organiser"><a href="#2-expository-advance-organiser" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>2. Expository Advance Organiser</h3>
+<p>Useful for for when the learners have little or no knowledge of the topic and are unlikely to already have sufficient points of reference for a comparison to suffice.</p>
+<h4 class="uppercase" style="color: #998f52; letter-spacing: 1px; font-size: 14px;" class="uppercase" style="color: #998f52; letter-spacing: 1px; font-size: 14px;" id="example"><a href="#example" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>Example</h4>
+<p>On the Design Council&#8217;s website they have a page about <a href="http://www.designcouncil.org.uk/designprocess">design process</a>. Prior to going into detail about the various steps of the process they provide an overview diagram of the process accompanied by a brief description. As this advance organiser is presented in both linguistic and visual form it should be better for recognition and recall than if only one were used according to <a href="http://www.instructionaldesign.org/theories/dual-coding.html">Dual Coding theory</a>.</p>
+<div id="attachment_903" class="wp-caption alignnone" style="max-width: 590px;"><a href="http://www.designcouncil.org.uk/designprocess"><img loading="lazy" class="size-full wp-image-903" src="/wp-content/uploads/2011/10/DoubleDiamond_580.jpg" alt="Divided into four distinct phases, Discover, Define, Develop and Deliver, it maps the divergent and convergent stages of the design process, showing the different modes of thinking that designers use." width="580" height="367" srcset="/wp-content/uploads/2011/10/DoubleDiamond_580.jpg 580w, /wp-content/uploads/2011/10/DoubleDiamond_580-300x190.jpg 300w" sizes="(max-width: 580px) 100vw, 580px" /></a></p>
+<p class="wp-caption-text">The “Double Diamond” Design Process model is divided into four distinct phases: Discover, Define, Develop and Deliver, it maps the divergent and convergent stages of the design process, showing the different modes of thinking that designers use.</p>
+</div>
+<hr />
+<h2 id="more-on-advance-organisers"><a href="#more-on-advance-organisers" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>More on Advance Organisers</h2>
+<p><a href="http://www.universalprinciplesofdesign.com/">Universal Principals of Design</a> (2003-2010) <em>Lidwell, Holden, Butler</em><br />
+<a href="http://www.learningandteaching.info/teaching/advance_organisers.htm">http://www.learningandteaching.info/teaching/advance_organisers.htm</a><br />
+<a href="http://www.learningandteaching.info/teaching/advance_organisers.htm">http://www.learningandteaching.info/teaching/advance_organisers.htm</a><br />
+<a href="http://www.glnd.k12.va.us/resources/graphicalorganizers/">http://www.glnd.k12.va.us/resources/graphicalorganizers/</a> [FUGLY warning]
+<p>The post <a rel="nofollow" href="/design/advance-organiser/">Advance Organiser</a> appeared first on <a rel="nofollow" href="/">Actino</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/design/advance-organiser/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

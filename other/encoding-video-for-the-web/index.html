@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en-GB" prefix="og: http://ogp.me/ns#" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>var htmlElement = document.getElementsByTagName('html')[0]; htmlElement.className = 'has-js';</script>
+
+  <!-- Critical, over-the-fold styles -->
+    <style>
+    
+    body{margin:0;padding:0;line-height:1.25;font-size:18px;box-sizing:border-box;overflow-x:hidden;overflow-y:scroll;font-family:"freight-text-pro","Georgia",Times,serif,"Arial Unicode MS","DejaVu Sans","Lucida Sans Unicode","Segoe UI Symbol","FreeSans","Meiryo UI","MS UI Gothic","Everson Mono Unicode",Meiryo,"MS Gothic","MS Mincho","MS PGothic","MS PMincho","Meslo LG L","Meslo LG L DZ","Meslo M L","Meslo M L DZ","Meslo S L","Meslo S L DZ","Symbola","DejaVu Sans Condensed","DejaVu Sans Mono",Code2000,"Everson Mono",Quivira,sans-serif;box-sizing:border-box;background:#f9f9f8}.cover{display:block !important;height:100vh;overflow:hidden;position:relative;z-index:100;left:0;top:0;bottom:0;right:0;cursor:pointer}.cover-inner{border:30px solid #fff;position:absolute;top:0;left:0;width:100%;height:100%;bottom:0;display:block;margin:0 auto;background-size:cover;background-position:center;box-sizing:border-box}.cover-inner--archive__logo-wrap{width:38%;min-width:200px;top:65px;position:relative;left:-6px}.cover-inner--archive__logo-wrap svg{width:100%;color:#fff}.cover-masthead{position:absolute;left:0;bottom:0;right:0;overflow:hidden;z-index:2;text-shadow:1px 2px 0 rgba(0,0,0,0.2);padding:0 18px}.cover-masthead span{background-color:rgba(0,0,0,0.4)}@media only screen and (min-width: 701px){.cover-masthead{padding:30px 35px}}@media only screen and (min-width: 951px){.cover-masthead{padding:30px 35px;top:0;right:auto;max-width:38%}}.cover-heading{font-family:"freight-sans-pro",-apple-system,BlinkMacSystemFont,"avenir next",avenir,helvetica,"helvetica neue",ubuntu,roboto,noto,"segoe ui","Arial Unicode MS","DejaVu Sans","Lucida Sans Unicode","Segoe UI Symbol","FreeSans","Meiryo UI","MS UI Gothic","Everson Mono Unicode",Meiryo,"MS Gothic","MS Mincho","MS PGothic","MS PMincho","Meslo LG L","Meslo LG L DZ","Meslo M L","Meslo M L DZ","Meslo S L","Meslo S L DZ","Symbola","DejaVu Sans Condensed","DejaVu Sans Mono",Code2000,"Everson Mono",Quivira,sans-serif;color:#fff;font-size:36px;line-height:0.9;text-transform:uppercase;font-weight:900;left:-3px;position:relative}@media only screen and (min-width: 701px){.cover-heading{font-size:48px}}@media only screen and (min-width: 951px){.cover-heading{font-size:60px}}body.category-photos .cover-heading:after{width:30px;height:6px;top:5px;left:5px;background:#E86146;position:relative;content:"";display:inline-block;box-shadow:1px 2px 0 rgba(0,0,0,0.2)}@media only screen and (min-width: 701px){body.category-photos .cover-heading:after{width:42px;height:9px;top:8px}}@media only screen and (min-width: 951px){body.category-photos .cover-heading:after{width:60px;height:12px;top:12px}}.category-design .cover-heading:after{content:'...'}.category-music .cover-heading:after{content:'»';left:0.2em;position:relative;top:-0.05em}.category-other .cover-heading:after{content:'*'}.category-design .cover-heading:after,.category-music .cover-heading:after,.category-other .cover-heading:after{color:#e86146}.cover-summary{font-family:"freight-micro-pro","freight-text-pro","Georgia",Times,serif,"Arial Unicode MS","DejaVu Sans","Lucida Sans Unicode","Segoe UI Symbol","FreeSans","Meiryo UI","MS UI Gothic","Everson Mono Unicode",Meiryo,"MS Gothic","MS Mincho","MS PGothic","MS PMincho","Meslo LG L","Meslo LG L DZ","Meslo M L","Meslo M L DZ","Meslo S L","Meslo S L DZ","Symbola","DejaVu Sans Condensed","DejaVu Sans Mono",Code2000,"Everson Mono",Quivira,sans-serif;font-style:italic;color:#fff;font-size:18px;padding:1em 0}@media only screen and (min-width: 701px){.cover-summary{font-size:24px}}@media only screen and (min-width: 951px){.cover-summary{font-size:30px}}
+/*# sourceMappingURL=over-the-fold--cover-image.css.map */  
+
+    @keyframes fade{ 0% {opacity:0;} 100% {opacity:1;} }
+
+    @keyframes fadeAndHide{ 0% {opacity:1;} 99% {opacity:0;} 100% {display: none; height:0; width:0; overflow: hidden;} }
+
+
+    /* Loading logo: size and position */
+      .loader-logo svg {
+        color: #000;
+        width: 38% !important;
+        max-width: 200px !important;
+        top: 50%;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        animation:fadeAndHide 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.5s 1 normal forwards;     
+      }
+
+
+    /* Home Page: Content: animation */
+      body.home .primary-content {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.3s 1 normal forwards;
+      }
+
+      body.search div, body.search footer,
+      body.error404 div, body.error404 footer {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.6s 1 normal forwards;
+      } 
+
+    /*  Archive, 
+        Single,
+        Page: 
+
+        content: animation 
+    */
+      body.single .page-hd,
+      body.single .page-bd,
+      body.single .page-ft,
+      body.archive .page-hd,
+      body.archive .page-bd,
+      body.archive .page-ft {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.9s 1 normal forwards;
+      } 
+
+    /* Archive: cover: animation */
+      body.archive .cover-inner {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        /*animation:fade 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.3s 1 normal forwards;*/
+        animation:fade 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.7s 1 normal forwards;
+      }
+
+    /* Single: cover: animation */
+      body.single .cover-inner {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        /*animation:fade 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s 1 normal forwards;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s 1 normal forwards;
+      }
+
+    /* Archive: cover: animation */
+    /*body.archive .cover__logo-wrap .logo-with-strap {
+      animation:fade 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.3s 1 reverse forwards;     
+    }*/
+
+  </style>  
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="//use.typekit.net">
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'kck4dwb',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+  <!-- Icons -->
+  
+<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/photo/favicons/other/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/photo/favicons/other/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/themes/photo/favicons/other/favicon-16x16.png">
+<link rel="manifest" href="/wp-content/themes/photo/favicons/other/manifest.json">
+<link rel="mask-icon" href="/wp-content/themes/photo/favicons/other/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/wp-content/themes/photo/favicons/other/favicon.ico">
+<meta name="msapplication-config" content="/wp-content/themes/photo/favicons/other/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+  <!-- WP Head stuff -->
+  <title>Encoding Video For The Web - Actino</title>
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v4.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="/other/encoding-video-for-the-web/" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Encoding Video For The Web - Actino" />
+<meta property="og:description" content="How to encode mp4 video files that work with HTML5 and Flash in Android, iOS, IE9 and the rest." />
+<meta property="og:url" content="http://actino.local/other/encoding-video-for-the-web/" />
+<meta property="og:site_name" content="Actino" />
+<meta property="article:tag" content="Code" />
+<meta property="article:section" content="Other" />
+<meta property="article:published_time" content="2013-09-13T14:39:56+01:00" />
+<meta property="article:modified_time" content="2017-05-17T23:21:52+01:00" />
+<meta property="og:updated_time" content="2017-05-17T23:21:52+01:00" />
+<meta property="og:image" content="http://actino.local/wp-content/uploads/2017/02/P1010229.jpg" />
+<meta property="og:image:width" content="4439" />
+<meta property="og:image:height" content="2497" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="How to encode mp4 video files that work with HTML5 and Flash in Android, iOS, IE9 and the rest." />
+<meta name="twitter:title" content="Encoding Video For The Web - Actino" />
+<meta name="twitter:image" content="http://actino.local/wp-content/uploads/2017/02/P1010229.jpg" />
+<meta property="DC.date.issued" content="2013-09-13T14:39:56+01:00" />
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Actino &raquo; Encoding Video For The Web Comments Feed" href="/other/encoding-video-for-the-web/feed/" />
+<link rel='stylesheet' id='wp-block-library-css'  href='/wp-includes/css/dist/block-library/style.min.css?ver=5.5.3' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="/wp-json/" /><link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/1021" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='/?p=1021' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fother%2Fencoding-video-for-the-web%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fother%2Fencoding-video-for-the-web%2F&#038;format=xml" />
+  <!-- Art Direction Styles -->
+
+
+
+</head>
+
+
+
+<body class="post-template-default single single-post postid-1021 single-format-standard  category-other" id="top">
+  <!-- Get SVG as symbol so we can use in several places without adding to page weight -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="logo-with-strap" class="logo-with-strap"  viewbox="0 0 677 270">
+  <title>
+    Other Matters
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <path class="logo-with-strap__main" fill="currentColor"
+      
+      d="M97.376 47.64c0 29.376-21.456 47.52-48.384 47.52S1.04 79.608 1.04 48.216C1.04 18.84 22.496.84 49.424.84s47.952 15.408 47.952 46.8zm-28.512.576c0-14.832-6.768-25.056-19.872-25.056s-19.44 10.08-19.44 24.48c0 14.832 6.768 25.2 19.872 25.2 12.96 0 19.44-10.224 19.44-24.624zm112.868-22.032V3h-82.8v23.184h27.216V93h28.368V26.184h27.216zM274.152 93V3h-28.368v32.832h-29.376V3H188.04v90h28.368V59.448h29.376V93h28.368zm81.476 0V70.968h-42.624V58.872H346.7V36.84h-33.696V25.032h42.624V3h-70.272v90h70.272zm37.124-26.64V93h-28.368V3h40.752c25.056 0 38.304 11.52 38.304 29.52 0 11.376-5.616 21.168-17.568 25.92L448.192 93H416.8l-16.128-27.36-7.92.72zm-.576-20.16l9.792-.144c8.64-.864 12.096-4.176 12.096-11.52 0-6.624-3.888-9.936-14.112-9.936h-7.776v21.6zM91.328 193h26.64l-3.168-90H74.48l-14.112 64.224L46.256 103H5.504l-3.168 90H28.4l.288-66.24 15.84 64.8h30.816l15.696-65.088.288 66.528zm94.724-90l30.384 90h-28.08l-5.616-16.848h-30.528L146.884 193h-27.936l30.96-90h36.144zm-8.784 51.84l-9.504-31.536-10.08 31.536h19.584zm109.268-28.656H259.32V193h-28.368v-66.816h-27.216V103h82.8v23.184zm78.472 0h-27.216V193h-28.368v-66.816h-27.216V103h82.8v23.184zM441.588 193v-22.032h-42.624v-12.096h33.696V136.84h-33.696v-11.808h42.624V103h-70.272v90h70.272zm37.124-26.64V193h-28.368v-90h40.752c25.056 0 38.304 11.52 38.304 29.52 0 11.376-5.616 21.168-17.568 25.92l22.32 34.56H502.76l-16.128-27.36-7.92.72zm-.576-20.16l9.792-.144c8.64-.864 12.096-4.176 12.096-11.52 0-6.624-3.888-9.936-14.112-9.936h-7.776v21.6zm94.436 26.064c-11.376 0-23.472-3.6-33.12-8.352l-4.32 23.184c8.208 4.464 22.176 8.064 37.008 8.064 26.064 0 39.6-12.384 39.6-30.384 0-17.28-14.976-23.472-29.232-27.504-8.928-2.448-17.568-4.464-17.568-8.64 0-3.6 3.168-4.752 8.64-4.752 9.36 0 21.6 3.312 31.68 8.208l4.464-23.184c-8.64-4.32-20.304-7.92-36.288-7.92-24.624 0-36.864 11.52-36.864 29.088 0 18.288 16.704 24.624 29.952 28.368 10.512 3.024 16.848 4.32 16.848 8.64 0 3.744-4.32 5.184-10.8 5.184z"/>
+    <path class="logo-with-strap__accent" fill="#E86145" 
+      
+      d="M639.072 137.992l1.584.432.288 23.904 20.592-6.624-13.824-19.584.864-1.44 22.608 7.344V120.28l-22.608 7.2-1.008-1.152 14.256-19.44-20.448-6.768-.864 23.76-1.44.576-13.968-19.008-12.672 17.424 22.32 7.632v1.584l-22.32 7.776 12.528 17.424"/>
+    <path class="logo-with-strap__strap" fill="#998F52"
+
+      d="M25.055 227.115v-1.69l-4.29-1.95-7.02 2.21-.78-1.04 4.485-6.045-.52-4.615-1.69-.585-3.12 3.445-.13 7.41-1.235.39-4.29-5.98-4.81-1.04-1.04 1.43 2.6 4.03 6.825 2.34v1.43L3.15 229l-2.34 4.225 1.04 1.43 4.615-1.105 4.29-5.785 1.105.325.13 7.41 3.12 3.51 1.69-.455.455-4.68-4.29-6.045.78-.975 7.15 2.21 4.16-1.95zM88.03 255l.454-3.445-5.46-2.015-.065-.26 3.51-29.965.064-.26h5.2l.585-4.68H78.993l-15.99 33.93H61.9l-6.11-33.93H41.683l-.39 3.445 5.46 2.015.13.26-4.615 29.965-.13.26h-5.07l-.586 4.68h15.99l.455-3.51-5.46-1.95-.066-.26 3.64-29.25h1.105l6.044 33.67h6.24l16.445-33.67h1.104l-4.42 30.03-.13.26H72.43l-.586 4.68H88.03zm27.62-23.27h.39l2.6-6.89 5.134-.065-4.16 10.53-2.665 14.69.26.52 6.824-2.405.585.52c-2.08 3.445-5.916 7.215-8.84 7.215-.52 0-4.096-1.625-4.096-2.015 0-1.3 1.56-7.54 3.445-14.17h-.716c-5.46 8.905-10.075 16.25-14.365 16.25-4.03 0-7.41-3.9-7.41-7.995 0-6.955 2.6-14.82 7.41-19.63 1.95-1.95 4.874-3.185 7.734-3.185 3.965 0 6.565 2.405 7.865 6.63zm-.91 1.43c0-.845-5.396-4.095-7.67-4.095-1.69 0-3.186.455-3.966 1.3-2.795 2.73-5.59 12.155-5.59 16.965 0 2.34 3.965 3.835 5.59 3.835 1.43 0 7.8-8.71 10.66-14.885.585-1.235.975-2.47.975-3.12zm42.504-6.695L140.28 253.96l-.326.91c-3.9 10.4-7.085 14.625-13.455 14.625-3.316 0-5.33-1.56-5.33-4.745 0-1.56.714-2.47 2.73-2.47 1.754 0 3.77.91 5.264 4.42l1.625-.52c.454-.91 6.174-10.66 6.174-10.66l-3.12-.585-1.95-24.635-.26-.455-6.89 2.405-.585-.585c2.144-3.445 5.654-7.215 8.644-7.215.52 0 3.705 1.495 3.705 1.885l1.82 25.025h.844l13.715-27.105 4.354 2.21zm47.05 22.425l-.586-.52-7.15 2.86-.195-.455c0-.13 4.355-13.715 4.355-13.715.845-2.47 1.69-4.81 1.69-6.695 0-2.145-4.94-5.915-7.28-5.915s-4.55.455-6.305 2.21c-2.6 2.6-5.785 8.515-8.06 12.285h-.65c1.3-4.355 2.99-11.18 2.99-12.48 0-.39-3.575-2.015-4.095-2.015-2.925 0-6.695 3.77-8.84 7.215l.585.585 6.89-2.405.26.455-2.275 14.755-2.795 10.27 5.785-.325 2.08-9.685c4.485-11.7 8.385-16.445 11.18-16.445 1.69 0 5.525 2.665 5.525 3.51 0 1.365-2.275 7.67-3.185 10.79-1.235 4.03-3.445 9.815-3.445 11.31 0 .455 4.55 1.365 5.005 1.365 2.99 0 6.435-3.51 8.515-6.955zm31.324-13.26c0 7.15-5.915 20.28-15.665 20.28-6.305 0-12.805-4.68-12.805-11.18 0-7.085 5.915-20.28 15.6-20.28 6.305 0 12.87 4.745 12.87 11.18zm-5.005-.52c0-4.355-6.045-7.085-9.815-7.085-2.795 0-6.11 6.24-7.605 11.57-.65 2.6-1.04 5.005-1.04 5.85 0 4.29 6.045 6.825 9.815 6.825 2.795 0 6.11-6.11 7.605-11.505.65-2.535 1.04-4.81 1.04-5.655zm15.01-8.775l-7.02 1.885.324 1.95 5.46 1.625c-.52 2.21-4.875 21.385-4.875 21.58-.065.715 4.16 2.47 4.615 2.47 2.99 0 6.435-3.705 8.515-7.15l-.585-.52-6.955 2.535-.325-.455 4.42-19.5h8.125l.845-4.095h-7.995l2.21-9.685h-2.925l-3.835 9.36zm50.43 5.395h.39l2.6-6.89 5.134-.065-4.16 10.53-2.665 14.69.26.52 6.825-2.405.585.52c-2.08 3.445-5.915 7.215-8.84 7.215-.52 0-4.095-1.625-4.095-2.015 0-1.3 1.56-7.54 3.445-14.17h-.715c-5.46 8.905-10.075 16.25-14.365 16.25-4.03 0-7.41-3.9-7.41-7.995 0-6.955 2.6-14.82 7.41-19.63 1.95-1.95 4.875-3.185 7.735-3.185 3.965 0 6.565 2.405 7.865 6.63zm-.91 1.43c0-.845-5.396-4.095-7.67-4.095-1.69 0-3.186.455-3.966 1.3-2.795 2.73-5.59 12.155-5.59 16.965 0 2.34 3.965 3.835 5.59 3.835 1.43 0 7.8-8.71 10.66-14.885.585-1.235.975-2.47.975-3.12zm32.428-3.51c-.26.455-.584 1.17-.584 1.82 0 1.95.65 2.405 2.795 2.405 1.82 0 3.12-1.43 3.12-3.835 0-3.445-3.704-5.59-9.1-5.59-8.904 0-17.42 9.815-17.42 21.58 0 6.175 6.5 9.88 10.336 9.88 4.225 0 9.945-4.16 13.585-10.14l-.714-.65c-3.315 2.145-10.4 7.28-11.57 7.28-1.625 0-6.63-3.12-6.63-6.045 0-6.695 3.965-14.43 6.76-17.16.78-.845 1.625-1.365 2.405-1.365 1.886 0 6.24.975 7.02 1.82zm13.906-3.315l-7.02 1.885.325 1.95 5.46 1.625c-.52 2.21-4.874 21.385-4.874 21.58-.065.715 4.16 2.47 4.615 2.47 2.99 0 6.436-3.705 8.516-7.15l-.585-.52-6.954 2.535-.325-.455 4.42-19.5h8.126l.845-4.095h-7.994l2.21-9.685h-2.925l-3.834 9.36zm12.605 5.07l.586.585 7.15-2.925.26.455c-.065.13-4.42 13.715-4.42 13.715-.78 2.535-1.625 4.81-1.625 6.76 0 2.08 4.876 5.85 7.216 5.85s4.55-.455 6.305-2.21c2.6-2.6 5.85-8.45 8.06-12.22h.65c-1.3 4.355-2.99 11.115-2.99 12.415 0 .39 3.576 2.015 4.096 2.015 2.925 0 6.695-3.77 8.84-7.215l-.585-.52-6.824 2.405-.325-.52 2.276-14.69 2.795-10.27-5.784.325-2.08 9.62c-4.485 11.7-8.385 16.445-11.18 16.445-1.625 0-5.46-2.6-5.46-3.445 0-1.365 2.21-7.67 3.12-10.855 1.235-4.03 3.445-9.75 3.445-11.245 0-.52-4.55-1.43-5.004-1.43-2.99 0-6.435 3.575-8.515 6.955zm58.3.325h.39l2.6-6.89 5.135-.065-4.16 10.53-2.665 14.69.26.52 6.825-2.405.585.52c-2.08 3.445-5.915 7.215-8.84 7.215-.52 0-4.095-1.625-4.095-2.015 0-1.3 1.56-7.54 3.445-14.17h-.715c-5.46 8.905-10.075 16.25-14.365 16.25-4.03 0-7.41-3.9-7.41-7.995 0-6.955 2.6-14.82 7.41-19.63 1.95-1.95 4.875-3.185 7.735-3.185 3.965 0 6.565 2.405 7.865 6.63zm-.91 1.43c0-.845-5.395-4.095-7.67-4.095-1.69 0-3.185.455-3.965 1.3-2.795 2.73-5.59 12.155-5.59 16.965 0 2.34 3.965 3.835 5.59 3.835 1.43 0 7.8-8.71 10.66-14.885.585-1.235.975-2.47.975-3.12zm23.85 15.535c-2.08 3.445-5.59 7.15-8.515 7.15-.52 0-4.81-1.885-4.615-2.47l8.255-33.735c0-.065-.065-.26-.065-.26l-5.785-2.275v-1.625l12.415-4.355s-9.555 39-9.555 39.13l.26.455 7.02-2.535.585.52zm14.49 0c-2.08 3.445-5.59 7.15-8.515 7.15-.52 0-4.81-1.885-4.615-2.47l8.255-33.735c0-.065-.065-.26-.065-.26l-5.785-2.275v-1.625l12.415-4.355s-9.555 39-9.555 39.13l.26.455 7.02-2.535.585.52zm33.144-22.23L465.99 253.96l-.326.91c-3.9 10.4-7.085 14.625-13.455 14.625-3.316 0-5.33-1.56-5.33-4.745 0-1.56.714-2.47 2.73-2.47 1.754 0 3.77.91 5.264 4.42l1.625-.52c.454-.91 6.174-10.66 6.174-10.66l-3.12-.585-1.95-24.635-.26-.455-6.89 2.405-.585-.585c2.144-3.445 5.654-7.215 8.644-7.215.52 0 3.705 1.495 3.705 1.885l1.82 25.025h.844l13.715-27.105 4.354 2.21zm63.56 22.425l-.585-.52-7.15 2.86-.196-.455c0-.13 4.485-14.235 4.485-14.235.844-2.535 1.43-4.94 1.43-6.825 0-2.535-5.526-5.265-7.15-5.265-1.69 0-3.966.975-5.46 2.47-2.6 2.6-5.786 8.255-8.06 12.35h-.586c1.365-4.615 2.73-8.385 2.73-10.075 0-2.47-3.77-4.745-5.33-4.745-3.055 0-4.68.78-6.045 2.21-2.666 2.6-5.85 8.515-8.32 12.61h-.65c1.43-4.68 3.184-11.505 3.184-12.805 0-.39-3.575-2.015-4.095-2.015-2.926 0-6.696 3.77-8.84 7.215l.584.585 6.89-2.405.26.455-2.275 14.755-2.6 10.27 5.784-.325 1.885-9.685c2.794-8.19 7.864-16.12 10.66-16.12 1.3 0 4.744 1.885 4.744 2.925 0 1.365-1.82 8.255-2.47 11.05l-3.25 12.155 5.85-.325 1.885-9.685c2.86-8.19 7.93-16.12 10.724-16.12 1.235 0 4.875 1.885 4.875 2.925 0 1.365-1.95 7.345-2.86 10.465-1.236 4.095-3.576 10.4-3.576 11.895 0 .455 4.55 1.365 5.005 1.365 2.99 0 6.434-3.51 8.514-6.955zm24.824-17.16h.39l2.6-6.89 5.135-.065-4.16 10.53-2.665 14.69.26.52 6.825-2.405.585.52c-2.08 3.445-5.915 7.215-8.84 7.215-.52 0-4.095-1.625-4.095-2.015 0-1.3 1.56-7.54 3.445-14.17h-.715c-5.46 8.905-10.075 16.25-14.365 16.25-4.03 0-7.41-3.9-7.41-7.995 0-6.955 2.6-14.82 7.41-19.63 1.95-1.95 4.875-3.185 7.735-3.185 3.965 0 6.565 2.405 7.865 6.63zm-.91 1.43c0-.845-5.395-4.095-7.67-4.095-1.69 0-3.185.455-3.965 1.3-2.795 2.73-5.59 12.155-5.59 16.965 0 2.34 3.965 3.835 5.59 3.835 1.43 0 7.8-8.71 10.66-14.885.585-1.235.975-2.47.975-3.12zm18.715-6.825l-7.02 1.885.325 1.95 5.46 1.625c-.52 2.21-4.875 21.385-4.875 21.58-.065.715 4.16 2.47 4.615 2.47 2.99 0 6.435-3.705 8.515-7.15l-.585-.52-6.955 2.535-.325-.455 4.42-19.5h8.125l.845-4.095h-7.995l2.21-9.685h-2.925l-3.835 9.36zm20.21 0l-7.02 1.885.325 1.95 5.46 1.625c-.52 2.21-4.875 21.385-4.875 21.58-.065.715 4.16 2.47 4.615 2.47 2.99 0 6.435-3.705 8.515-7.15l-.585-.52-6.955 2.535-.325-.455 4.42-19.5h8.125l.845-4.095h-7.995l2.21-9.685h-2.925l-3.835 9.36zm17.87 18.135c-.066.52-.13 1.17-.13 1.885 0 2.925 5.004 6.045 6.63 6.045 1.17 0 8.254-5.135 11.57-7.28l.714.65c-3.64 5.98-9.36 10.14-13.585 10.14-3.835 0-10.335-3.705-10.335-9.88 0-11.765 8.515-21.58 17.29-21.58 5.395 0 9.035 2.925 9.035 5.915 0 4.94-4.095 5.72-21.19 14.105zm0-2.535h.65c11.504-6.175 15.534-7.995 15.534-10.205 0-1.69-3.315-3.965-6.955-3.965-.845 0-1.82.585-2.535 1.3-2.6 2.6-5.59 7.67-6.695 12.87zm42.18-12.09c.584 1.82 2.014 2.405 4.29 2.405 1.95 0 2.924-1.105 2.924-4.095 0-2.34-1.885-3.705-3.705-3.705-2.6 0-3.9 1.235-5.135 2.73-1.235 1.43-5.005 7.93-9.1 15.99h-.65c1.95-7.93 3.77-15.405 3.77-16.705 0-.39-3.575-2.015-4.095-2.015-2.925 0-6.695 3.77-8.84 7.215l.585.585 6.89-2.405.26.455-2.275 14.755-2.795 10.27 5.785-.325 2.08-9.62 8.84-15.145 1.17-.39z"/>
+  </g>
+</symbol>
+      </svg>
+  
+  
+
+  
+
+  
+          <a href="#page" class="cover cover-article">
+
+
+
+        <style>
+          /* larger, high density screen and print */
+          @media  
+            (-webkit-min-device-pixel-ratio: 2) and (min-width: 960px), 
+            (min-resolution: 192dpi) and (min-width: 960px) 
+          { 
+            .cover-inner { 
+              background-image: url("/wp-content/uploads/2017/02/P1010229-2800x1575.jpg")
+            }
+          }
+          /* larger, low density screen */
+          /* small, high density screen */
+          @media  
+            only screen and (-webkit-max-device-pixel-ratio: 1.99) and (min-width: 960px), 
+            only screen and (max-resolution: 191dpi) and (min-width: 960px),
+            only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 959px), 
+            only screen and (min-resolution: 192dpi) and (max-width: 960px)
+          {
+            .cover-inner { 
+              background-image: url("/wp-content/uploads/2017/02/P1010229-1400x788.jpg")
+            }
+          }
+          /* small, low density screen */
+          @media  
+            only screen and (-webkit-max-device-pixel-ratio: 1.99) and (max-width: 960px), 
+            only screen and (max-resolution: 191dpi) and (max-width: 960px)
+          {
+            .cover-inner { 
+              background-image: url("/wp-content/uploads/2017/02/P1010229-1400x788.jpg")
+            }
+          }
+        </style>
+
+        
+        <div class="cover-inner">
+          <header class="cover-masthead">
+            <h1 class="cover-heading">Encoding Video For The Web</h1>
+            <div class="cover-summary">
+              <div class="hidden-under-m">
+                <p>How to encode mp4 video files that work with HTML5 and Flash in Android, iOS, IE9 and the rest.</p>
+              </div>
+              <div>Read More ...</div>
+              
+            </div>
+          </header>
+        </div><!-- cover-inner -->
+      </a><!-- cover -->
+    
+    <div class="min-vh-100 cf main-container" id="page">
+    
+  <header role="banner" class="page-hd">
+
+    <!-- menu button -->
+    <div class="right gutter-right">
+      <a class="nav-main__trigger js-nav-main__trigger uppercase track-loose" href="#" >
+        <span class="burger">
+          <span></span><span></span><span></span><span></span>          
+        </span>
+        Menu
+      </a>
+    </div>
+    
+    <!-- icon -->
+    <div class="branding left gutters category-other">
+      <a  class="logo__link block" style="max-width: 250px" href="/other/" rel="home">
+        <svg>
+          <use xlink:href="#logo-with-strap" />
+        </svg>         
+      </a>
+    </div><!-- branding -->
+
+
+    <!-- dropdown nav -->
+    <nav class="nav-main">
+
+      <ul>
+        <li class="h6 text-center mv0 gutters" style="color:#eee;">
+          <div class="clearfix width-s center">
+            <form class="block clearfix pv2 search" role="search" method="get" id="searchform" action="/">
+  <div>
+    <label class="screen-reader-text" for="s">Search for:</label>
+    <input class="button--search right relative uppercase track-loose" type="submit" id="searchsubmit" value="Search">
+    <div class="overflow-hidden">
+      <input class="fill" type="text" value="" name="s" id="s">
+    </div>
+  </div>
+</form>          </div>
+        </li>
+        <li class="h3 uppercase text-center link--heading-color border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 font-sans heavy  gutter-left gutter-right" href="/">
+            Home <span style="color:#e86146;"></span>
+          </a>
+        </li>
+        <li class="h3 uppercase text-center border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 gutter-left gutter-right font-sans heavy link--heading-color" href="/design">
+            Notes on Design<span style="color:#e86146;">...</span>
+          </a>
+        </li>
+                <li class="h3 uppercase text-center border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 gutter-left gutter-right font-sans heavy link--heading-color" href="/photos">
+            Photos<span style="color:#e86146;font-weight: 900">_</span>
+          </a>
+        </li>
+                <li class="h3 uppercase text-center border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 gutter-left gutter-right font-sans heavy link--heading-color" href="/music">
+            What I’m Listening To<span style="color:#e86146;">»</span>
+          </a>
+        </li>
+                <li class="h3 uppercase text-center border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 gutter-left gutter-right font-sans heavy link--heading-color" href="/other">
+            Other Matters<span style="color:#e86146;">*</span>
+          </a>
+        </li>
+        <ul class="nav-main__sub" style="background: #fafafa;margin-top:-1px;">
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/other/encoding-video-for-the-web/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">Encoding Video For The Web</div>
+      <div class="info">
+        <!-- <time datetime="Friday, September 13th, 2013" pubdate>Friday 13th September 2013</time> -->
+        <span class="tag">Code </span>      </div>
+    </a>            
+  </li>
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/other/belittled-by-the-ad-men/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">Belittled by the ad-men</div>
+      <div class="info">
+        <!-- <time datetime="Saturday, May 22nd, 2010" pubdate>Saturday 22nd May 2010</time> -->
+        <span class="tag">Quotes </span>      </div>
+    </a>            
+  </li>
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/other/once-upon-a-time-i-co-produced-an-album/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">Once upon a time &#8230; I co-produced an album</div>
+      <div class="info">
+        <!-- <time datetime="Thursday, May 6th, 2010" pubdate>Thursday 6th May 2010</time> -->
+              </div>
+    </a>            
+  </li>
+    
+</ul>
+      </ul>
+    </nav><!-- nav-main -->  
+         
+  </header><!-- page-hd -->
+    <main class="page-bd">
+  
+
+
+<div class="cf wrap">
+  
+
+
+      
+    
+    <article class="gutters post type-post hentry">
+
+      <header>
+        <div class="info entry-meta size-s">
+          <a href="/tag/code/" rel="tag">Code</a>        </div>
+        <h1 class="mt0">
+          Encoding Video For The Web        </h1>
+        <time class="info" datetime="Friday, September 13th, 2013" pubdate>Friday, 9th Sep 2013</time>
+      </header>
+
+      <footer class="">
+        <div>
+          <!-- Posted on  --> 
+        </div> 
+      </footer>   
+
+            
+      <div class="cf entry-content">
+        <h2 id="the-problem"><a href="#the-problem" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>The Problem</h2>
+<p>To try and encode video that plays in all of the following:</p>
+<ul>
+<li>iPhone (Safari, Chrome)</li>
+<li>iPad (Safari, Chrome)</li>
+<li>Android (Browser and Dolphin)</li>
+<li>Windows (IE7 and up, Chrome, Firefox, Opera etc.)</li>
+<li>OS X (All current browsers)</li>
+</ul>
+<p>Sounds easy? Just encode an MP4 in <a href="http://handbrake.fr/">HandBrake</a>, and <a href="http://www.longtailvideo.com/">JWPlayer</a> will do the rest? Nearly.</p>
+<p>JWPlayer will work just fine however the various different devices can be pretty picky about the exact encoding format. Android and IE9 in particular get all distressed and soil themselves if it isn&#8217;t just-so.</p>
+<h2 id="the-solution"><a href="#the-solution" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>The Solution</h2>
+<p>After hours of Googling and experimentation with encoding formats and details these are the Handbrake settings that worked for me.</p>
+<p>The significant option selections are highlighted with red circles.</p>
+<img loading="lazy" class="alignnone size-large wp-image-1292" src="/wp-content/uploads/2013/09/Screen-Shot-2017-04-16-at-17.48.06-1024x720.png" alt="" width="1024" height="720" srcset="/wp-content/uploads/2013/09/Screen-Shot-2017-04-16-at-17.48.06-1024x720.png 1024w, /wp-content/uploads/2013/09/Screen-Shot-2017-04-16-at-17.48.06-300x211.png 300w, /wp-content/uploads/2013/09/Screen-Shot-2017-04-16-at-17.48.06-768x540.png 768w, /wp-content/uploads/2013/09/Screen-Shot-2017-04-16-at-17.48.06-1400x985.png 1400w, /wp-content/uploads/2013/09/Screen-Shot-2017-04-16-at-17.48.06-1344x945.png 1344w, /wp-content/uploads/2013/09/Screen-Shot-2017-04-16-at-17.48.06-672x473.png 672w, /wp-content/uploads/2013/09/Screen-Shot-2017-04-16-at-17.48.06.png 1848w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<p>The key here is to choose MP4, encoded in x264.</p>
+<p>The ‘Level: 3’ and ‘Profile: Baseline’ bit is for support on older Android devices. Checking ‘Web Optimised’ moves the MOOV Atom to the front of the video, which means that it streams properly (otherwise your browser has to download the entire video before it can start to play).</p>
+<p>I don&#8217;t think I changed any audio settings. These see to be the default settings for x264 and they work just fine.</p>
+<a href="/wp-content/uploads/2013/09/audio.png"><img loading="lazy" class="alignnone size-full wp-image-1023" src="/wp-content/uploads/2013/09/audio.png" alt="audio" width="1072" height="750" srcset="/wp-content/uploads/2013/09/audio.png 1072w, /wp-content/uploads/2013/09/audio-300x210.png 300w, /wp-content/uploads/2013/09/audio-768x537.png 768w, /wp-content/uploads/2013/09/audio-1024x716.png 1024w, /wp-content/uploads/2013/09/audio-672x470.png 672w" sizes="(max-width: 1072px) 100vw, 1072px" /></a>If you started off by using a preset you might find that Handbrake has re-sized your videos to a more standard aspect ratio. Click ‘Picture settings’ at the top of the main interface to see the size at which your video will be output.</p>
+<p>If they are not as you wish then change them here. Uncheck the ‘Keep Aspect Ratio’ option if it will not allow you to select your preferred dimensions, and  switch ‘Anamorphic’ to none (unless you want the black letterboxing effect). Also check the ‘Cropping’ is set to zero.</p>
+<p><a href="/wp-content/uploads/2013/09/picture.png"><img loading="lazy" class="alignnone size-full wp-image-1024" src="/wp-content/uploads/2013/09/picture.png" alt="picture" width="573" height="276" srcset="/wp-content/uploads/2013/09/picture.png 573w, /wp-content/uploads/2013/09/picture-300x145.png 300w" sizes="(max-width: 573px) 100vw, 573px" /></a>
+<h2 id="the-code"><a href="#the-code" class="heading-link"><i class="glyphicon glyphicon-link">#</i></a>The Code</h2>
+<p>If you are using html5 &lt;video&gt; tags you won&#8217;t need the below. We needed to provide a Flash fallback as our browser support went back to pre-html5 browsers.</p>
+<pre><code class="language-markup">&lt;div id="myVideo"&gt;&lt;/div&gt;
+&lt;script type="text/javascript" src="jwplayer.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+  jwplayer.key="thisisthejwplayerauthorisationkey=="
+  jwplayer("myVideo").setup({
+    file:     "vip9.mp4"
+    width:    720
+    height:   400
+    primary:  "flash"
+    analytics: {
+      enabled: false
+      cookies: 
+    }
+  });
+&lt;/script&gt;</code></pre>
+              </div>
+
+      
+            
+      <nav class="cf border-top border-bottom grey-10 mt4 pv2">
+        <ul class="navigation flex post-suggestion">
+          <li class="post-suggestion__older left pr1 border-right u1of2 flex">
+            <a href="/other/belittled-by-the-ad-men/" rel="prev"><span class="info block">&larr; Older</span> <span class="visually-hidden-under-m bold">Belittled by the ad-men</span></a>          </li> 
+          <li class="post-suggestion__newer relative right pl1 u1of2 flex text-right">
+            <div class="block fill">
+                            
+            </div>
+
+          </li>
+        </ul>        
+      </nav>
+
+      <style>
+        .post-suggestion__newer a {
+          float: right;
+        }
+      </style>
+      
+      <!-- <nav class="cf entry-comments">
+              </nav> -->
+
+    </article>
+
+    
+</div><!-- cf wrap -->
+
+        
+  
+      </main><!-- page-bd -->
+    </div><!-- main-container -->
+
+    <footer role="contentinfo" class="page-ft cf pv5 mt5 gutters" style="background:#fff">
+      <div class="wrap">
+        &copy;2020 <a class="" href="/">Paul Davison</a> 
+         - <a class="grey-70" href="/design">Design</a>
+         - <a class="grey-70" href="/photos">Photos</a> 
+         - <a class="grey-70" href="/music">Music</a> 
+         - <a class="grey-70 is-active" href="/other">Other Matters</a> 
+         <!-- <a class="right button" style="color:white;margin-top: -12px" href="#page" title="Jump back to top">&#8593; TOP</a> -->    
+      </div><!-- wrap -->
+    </footer>
+
+  
+  <noscript id="deferred-styles">
+    <link rel="stylesheet" type="text/css" href="/wp-content/themes/photo/stylesheets-1-0-1/css/style.css"/>
+      </noscript>
+  <script>
+    var loadDeferredStyles = function() {
+      var addStylesNode = document.getElementById("deferred-styles");
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+  </script>
+  
+  <!-- wp_footer -->
+  <script type='text/javascript' src='/wp-content/plugins/ab-audio-sync-master/libs/device/device.min.js?ver=5.5.3' id='device-js-js'></script>
+<script type='text/javascript' src='/wp-content/plugins/ab-audio-sync-master/libs/howler/howler.core.min.js?ver=5.5.3' id='howler-js-js'></script>
+<script type='text/javascript' src='/wp-content/themes/photo/javascripts-1-0-1/min/general.js' id='jquery-js'></script>
+<script type='text/javascript' src='/wp-content/plugins/ab-audio-sync-master/ab-audio-sync.js?ver=5.5.3' id='ab-audio-sync-js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=5.5.3' id='wp-embed-js'></script>
+  <!-- / wp_footer -->
+  
+  
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-99105445-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

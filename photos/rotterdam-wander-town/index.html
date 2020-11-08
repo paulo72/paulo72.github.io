@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en-GB" prefix="og: http://ogp.me/ns#" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>var htmlElement = document.getElementsByTagName('html')[0]; htmlElement.className = 'has-js';</script>
+
+  <!-- Critical, over-the-fold styles -->
+    <style>
+    
+    body{margin:0;padding:0;line-height:1.25;font-size:18px;box-sizing:border-box;overflow-x:hidden;overflow-y:scroll;font-family:"freight-text-pro","Georgia",Times,serif,"Arial Unicode MS","DejaVu Sans","Lucida Sans Unicode","Segoe UI Symbol","FreeSans","Meiryo UI","MS UI Gothic","Everson Mono Unicode",Meiryo,"MS Gothic","MS Mincho","MS PGothic","MS PMincho","Meslo LG L","Meslo LG L DZ","Meslo M L","Meslo M L DZ","Meslo S L","Meslo S L DZ","Symbola","DejaVu Sans Condensed","DejaVu Sans Mono",Code2000,"Everson Mono",Quivira,sans-serif;box-sizing:border-box;background:#f9f9f8}.cover{display:block !important;height:100vh;overflow:hidden;position:relative;z-index:100;left:0;top:0;bottom:0;right:0;cursor:pointer}.cover-inner{border:30px solid #fff;position:absolute;top:0;left:0;width:100%;height:100%;bottom:0;display:block;margin:0 auto;background-size:cover;background-position:center;box-sizing:border-box}.cover-inner--archive__logo-wrap{width:38%;min-width:200px;top:65px;position:relative;left:-6px}.cover-inner--archive__logo-wrap svg{width:100%;color:#fff}.cover-masthead{position:absolute;left:0;bottom:0;right:0;overflow:hidden;z-index:2;text-shadow:1px 2px 0 rgba(0,0,0,0.2);padding:0 18px}.cover-masthead span{background-color:rgba(0,0,0,0.4)}@media only screen and (min-width: 701px){.cover-masthead{padding:30px 35px}}@media only screen and (min-width: 951px){.cover-masthead{padding:30px 35px;top:0;right:auto;max-width:38%}}.cover-heading{font-family:"freight-sans-pro",-apple-system,BlinkMacSystemFont,"avenir next",avenir,helvetica,"helvetica neue",ubuntu,roboto,noto,"segoe ui","Arial Unicode MS","DejaVu Sans","Lucida Sans Unicode","Segoe UI Symbol","FreeSans","Meiryo UI","MS UI Gothic","Everson Mono Unicode",Meiryo,"MS Gothic","MS Mincho","MS PGothic","MS PMincho","Meslo LG L","Meslo LG L DZ","Meslo M L","Meslo M L DZ","Meslo S L","Meslo S L DZ","Symbola","DejaVu Sans Condensed","DejaVu Sans Mono",Code2000,"Everson Mono",Quivira,sans-serif;color:#fff;font-size:36px;line-height:0.9;text-transform:uppercase;font-weight:900;left:-3px;position:relative}@media only screen and (min-width: 701px){.cover-heading{font-size:48px}}@media only screen and (min-width: 951px){.cover-heading{font-size:60px}}body.category-photos .cover-heading:after{width:30px;height:6px;top:5px;left:5px;background:#E86146;position:relative;content:"";display:inline-block;box-shadow:1px 2px 0 rgba(0,0,0,0.2)}@media only screen and (min-width: 701px){body.category-photos .cover-heading:after{width:42px;height:9px;top:8px}}@media only screen and (min-width: 951px){body.category-photos .cover-heading:after{width:60px;height:12px;top:12px}}.category-design .cover-heading:after{content:'...'}.category-music .cover-heading:after{content:'»';left:0.2em;position:relative;top:-0.05em}.category-other .cover-heading:after{content:'*'}.category-design .cover-heading:after,.category-music .cover-heading:after,.category-other .cover-heading:after{color:#e86146}.cover-summary{font-family:"freight-micro-pro","freight-text-pro","Georgia",Times,serif,"Arial Unicode MS","DejaVu Sans","Lucida Sans Unicode","Segoe UI Symbol","FreeSans","Meiryo UI","MS UI Gothic","Everson Mono Unicode",Meiryo,"MS Gothic","MS Mincho","MS PGothic","MS PMincho","Meslo LG L","Meslo LG L DZ","Meslo M L","Meslo M L DZ","Meslo S L","Meslo S L DZ","Symbola","DejaVu Sans Condensed","DejaVu Sans Mono",Code2000,"Everson Mono",Quivira,sans-serif;font-style:italic;color:#fff;font-size:18px;padding:1em 0}@media only screen and (min-width: 701px){.cover-summary{font-size:24px}}@media only screen and (min-width: 951px){.cover-summary{font-size:30px}}
+/*# sourceMappingURL=over-the-fold--cover-image.css.map */  
+
+    @keyframes fade{ 0% {opacity:0;} 100% {opacity:1;} }
+
+    @keyframes fadeAndHide{ 0% {opacity:1;} 99% {opacity:0;} 100% {display: none; height:0; width:0; overflow: hidden;} }
+
+
+    /* Loading logo: size and position */
+      .loader-logo svg {
+        color: #000;
+        width: 38% !important;
+        max-width: 200px !important;
+        top: 50%;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        animation:fadeAndHide 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.5s 1 normal forwards;     
+      }
+
+
+    /* Home Page: Content: animation */
+      body.home .primary-content {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.3s 1 normal forwards;
+      }
+
+      body.search div, body.search footer,
+      body.error404 div, body.error404 footer {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.6s 1 normal forwards;
+      } 
+
+    /*  Archive, 
+        Single,
+        Page: 
+
+        content: animation 
+    */
+      body.single .page-hd,
+      body.single .page-bd,
+      body.single .page-ft,
+      body.archive .page-hd,
+      body.archive .page-bd,
+      body.archive .page-ft {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.9s 1 normal forwards;
+      } 
+
+    /* Archive: cover: animation */
+      body.archive .cover-inner {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        /*animation:fade 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.3s 1 normal forwards;*/
+        animation:fade 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.7s 1 normal forwards;
+      }
+
+    /* Single: cover: animation */
+      body.single .cover-inner {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        /*animation:fade 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s 1 normal forwards;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s 1 normal forwards;
+      }
+
+    /* Archive: cover: animation */
+    /*body.archive .cover__logo-wrap .logo-with-strap {
+      animation:fade 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.3s 1 reverse forwards;     
+    }*/
+
+  </style>  
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="//use.typekit.net">
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'kck4dwb',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+  <!-- Icons -->
+  
+<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/photo/favicons/photos/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/photo/favicons/photos/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/themes/photo/favicons/photos/favicon-16x16.png">
+<link rel="manifest" href="/wp-content/themes/photo/favicons/photos/manifest.json">
+<link rel="mask-icon" href="/wp-content/themes/photo/favicons/photos/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/wp-content/themes/photo/favicons/photos/favicon.ico">
+<meta name="msapplication-config" content="/wp-content/themes/photo/favicons/photos/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+  <!-- WP Head stuff -->
+  <title>Rotterdam: A wander through town - Actino</title>
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v4.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="/photos/rotterdam-wander-town/" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Rotterdam: A wander through town - Actino" />
+<meta property="og:url" content="http://actino.local/photos/rotterdam-wander-town/" />
+<meta property="og:site_name" content="Actino" />
+<meta property="article:tag" content="rotterdam" />
+<meta property="article:section" content="Photos" />
+<meta property="article:published_time" content="2017-05-12T07:45:35+01:00" />
+<meta property="article:modified_time" content="2017-07-30T22:01:38+01:00" />
+<meta property="og:updated_time" content="2017-07-30T22:01:38+01:00" />
+<meta property="og:image" content="http://actino.local/wp-content/uploads/2017/03/P1020686.jpg" />
+<meta property="og:image:width" content="4379" />
+<meta property="og:image:height" content="2463" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Rotterdam: A wander through town - Actino" />
+<meta name="twitter:image" content="http://actino.local/wp-content/uploads/2017/03/P1020686.jpg" />
+<meta property="DC.date.issued" content="2017-05-12T07:45:35+01:00" />
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel='stylesheet' id='wp-block-library-css'  href='/wp-includes/css/dist/block-library/style.min.css?ver=5.5.3' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="/wp-json/" /><link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/1335" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='/?p=1335' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fphotos%2Frotterdam-wander-town%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fphotos%2Frotterdam-wander-town%2F&#038;format=xml" />
+  <!-- Art Direction Styles -->
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+<body class="post-template-default single single-post postid-1335 single-format-standard  category-photos" id="top">
+  <!-- Get SVG as symbol so we can use in several places without adding to page weight -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="logo-with-strap" class="logo-with-strap" viewbox="0 0 684 259">
+  <title>
+    filtered-photons-and-strap copy
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <path class="logo-with-strap__accent" fill="#E86145" 
+      
+      d="M573.59 163.005H684v20.207H573.59z"/>
+    <path class="logo-with-strap__main" fill="currentColor"  
+      
+      d="M0 77.46h24.032V50.07h27.5V30.738h-27.5V19.582h35.18V0H0v77.46zm97.085 0V0H72.682v77.46h24.403zm71.443 0V57.508h-29.854V0H114.27v77.46h54.258zm66.612-57.506V0h-71.228v19.954h23.412V77.46h24.404V19.955h23.412zm73.3 57.507V58.5h-36.666V48.087h28.987V29.125h-28.986V18.962h36.667V0h-60.45v77.46h60.45zm39.36-22.927l6.814-.62 13.873 23.548h27.005l-19.2-29.744c10.28-4.09 15.112-12.518 15.112-22.31C391.404 9.917 380.008 0 358.454 0h-35.057v77.46H347.8V54.534zm-.495-17.352V18.59h6.69c8.794 0 12.14 2.85 12.14 8.552 0 6.32-2.974 9.172-10.407 9.915l-8.423.124zm120.25 40.28V58.5h-36.667V48.087h28.986V29.125h-28.986V18.962h36.666V0h-60.45v77.46h60.45zm90.643-39.287C558.198 15.12 542.714 0 514.594 0H482.51v77.46h30.35c29.234 0 45.338-15.49 45.338-39.287zm-24.527.743c0 13.758-7.308 19.83-19.447 19.83h-7.31v-40.03h6.07c14.246 0 20.688 5.824 20.688 20.2zM66.644 133.352c0-16.608-12.51-27.762-34.437-27.762H0v77.46h24.403v-20.82h6.194c23.66 0 36.047-10.288 36.047-28.878zm-24.155.495c0 6.817-3.965 10.287-12.636 10.41l-6.194.125V124.18h6.69c7.927 0 12.14 3.347 12.14 9.667zm106.056 49.204v-77.46h-24.403v28.257h-25.27V105.59H74.47v77.46h24.403v-28.877h25.27v28.878h24.403zm91.565-39.04c0-27.018-18.085-40.28-41.25-40.28-23.164 0-41.62 15.493-41.62 40.776 0 27.02 18.085 40.404 41.25 40.404 23.164 0 41.62-15.616 41.62-40.9zm-24.526.496c0 12.394-5.574 21.193-16.723 21.193-11.272 0-17.094-8.924-17.094-21.69 0-12.393 5.45-21.07 16.723-21.07 11.272 0 17.094 8.8 17.094 21.566zm98.997-18.962V105.59h-71.227v19.954h23.412v57.507h24.404v-57.506h23.41zm86.115 18.466c0-27.018-18.086-40.28-41.25-40.28-23.165 0-41.622 15.493-41.622 40.776 0 27.02 18.086 40.404 41.25 40.404 23.165 0 41.622-15.616 41.622-40.9zm-24.527.496c0 12.394-5.575 21.193-16.723 21.193-11.273 0-17.095-8.924-17.095-21.69 0-12.393 5.45-21.07 16.723-21.07s17.095 8.8 17.095 21.566zm86.98 5.082l-27.5-43.998h-26.26v77.46h22.668v-43.873l27.872 44.617h25.89V105.59h-22.67v43.998zm62.455 15.616c-9.786 0-20.192-3.1-28.49-7.19l-3.717 19.955c7.06 3.84 19.076 6.94 31.835 6.94 22.422 0 34.067-10.66 34.067-26.15 0-14.874-12.883-20.203-25.147-23.673-7.68-2.107-15.112-3.842-15.112-7.436 0-3.098 2.725-4.09 7.432-4.09 8.052 0 18.58 2.85 27.252 7.065l3.84-19.954c-7.432-3.717-17.466-6.815-31.216-6.815-21.182 0-31.712 9.915-31.712 25.035 0 15.74 14.37 21.193 25.766 24.416 9.043 2.602 14.493 3.718 14.493 7.436 0 3.222-3.716 4.462-9.29 4.462z"/>
+    <path class="logo-with-strap__strap" fill="#998F52" 
+      
+      d="M23.327 239.118h-2.532l-1.955 3.912c-.71 1.467-.933 1.645-3.777 1.645H8.087l2.8-21.206.088-.178h4.443l.4-3.2H3.688l-.267 2.355 3.734 1.378.09.178-2.712 20.494-.09.178H.98l-.445 3.2h20.75l2.044-8.757zm5.435 1.556c11.686-5.735 14.485-6.27 14.485-9.647 0-2.045-2.488-4.046-6.176-4.046-5.998 0-11.82 6.714-11.82 14.76 0 4.224 4.445 6.758 7.066 6.758 2.888 0 6.8-2.845 9.287-6.935l-.49-.445c-2.265 1.467-7.108 4.98-7.908 4.98-1.11 0-4.532-2.134-4.532-4.135 0-.49.044-.934.09-1.29zm0-1.734c.755-3.556 2.8-7.024 4.576-8.802.49-.49 1.156-.89 1.733-.89 2.49 0 4.755 1.557 4.755 2.712 0 1.512-2.754 2.757-10.62 6.98h-.443zm30.26-6.98c-.89-2.89-2.667-4.534-5.378-4.534-1.955 0-3.954.845-5.287 2.178-3.288 3.29-5.066 8.67-5.066 13.426 0 2.8 2.312 5.468 5.067 5.468 2.932 0 6.087-5.023 9.82-11.114h.488c-1.288 4.535-2.355 8.802-2.355 9.69 0 .268 2.444 1.38 2.8 1.38 2 0 4.62-2.58 6.042-4.935l-.4-.357-4.665 1.645-.178-.355 1.82-10.048 2.845-7.2-3.51.043-1.778 4.712h-.266zm-.623.978c0 .445-.268 1.29-.668 2.134-1.955 4.224-6.31 10.18-7.287 10.18-1.11 0-3.82-1.022-3.82-2.622 0-3.29 1.91-9.736 3.82-11.603.533-.578 1.555-.89 2.71-.89 1.556 0 5.244 2.224 5.244 2.8zm21.03-2.267c.4 1.246 1.376 1.646 2.93 1.646 1.334 0 2-.756 2-2.8 0-1.6-1.288-2.535-2.532-2.535-1.777 0-2.666.846-3.51 1.868-.844.98-3.42 5.424-6.22 10.937h-.445c1.333-5.424 2.577-10.536 2.577-11.426 0-.267-2.444-1.38-2.8-1.38-2 0-4.576 2.58-6.042 4.936l.4.4 4.71-1.645.178.312-1.556 10.092-1.91 7.024 3.954-.222 1.422-6.58 6.043-10.358.8-.267zm28.818 13.027l-.4-.356-4.887 1.957-.132-.31c0-.09 2.977-9.38 2.977-9.38.577-1.69 1.155-3.29 1.155-4.58 0-1.467-3.377-4.046-4.977-4.046-1.6 0-3.11.313-4.31 1.513-1.777 1.778-3.954 5.824-5.51 8.402h-.444c.888-2.98 2.043-7.646 2.043-8.536 0-.267-2.444-1.38-2.8-1.38-2 0-4.576 2.58-6.042 4.936l.4.4 4.71-1.645.18.312-1.557 10.092-1.91 7.024 3.954-.222 1.422-6.624c3.065-8.002 5.73-11.248 7.642-11.248 1.155 0 3.776 1.823 3.776 2.4 0 .935-1.555 5.247-2.177 7.38-.843 2.757-2.354 6.714-2.354 7.736 0 .31 3.11.934 3.422.934 2.044 0 4.4-2.4 5.82-4.757zm12.855-22.94c0-2.178-.49-2.89-2.622-2.89-2.22 0-2.753.712-2.753 2.802 0 2.177.577 2.977 2.754 2.977 2.18 0 2.623-.8 2.623-2.89zm-1.422 22.806l-.443-.355-4.71 1.734-.267-.312 4.8-16.048c.088-.31-2.09-1.6-3.11-1.6-2.045 0-4.667 2.578-6.133 4.934l.4.4 4.71-1.645.266.312-4.487 15.782c-.09.4 2.843 1.69 3.154 1.69 2.044 0 4.355-2.534 5.82-4.89zm24.142.134l-.4-.356-4.888 1.957-.133-.31c0-.09 2.978-9.38 2.978-9.38.578-1.69 1.155-3.29 1.155-4.58 0-1.467-3.377-4.046-4.976-4.046-1.6 0-3.11.313-4.31 1.513-1.778 1.778-3.955 5.824-5.51 8.402h-.444c.888-2.98 2.044-7.646 2.044-8.536 0-.267-2.444-1.38-2.8-1.38-2 0-4.576 2.58-6.043 4.936l.4.4 4.71-1.645.178.312-1.555 10.092-1.91 7.024 3.954-.222 1.423-6.624c3.065-8.002 5.73-11.248 7.642-11.248 1.155 0 3.777 1.823 3.777 2.4 0 .935-1.555 5.247-2.177 7.38-.845 2.757-2.355 6.714-2.355 7.736 0 .31 3.11.934 3.42.934 2.045 0 4.4-2.4 5.822-4.757zm21.43-11.692l.844-3.6-5.332-.134c-1.377-.71-3.066-1.378-4.887-1.378-5.6 0-9.598 4.18-9.598 9.158 0 2.668 1.554 4.357 3.243 5.113v.222c-2.178.356-3.333 1.512-3.333 3.29 0 1.378.844 2.49 2.355 3.156v.357c-3.466.4-6.798 2-6.798 5.023 0 4.09 2.977 5.78 9.464 5.78 7.91 0 11.91-3.023 11.91-7.513 0-2.712-1.778-4.18-5.51-4.713l-4.044-.578c-2.8-.444-4.132-.933-4.132-2.045 0-1.11.31-1.955 1.2-2.488.71.222 2.088.49 3.243.49 5.332 0 8.93-5.203 8.93-8.537 0-1.11-.976-2.4-1.376-2.89l.045-.266 3.777 1.555zm-5.51.09c0 2.088-1.2 5.022-3.2 7.023-1.065 1.067-1.82 1.6-3.42 1.6-.756 0-2.177-.355-2.533-.71-.356-.357-.89-1.112-.89-3.113 0-2.756.578-5.646 1.2-6.49.49-.712 1.244-1.334 2-1.334 2.754 0 6.842 1.912 6.842 3.024zm.267 20.804c0 2.444-2.223 3.69-7.066 3.69-5.243 0-8.13-1.38-8.13-4.002 0-1.734 3.02-3.423 5.11-4.046 1.465.4 4.31.89 5.197 1.067 3.556.666 4.89 1.378 4.89 3.29zm24.535-8.225c.845 2.223 3.333 3.823 5.2 3.823 1.865 0 3.643-.756 5.064-2.178 3.42-3.423 5.554-8.625 5.554-13.515 0-3.067-2.09-5.868-5.377-5.868-2.888 0-5.998 4.846-9.686 10.936h-.488c1.244-4.534 2.31-8.89 2.31-9.514 0-.267-2.532-1.38-2.843-1.38-2.045 0-4.622 2.58-6.044 4.936l.4.4 4.665-1.645.18.312-4.09 22.984-.088.178h-3.2l-.577 3.245h10.398l.4-2.446-3.244-1.334-.045-.177 1.022-8.758h.488zm.445-2.58c0-.4.31-1.066.71-1.91 1.867-4.09 6.443-10.358 7.732-10.358 1.333 0 3.6 1.69 3.6 3.512 0 3.288-2.267 9.69-4.133 11.602-.534.533-1.423.844-2.09.844-2.177 0-5.82-2.712-5.82-3.69zm37.057 1.602l-.4-.356-4.888 1.957-.134-.31c0-.09 2.977-9.38 2.977-9.38.578-1.69 1.155-3.29 1.155-4.58 0-1.467-3.377-4.046-4.976-4.046-1.6 0-3.11.313-4.31 1.513-1.778 1.778-3.955 5.824-5.51 8.402h-.444l2.8-9.38 1.954-9.647-8.575 2.978v1.112l3.776 1.556.09.178-3.11 17.382-1.912 7.024 3.956-.222 1.422-6.624c3.066-8.002 5.376-11.248 7.642-11.248 1.155 0 3.777 1.823 3.777 2.4 0 .935-1.555 5.247-2.177 7.38-.844 2.757-2.355 6.714-2.355 7.736 0 .31 3.11.934 3.42.934 2.045 0 4.4-2.4 5.822-4.757zm21.608-9.07c0-4.4-4.488-7.646-8.798-7.646-6.62 0-10.664 9.026-10.664 13.872 0 4.445 4.443 7.646 8.753 7.646 6.665 0 10.71-8.98 10.71-13.87zm-3.422-.355c0 .578-.266 2.134-.71 3.868-1.022 3.69-3.29 7.868-5.2 7.868-2.576 0-6.71-1.733-6.71-4.667 0-.577.268-2.222.712-4 1.022-3.646 3.288-7.914 5.2-7.914 2.576 0 6.708 1.868 6.708 4.846zm10.456-6l-4.8 1.288.222 1.333 3.732 1.112c-.355 1.51-3.332 14.626-3.332 14.76-.044.488 2.844 1.69 3.155 1.69 2.044 0 4.4-2.535 5.82-4.892l-.4-.355-4.754 1.734-.222-.312 3.023-13.336h5.554l.577-2.8H253.8l1.51-6.625h-2l-2.62 6.4zm27.37 6.356c0-4.4-4.488-7.647-8.798-7.647-6.62 0-10.664 9.026-10.664 13.872 0 4.445 4.443 7.646 8.753 7.646 6.666 0 10.71-8.98 10.71-13.87zm-3.422-.356c0 .578-.266 2.134-.71 3.868-1.023 3.69-3.29 7.868-5.2 7.868-2.577 0-6.71-1.733-6.71-4.667 0-.577.268-2.222.712-4 1.022-3.646 3.288-7.914 5.2-7.914 2.576 0 6.708 1.868 6.708 4.846zm24.985-2.267l.844-3.6-5.332-.134c-1.377-.71-3.066-1.378-4.887-1.378-5.6 0-9.598 4.18-9.598 9.158 0 2.668 1.555 4.357 3.244 5.113v.222c-2.178.356-3.333 1.512-3.333 3.29 0 1.378.845 2.49 2.356 3.156v.357c-3.466.4-6.798 2-6.798 5.023 0 4.09 2.977 5.78 9.464 5.78 7.91 0 11.908-3.023 11.908-7.513 0-2.712-1.777-4.18-5.51-4.713l-4.043-.578c-2.8-.444-4.132-.933-4.132-2.045 0-1.11.31-1.955 1.2-2.488.71.222 2.088.49 3.243.49 5.332 0 8.93-5.203 8.93-8.537 0-1.11-.976-2.4-1.376-2.89l.044-.266 3.777 1.555zm-5.51.09c0 2.088-1.2 5.022-3.2 7.023-1.065 1.067-1.82 1.6-3.42 1.6-.756 0-2.177-.355-2.533-.71-.355-.357-.89-1.112-.89-3.113 0-2.756.58-5.646 1.2-6.49.49-.712 1.245-1.334 2-1.334 2.755 0 6.843 1.912 6.843 3.024zm.267 20.804c0 2.444-2.222 3.69-7.065 3.69-5.243 0-8.13-1.38-8.13-4.002 0-1.734 3.02-3.423 5.11-4.046 1.465.4 4.31.89 5.197 1.067 3.555.666 4.888 1.378 4.888 3.29zm20.333-22.23c.4 1.246 1.377 1.646 2.932 1.646 1.333 0 2-.756 2-2.8 0-1.6-1.29-2.535-2.533-2.535-1.777 0-2.666.846-3.51 1.868-.844.98-3.42 5.424-6.22 10.937h-.445c1.333-5.424 2.577-10.536 2.577-11.426 0-.267-2.444-1.38-2.8-1.38-2 0-4.576 2.58-6.042 4.936l.4.4 4.71-1.645.177.312-1.556 10.092-1.91 7.024 3.954-.222 1.422-6.58 6.043-10.358.8-.267zm19.417 1.29c-.89-2.89-2.666-4.534-5.376-4.534-1.955 0-3.955.845-5.288 2.178-3.288 3.29-5.065 8.67-5.065 13.426 0 2.8 2.31 5.468 5.066 5.468 2.933 0 6.087-5.023 9.82-11.114h.488c-1.288 4.535-2.354 8.802-2.354 9.69 0 .268 2.443 1.38 2.8 1.38 1.998 0 4.62-2.58 6.042-4.935l-.4-.357-4.666 1.645-.177-.355 1.82-10.048 2.844-7.2-3.51.043-1.777 4.712h-.267zm-.622.978c0 .445-.267 1.29-.667 2.134-1.954 4.224-6.308 10.18-7.286 10.18-1.11 0-3.82-1.022-3.82-2.622 0-3.29 1.91-9.736 3.82-11.603.534-.578 1.556-.89 2.71-.89 1.556 0 5.244 2.224 5.244 2.8zm13.654 11.737c.845 2.223 3.333 3.823 5.2 3.823 1.865 0 3.642-.756 5.064-2.178 3.422-3.423 5.554-8.625 5.554-13.515 0-3.067-2.088-5.868-5.376-5.868-2.888 0-5.998 4.846-9.686 10.936h-.49c1.245-4.534 2.31-8.89 2.31-9.514 0-.267-2.53-1.38-2.842-1.38-2.044 0-4.62 2.58-6.043 4.936l.4.4 4.665-1.645.178.312-4.088 22.984-.09.178h-3.198l-.578 3.245h10.398l.4-2.446-3.244-1.334-.044-.177 1.022-8.758h.488zm.445-2.58c0-.4.31-1.066.71-1.91 1.867-4.09 6.443-10.358 7.732-10.358 1.332 0 3.598 1.69 3.598 3.512 0 3.288-2.266 9.69-4.132 11.602-.533.533-1.422.844-2.09.844-2.176 0-5.82-2.712-5.82-3.69zm38.403 1.602l-.4-.356-4.887 1.957-.134-.31c0-.09 2.976-9.38 2.976-9.38.578-1.69 1.156-3.29 1.156-4.58 0-1.467-3.377-4.046-4.977-4.046-1.6 0-3.11.313-4.31 1.513-1.777 1.778-3.954 5.824-5.51 8.402h-.444l2.8-9.38 1.956-9.647-8.576 2.978v1.112l3.777 1.556.09.178-3.112 17.382-1.91 7.024 3.954-.222 1.42-6.624c3.067-8.002 5.377-11.248 7.644-11.248 1.155 0 3.776 1.823 3.776 2.4 0 .935-1.555 5.247-2.177 7.38-.844 2.757-2.355 6.714-2.355 7.736 0 .31 3.11.934 3.422.934 2.043 0 4.398-2.4 5.82-4.757zm23.163-15.338l-2.977-1.512-9.375 18.538h-.577L395 228.27c0-.266-2.178-1.29-2.533-1.29-2.044 0-4.444 2.58-5.91 4.936l.4.4 4.71-1.645.177.312 1.333 16.85 2.133.4s-3.91 6.668-4.22 7.29l-1.112.356c-1.022-2.4-2.4-3.023-3.6-3.023-1.376 0-1.865.622-1.865 1.69 0 2.177 1.377 3.244 3.644 3.244 4.354 0 6.53-2.89 9.197-10.003l.222-.623 11.597-18.805zm26.687 6.49l1.91 13.292 3.156.134 5.554-10.136c1.644-3.2 3.776-6.713 3.776-8.714 0-1.467-.444-2.49-2.71-2.49-1.688 0-2.755 1.557-3.244 3.29l2.8 1.646c-.222 1.155-1.6 3.556-2.444 5.423l-3.777 7.78h-.488l-2.22-17.47-3.91-.224.487 4.758-6.355 12.937h-.533l-1.377-16.804c0-.266-2.31-1.29-2.533-1.29-2.044 0-4.443 2.58-5.91 4.936l.4.4 4.62-1.645.224.268 1.644 17.204 3.6.134 6.886-13.426h.444zm26.673-14.092c0-2.18-.488-2.89-2.62-2.89-2.223 0-2.756.71-2.756 2.8 0 2.18.578 2.98 2.755 2.98s2.62-.8 2.62-2.89zm-1.42 22.805l-.446-.355-4.71 1.734-.266-.312 4.8-16.048c.088-.31-2.09-1.6-3.11-1.6-2.045 0-4.666 2.578-6.133 4.934l.4.4 4.71-1.645.267.312-4.488 15.782c-.09.4 2.844 1.69 3.155 1.69 2.045 0 4.355-2.534 5.822-4.89zm6.81-15.292l-4.798 1.29.222 1.333 3.732 1.112c-.356 1.51-3.333 14.626-3.333 14.76-.045.488 2.843 1.69 3.154 1.69 2.045 0 4.4-2.535 5.822-4.892l-.4-.355-4.754 1.734-.222-.312 3.02-13.336h5.555l.58-2.8h-5.466l1.51-6.625h-2l-2.62 6.4zm29.873 15.427l-.4-.356-4.888 1.957-.133-.31c0-.09 2.977-9.38 2.977-9.38.578-1.69 1.155-3.29 1.155-4.58 0-1.467-3.377-4.046-4.976-4.046-1.6 0-3.11.313-4.31 1.513-1.777 1.778-3.954 5.824-5.51 8.402h-.443l2.8-9.38 1.954-9.647-8.575 2.978v1.112l3.777 1.556.09.178-3.11 17.382-1.912 7.024 3.955-.222 1.422-6.624c3.065-8.002 5.376-11.248 7.642-11.248 1.154 0 3.776 1.823 3.776 2.4 0 .935-1.555 5.247-2.177 7.38-.846 2.757-2.356 6.714-2.356 7.736 0 .31 3.11.934 3.42.934 2.045 0 4.4-2.4 5.822-4.757zm17.133-15.426l-4.8 1.29.223 1.333 3.732 1.112c-.355 1.51-3.332 14.626-3.332 14.76-.045.488 2.843 1.69 3.155 1.69 2.043 0 4.398-2.535 5.82-4.892l-.4-.355-4.754 1.734-.222-.312 3.02-13.336h5.555l.578-2.8h-5.465l1.51-6.625h-2l-2.62 6.4zm29.872 15.427l-.4-.356-4.888 1.957-.133-.31c0-.09 2.978-9.38 2.978-9.38.578-1.69 1.155-3.29 1.155-4.58 0-1.467-3.377-4.046-4.976-4.046-1.6 0-3.11.313-4.31 1.513-1.777 1.778-3.955 5.824-5.51 8.402h-.444l2.8-9.38 1.954-9.647-8.575 2.978v1.112l3.776 1.556.09.178-3.11 17.382-1.912 7.024 3.955-.222 1.423-6.624c3.066-8.002 5.376-11.248 7.642-11.248 1.156 0 3.777 1.823 3.777 2.4 0 .935-1.555 5.247-2.177 7.38-.844 2.757-2.355 6.714-2.355 7.736 0 .31 3.11.934 3.42.934 2.045 0 4.4-2.4 5.822-4.757zm5.3-3.023c11.687-5.735 14.486-6.27 14.486-9.647 0-2.045-2.488-4.046-6.176-4.046-6 0-11.82 6.714-11.82 14.76 0 4.224 4.444 6.758 7.066 6.758 2.888 0 6.798-2.845 9.286-6.935l-.49-.445c-2.265 1.467-7.108 4.98-7.908 4.98-1.11 0-4.532-2.134-4.532-4.135 0-.49.045-.934.09-1.29zm0-1.734c.756-3.556 2.8-7.024 4.578-8.802.488-.49 1.155-.89 1.732-.89 2.49 0 4.755 1.557 4.755 2.712 0 1.512-2.755 2.757-10.62 6.98h-.444zm48.06.178h-2.533l-1.956 3.912c-.71 1.467-.933 1.645-3.777 1.645h-6.976l2.8-21.206.09-.178h4.443l.4-3.2h-12.13l-.267 2.355 3.732 1.378.09.178-2.71 20.494-.09.178h-3.466l-.444 3.2h20.75l2.044-8.757zm27.073 8.802l.31-2.445-3.51-1.156-.177-.223-6.354-10.27 10.087-10.358.223-.178h2.355l.444-3.2h-9.775l-.31 2.4 2.843 1.155.044.222-7.11 8.224h-.755l-4.4-8.58.09-.222h2.754l.4-3.2h-10.53l-.312 2.4 3.51 1.155.178.222 6.177 10.224-9.642 10.36-.223.22h-2.977l-.4 3.202h10.487l.31-2.4-2.976-1.157-.045-.223 6.844-8.224h.71l4.578 8.624-.09.178h-2.8l-.4 3.2 10.443.045zm14.1-.044l.31-2.4-4.488-1.335-.044-.176 2.31-17.427-9.197 1.645-.222 1.778 5.82.578-1.91 13.96-.134.177h-4.71l-.444 3.2h12.708zm22.584-12.848c0-5.38-3.422-8.625-8.398-8.625-5.732 0-10.575 5.69-10.53 13.47 0 5.29 3.51 8.625 8.397 8.625 5.775 0 10.53-5.735 10.53-13.47zm-3.555-.133c0 4.712-2.266 10.758-6.043 10.758-3.2 0-5.91-1.734-5.865-5.78.044-4.667 2.355-10.713 6.087-10.713 3.2 0 5.82 1.822 5.82 5.735zm25.385.133c0-5.38-3.422-8.625-8.398-8.625-5.732 0-10.575 5.69-10.53 13.47 0 5.29 3.51 8.625 8.397 8.625 5.775 0 10.53-5.735 10.53-13.47zm-3.555-.133c0 4.712-2.266 10.758-6.043 10.758-3.2 0-5.91-1.734-5.865-5.78.044-4.667 2.355-10.713 6.087-10.713 3.2 0 5.82 1.822 5.82 5.735z"/>
+  </g>
+</symbol>
+    <symbol id="logo" class="logo" viewbox="0 0 416 182">
+  <g fill="none" fill-rule="evenodd">
+    <path class="logo__accent" fill="#E86145" d="M304 162h109v20H304z"/>
+    <path class="logo__main" fill="currentColor" 
+
+      d="M.336 58h17.848V37.668h20.424V23.316H18.184v-8.28h26.128V.5H.336V58zm72.104 0V.5H54.316V58H72.44zm53.06 0V43.188h-22.172V.5H85.204V58H125.5zm49.472-42.688V.5h-52.9v14.812h17.388V58h18.124V15.312h17.388zM229.412 58V43.924H202.18v-7.728h21.528V22.12H202.18v-7.544h27.232V.5h-44.896V58h44.896zm29.232-17.02l5.06-.46L274.008 58h20.056l-14.26-22.08c7.636-3.036 11.224-9.292 11.224-16.56 0-11.5-8.464-18.86-24.472-18.86H240.52V58h18.124V40.98zm-.368-12.88V14.3h4.968c6.532 0 9.016 2.116 9.016 6.348 0 4.692-2.208 6.808-7.728 7.36l-6.256.092zM347.584 58V43.924h-27.232v-7.728h21.528V22.12h-21.528v-7.544h27.232V.5h-44.896V58h44.896zm67.32-29.164C414.904 11.724 403.404.5 382.52.5h-23.828V58h22.54c21.712 0 33.672-11.5 33.672-29.164zm-18.216.552c0 10.212-5.428 14.72-14.444 14.72h-5.428V14.392h4.508c10.58 0 15.364 4.324 15.364 14.996zM49.832 102.108c0-12.328-9.292-20.608-25.576-20.608H.336V139H18.46v-15.456h4.6c17.572 0 26.772-7.636 26.772-21.436zm-17.94.368c0 5.06-2.944 7.636-9.384 7.728l-4.6.092V95.3h4.968c5.888 0 9.016 2.484 9.016 7.176zM110.66 139V81.5H92.536v20.976H73.768V81.5H55.644V139h18.124v-21.436h18.768V139h18.124zm68.004-28.98c0-20.056-13.432-29.9-30.636-29.9s-30.912 11.5-30.912 30.268c0 20.056 13.432 29.992 30.636 29.992s30.912-11.592 30.912-30.36zm-18.216.368c0 9.2-4.14 15.732-12.42 15.732-8.372 0-12.696-6.624-12.696-16.1 0-9.2 4.048-15.64 12.42-15.64s12.696 6.532 12.696 16.008zm73.524-14.076V81.5h-52.9v14.812h17.388V139h18.124V96.312h17.388zm63.956 13.708c0-20.056-13.432-29.9-30.636-29.9s-30.912 11.5-30.912 30.268c0 20.056 13.432 29.992 30.636 29.992s30.912-11.592 30.912-30.36zm-18.216.368c0 9.2-4.14 15.732-12.42 15.732-8.372 0-12.696-6.624-12.696-16.1 0-9.2 4.048-15.64 12.42-15.64s12.696 6.532 12.696 16.008zm64.6 3.772L323.888 81.5h-19.504V139h16.836v-32.568l20.7 33.12h19.228V81.5h-16.836v32.66zm46.384 11.592c-7.268 0-14.996-2.3-21.16-5.336l-2.76 14.812c5.244 2.852 14.168 5.152 23.644 5.152 16.652 0 25.3-7.912 25.3-19.412 0-11.04-9.568-14.996-18.676-17.572-5.704-1.564-11.224-2.852-11.224-5.52 0-2.3 2.024-3.036 5.52-3.036 5.98 0 13.8 2.116 20.24 5.244l2.852-14.812c-5.52-2.76-12.972-5.06-23.184-5.06-15.732 0-23.552 7.36-23.552 18.584 0 11.684 10.672 15.732 19.136 18.124 6.716 1.932 10.764 2.76 10.764 5.52 0 2.392-2.76 3.312-6.9 3.312z"/>
+  </g>
+</symbol>  </svg>
+  
+  
+
+  
+
+  
+          <a href="#page" class="cover cover-article">
+
+
+
+        <style>
+          /* larger, high density screen and print */
+          @media  
+            (-webkit-min-device-pixel-ratio: 2) and (min-width: 960px), 
+            (min-resolution: 192dpi) and (min-width: 960px) 
+          { 
+            .cover-inner { 
+              background-image: url("/wp-content/uploads/2017/03/P1020686-2800x1575.jpg")
+            }
+          }
+          /* larger, low density screen */
+          /* small, high density screen */
+          @media  
+            only screen and (-webkit-max-device-pixel-ratio: 1.99) and (min-width: 960px), 
+            only screen and (max-resolution: 191dpi) and (min-width: 960px),
+            only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 959px), 
+            only screen and (min-resolution: 192dpi) and (max-width: 960px)
+          {
+            .cover-inner { 
+              background-image: url("/wp-content/uploads/2017/03/P1020686-1400x787.jpg")
+            }
+          }
+          /* small, low density screen */
+          @media  
+            only screen and (-webkit-max-device-pixel-ratio: 1.99) and (max-width: 960px), 
+            only screen and (max-resolution: 191dpi) and (max-width: 960px)
+          {
+            .cover-inner { 
+              background-image: url("/wp-content/uploads/2017/03/P1020686-1400x787.jpg")
+            }
+          }
+        </style>
+
+        
+        <div class="cover-inner">
+          <header class="cover-masthead">
+            <h1 class="cover-heading">Rotterdam: A wander through town</h1>
+            <div class="cover-summary">
+              <div class="hidden-under-m">
+                              </div>
+              <div>Read More ...</div>
+              
+            </div>
+          </header>
+        </div><!-- cover-inner -->
+      </a><!-- cover -->
+    
+    <div class="min-vh-100 cf main-container" id="page">
+    
+  <header role="banner" class="page-hd">
+
+    <!-- menu button -->
+    <div class="right gutter-right">
+      <a class="nav-main__trigger js-nav-main__trigger uppercase track-loose" href="#" >
+        <span class="burger">
+          <span></span><span></span><span></span><span></span>          
+        </span>
+        Menu
+      </a>
+    </div>
+    
+    <!-- icon -->
+    <div class="branding left gutters category-photos">
+      <a  class="logo__link block" style="max-width: 250px" href="/photos/" rel="home">
+        <svg>
+          <use xlink:href="#logo-with-strap" />
+        </svg>         
+      </a>
+    </div><!-- branding -->
+
+
+    <!-- dropdown nav -->
+    <nav class="nav-main">
+
+      <ul>
+        <li class="h6 text-center mv0 gutters" style="color:#eee;">
+          <div class="clearfix width-s center">
+            <form class="block clearfix pv2 search" role="search" method="get" id="searchform" action="/">
+  <div>
+    <label class="screen-reader-text" for="s">Search for:</label>
+    <input class="button--search right relative uppercase track-loose" type="submit" id="searchsubmit" value="Search">
+    <div class="overflow-hidden">
+      <input class="fill" type="text" value="" name="s" id="s">
+    </div>
+  </div>
+</form>          </div>
+        </li>
+        <li class="h3 uppercase text-center link--heading-color border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 font-sans heavy  gutter-left gutter-right" href="/">
+            Home <span style="color:#e86146;"></span>
+          </a>
+        </li>
+        <li class="h3 uppercase text-center border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 gutter-left gutter-right font-sans heavy link--heading-color" href="/design">
+            Notes on Design<span style="color:#e86146;">...</span>
+          </a>
+        </li>
+                <li class="h3 uppercase text-center border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 gutter-left gutter-right font-sans heavy link--heading-color" href="/photos">
+            Photos<span style="color:#e86146;font-weight: 900">_</span>
+          </a>
+        </li>
+        <ul class="nav-main__sub" style="background: #fafafa;margin-top:-1px;">
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/photos/rotterdam-wander-town/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">Rotterdam: A wander through town</div>
+      <div class="info">
+        <!-- <time datetime="Friday, May 12th, 2017" pubdate>Friday 12th May 2017</time> -->
+        <span class="tag">rotterdam </span>      </div>
+    </a>            
+  </li>
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/photos/a-day-at-the-kunsthal/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">Rotterdam: A day at the Kunsthal</div>
+      <div class="info">
+        <!-- <time datetime="Saturday, May 21st, 2016" pubdate>Saturday 21st May 2016</time> -->
+        <span class="tag">rotterdam </span>      </div>
+    </a>            
+  </li>
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/photos/rotterdam-centraal-crib/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">Rotterdam: From Centraal to Kop Van Zuid</div>
+      <div class="info">
+        <!-- <time datetime="Thursday, May 19th, 2016" pubdate>Thursday 19th May 2016</time> -->
+        <span class="tag">rotterdam </span>      </div>
+    </a>            
+  </li>
+    <li class="text-center border-top link--heading-color mv0" style="color:#eee;">
+    <a href="/photos/pride-2015/" rel="bookmark" class="pv2  gutter-left gutter-right nav-main__sub-link">
+      <div class="h3 pv0 font-sans bold nav-main__title nav-main__sub-title">Pride 2015</div>
+      <div class="info">
+        <!-- <time datetime="Sunday, August 2nd, 2015" pubdate>Sunday 2nd August 2015</time> -->
+        <span class="tag">brighton </span>      </div>
+    </a>            
+  </li>
+    
+</ul>
+        <li class="h3 uppercase text-center border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 gutter-left gutter-right font-sans heavy link--heading-color" href="/music">
+            What I’m Listening To<span style="color:#e86146;">»</span>
+          </a>
+        </li>
+                <li class="h3 uppercase text-center border-top mv0" style="color:#eee;">
+          <a class="text-center pv3 gutter-left gutter-right font-sans heavy link--heading-color" href="/other">
+            Other Matters<span style="color:#e86146;">*</span>
+          </a>
+        </li>
+              </ul>
+    </nav><!-- nav-main -->  
+         
+  </header><!-- page-hd -->
+    <main class="page-bd">
+  
+
+
+<div class="cf wrap">
+  
+
+
+      
+    
+    <article class="gutters post type-post hentry">
+
+      <header>
+        <div class="info entry-meta size-s">
+          <a href="/tag/rotterdam/" rel="tag">rotterdam</a>        </div>
+        <h1 class="mt0">
+          Rotterdam: A wander through town        </h1>
+        <time class="info" datetime="Friday, May 12th, 2017" pubdate>Friday, 5th May 2017</time>
+      </header>
+
+      <footer class="">
+        <div>
+          <!-- Posted on  --> 
+        </div> 
+      </footer>   
+
+            
+      <div class="cf entry-content">
+        <div class="gallery wp-gallery gutters__container">
+<div class="wp-gallery__item gallery-item">
+  <a href="/wp-content/uploads/2017/03/P1020617-1400x788.jpg" class="wp-gallery__link" data-fancybox="gallery28745">
+  <img src="/wp-content/uploads/2017/03/P1020617-450x300.jpg" srcset="/wp-content/uploads/2017/03/P1020617-450x300.jpg 1x, /wp-content/uploads/2017/03/P1020617-900x600.jpg 2x" width="450" height="300" alt="" />
+<div class="wp-caption__hover-overlay"></div>
+  </a>
+</div>
+<div class="wp-gallery__item gallery-item">
+  <a href="/wp-content/uploads/2017/03/P1020650-1400x787.jpg" class="wp-gallery__link" data-fancybox="gallery28745">
+  <img src="/wp-content/uploads/2017/03/P1020650-450x300.jpg" srcset="/wp-content/uploads/2017/03/P1020650-450x300.jpg 1x, /wp-content/uploads/2017/03/P1020650-900x600.jpg 2x" width="450" height="300" alt="" />
+<div class="wp-caption__hover-overlay"></div>
+  </a>
+</div>
+<div class="wp-gallery__item gallery-item">
+  <a href="/wp-content/uploads/2017/03/P1020651-1400x788.jpg" class="wp-gallery__link" data-fancybox="gallery28745">
+  <img src="/wp-content/uploads/2017/03/P1020651-450x300.jpg" srcset="/wp-content/uploads/2017/03/P1020651-450x300.jpg 1x, /wp-content/uploads/2017/03/P1020651-900x600.jpg 2x" width="450" height="300" alt="" />
+<div class="wp-caption__hover-overlay"></div>
+  </a>
+</div>
+<div class="wp-gallery__item gallery-item">
+  <a href="/wp-content/uploads/2017/03/P1020655-1400x2489.jpg" class="wp-gallery__link" data-fancybox="gallery28745">
+  <img src="/wp-content/uploads/2017/03/P1020655-450x300.jpg" srcset="/wp-content/uploads/2017/03/P1020655-450x300.jpg 1x, /wp-content/uploads/2017/03/P1020655-900x600.jpg 2x" width="450" height="300" alt="" />
+<div class="wp-caption__hover-overlay"></div>
+  </a>
+</div>
+<div class="wp-gallery__item gallery-item">
+  <a href="/wp-content/uploads/2017/03/P1020670-1400x788.jpg" class="wp-gallery__link" data-fancybox="gallery28745">
+  <img src="/wp-content/uploads/2017/03/P1020670-450x300.jpg" srcset="/wp-content/uploads/2017/03/P1020670-450x300.jpg 1x, /wp-content/uploads/2017/03/P1020670-900x600.jpg 2x" width="450" height="300" alt="" />
+<div class="wp-caption__hover-overlay"></div>
+  </a>
+</div>
+<div class="wp-gallery__item gallery-item">
+  <a href="/wp-content/uploads/2017/03/P1020671-1400x788.jpg" class="wp-gallery__link" data-fancybox="gallery28745">
+  <img src="/wp-content/uploads/2017/03/P1020671-450x300.jpg" srcset="/wp-content/uploads/2017/03/P1020671-450x300.jpg 1x, /wp-content/uploads/2017/03/P1020671-900x600.jpg 2x" width="450" height="300" alt="" />
+<div class="wp-caption__hover-overlay"></div>
+  </a>
+</div>
+<div class="wp-gallery__item gallery-item">
+  <a href="/wp-content/uploads/2017/03/P1020679-1400x2489.jpg" class="wp-gallery__link" data-fancybox="gallery28745">
+  <img src="/wp-content/uploads/2017/03/P1020679-450x300.jpg" srcset="/wp-content/uploads/2017/03/P1020679-450x300.jpg 1x, /wp-content/uploads/2017/03/P1020679-900x600.jpg 2x" width="450" height="300" alt="" />
+<div class="wp-caption__hover-overlay"></div>
+  </a>
+</div>
+<div class="wp-gallery__item gallery-item">
+  <a href="/wp-content/uploads/2017/03/P1020683-1400x788.jpg" class="wp-gallery__link" data-fancybox="gallery28745">
+  <img src="/wp-content/uploads/2017/03/P1020683-450x300.jpg" srcset="/wp-content/uploads/2017/03/P1020683-450x300.jpg 1x, /wp-content/uploads/2017/03/P1020683-900x600.jpg 2x" width="450" height="300" alt="" />
+<div class="wp-caption__hover-overlay"></div>
+  </a>
+</div>
+<div class="wp-gallery__item gallery-item">
+  <a href="/wp-content/uploads/2017/03/P1020686-1400x787.jpg" class="wp-gallery__link" data-fancybox="gallery28745">
+  <img src="/wp-content/uploads/2017/03/P1020686-450x300.jpg" srcset="/wp-content/uploads/2017/03/P1020686-450x300.jpg 1x, /wp-content/uploads/2017/03/P1020686-900x600.jpg 2x" width="450" height="300" alt="" />
+<div class="wp-caption__hover-overlay"></div>
+  </a>
+</div>
+<div class="wp-gallery__item gallery-item">
+  <a href="/wp-content/uploads/2017/03/P1020700-1400x788.jpg" class="wp-gallery__link" data-fancybox="gallery28745">
+  <img src="/wp-content/uploads/2017/03/P1020700-450x300.jpg" srcset="/wp-content/uploads/2017/03/P1020700-450x300.jpg 1x, /wp-content/uploads/2017/03/P1020700-900x600.jpg 2x" width="450" height="300" alt="" />
+<div class="wp-caption__hover-overlay"></div>
+  </a>
+</div>
+</div>
+
+              </div>
+
+      
+            
+      <nav class="cf border-top border-bottom grey-10 mt4 pv2">
+        <ul class="navigation flex post-suggestion">
+          <li class="post-suggestion__older left pr1 border-right u1of2 flex">
+            <a href="/photos/a-day-at-the-kunsthal/" rel="prev"><span class="info block">&larr; Older</span> <span class="visually-hidden-under-m bold">Rotterdam: A day at the Kunsthal</span></a>          </li> 
+          <li class="post-suggestion__newer relative right pl1 u1of2 flex text-right">
+            <div class="block fill">
+                            
+            </div>
+
+          </li>
+        </ul>        
+      </nav>
+
+      <style>
+        .post-suggestion__newer a {
+          float: right;
+        }
+      </style>
+      
+      <!-- <nav class="cf entry-comments">
+              </nav> -->
+
+    </article>
+
+    
+</div><!-- cf wrap -->
+
+        
+  
+      </main><!-- page-bd -->
+    </div><!-- main-container -->
+
+    <footer role="contentinfo" class="page-ft cf pv5 mt5 gutters" style="background:#fff">
+      <div class="wrap">
+        &copy;2020 <a class="" href="/">Paul Davison</a> 
+         - <a class="grey-70" href="/design">Design</a>
+         - <a class="grey-70 is-active" href="/photos">Photos</a> 
+         - <a class="grey-70" href="/music">Music</a> 
+         - <a class="grey-70" href="/other">Other Matters</a> 
+         <!-- <a class="right button" style="color:white;margin-top: -12px" href="#page" title="Jump back to top">&#8593; TOP</a> -->    
+      </div><!-- wrap -->
+    </footer>
+
+  
+  <noscript id="deferred-styles">
+    <link rel="stylesheet" type="text/css" href="/wp-content/themes/photo/stylesheets-1-0-1/css/style.css"/>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+      </noscript>
+  <script>
+    var loadDeferredStyles = function() {
+      var addStylesNode = document.getElementById("deferred-styles");
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+  </script>
+  
+  <!-- wp_footer -->
+  <script type='text/javascript' src='/wp-content/plugins/ab-audio-sync-master/libs/device/device.min.js?ver=5.5.3' id='device-js-js'></script>
+<script type='text/javascript' src='/wp-content/plugins/ab-audio-sync-master/libs/howler/howler.core.min.js?ver=5.5.3' id='howler-js-js'></script>
+<script type='text/javascript' src='/wp-content/themes/photo/javascripts-1-0-1/min/general.js' id='jquery-js'></script>
+<script type='text/javascript' src='/wp-content/plugins/ab-audio-sync-master/ab-audio-sync.js?ver=5.5.3' id='ab-audio-sync-js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=5.5.3' id='wp-embed-js'></script>
+  <!-- / wp_footer -->
+  
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+  
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-99105445-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
