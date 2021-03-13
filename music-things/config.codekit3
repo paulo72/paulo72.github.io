@@ -211,6 +211,28 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/pwa-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 1,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/pwa-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pwabuilder-sw.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 1,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/pwabuilder-sw-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		}
 	},
 "hooks": [
