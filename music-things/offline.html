@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Beatsheet</title>
+
+  <script src="./js/tonal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.68/Tone.js"></script>
+  <!-- <script src="./js/jquery-3.5.1.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.js"></script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://actino.co.uk/wp-content/themes/photo/favicons/music/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://actino.co.uk/wp-content/themes/photo/favicons/music/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://actino.co.uk/wp-content/themes/photo/favicons/music/favicon-16x16.png">
+  <link rel="manifest" href="https://actino.co.uk/wp-content/themes/photo/favicons/music/manifest.json">
+  <link rel="mask-icon" href="https://actino.co.uk/wp-content/themes/photo/favicons/music/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="https://actino.co.uk/wp-content/themes/photo/favicons/music/favicon.ico">
+  <meta name="msapplication-config" content="https://actino.co.uk/wp-content/themes/photo/favicons/music/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  
+  <link rel="stylesheet" href="./css/styles.css">
+
+<style>
+main::-webkit-scrollbar {
+  width: 15px;
+}
+ 
+main::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+main::-webkit-scrollbar-thumb {
+  background-color: #5d5d5d;
+  border: 3px solid #2d2d2d;
+  border-radius: 20px;  
+}
+.right {
+  float: right;
+}
+</style>
+</head>
+
+
+<body>
+  <form action="#" method="get">
+
+    <input id="song_name" name="song_name" style="text-transform: capitalize; color: #fff;" type="text">
+    <button id="reload_name" onclick="newRandomishName();return false;">↻</button>
+    <!-- <div class="ui-title">Song Name</div> -->
+    
+    <div class="right">
+      
+      <div id="scale" class="inline-block">
+            
+        <!-- <label for="scale_type">Scale</label> -->
+        <select name="scale_type" id="scale_type">
+          <optgroup label="common">
+            <option value="major">major</option>
+            <option value="aeolian">minor</option>
+            <option value="harmonic minor">harmonic minor</option>
+            <option value="melodic minor">melodic minor</option>
+          </optgroup>
+          <optgroup label="major modes">
+            <option value="lydian">lydian</option>
+            <option value="major">ionian/major</option>
+            <option value="mixolydian">mixolydian</option>
+            <option value="dorian">dorian</option>
+            <option value="aeolian">aeolian/minor</option>
+            <option value="phrygian">phrygian</option>
+            <option value="locrian">locrian</option>
+          </optgroup>
+          <optgroup label="pentatonic">
+            <option value="major pentatonic">major pentatonic</option>
+            <option value="minor pentatonic">minor pentatonic</option>
+          </optgroup>
+          <optgroup label="blues">
+            <option value="minor blues">minor blues</option>
+          </optgroup>
+          <optgroup label="fancy">
+            <option value="dorian #4">dorian #4</option>
+            <option value="phrygian dominant">phrygian dominant</option>
+            <option value="persian">persian</option>
+            <option value="egyptian">egyptian</option>
+            <option value="flamenco">flamenco</option>
+            <option value="spanish heptatonic">spanish heptatonic</option>
+          </optgroup>
+          <optgroup label="mo fancy">
+            <option value="bebop">bebop</option>
+            <option value="bebop minor">bebop minor</option>
+            <option value="enigmatic">enigmatic</option>
+            <option value="augmented">augmented</option> 
+            <option value="altered">altered</option>
+            <option value="diminished">diminished</option>
+          </optgroup>
+          <optgroup label="major">
+            <option value="harmonic major">harmonic major</option>
+            <option value="double harmonic major">double harmonic major</option>
+          </optgroup>
+          <!-- 
+          <option value="minor six pentatonic">minor six pentatonic</option>
+          <option value="flat three pentatonic">flat three pentatonic</option>
+          <option value="flat six pentatonic">flat six pentatonic</option>
+          <option value="whole tone pentatonic">whole tone pentatonic</option>
+          <option value="lydian #5P pentatonic">lydian #5P pentatonic</option>
+          <option value="lydian dominant pentatonic">lydian dominant pentatonic</option>
+          <option value="minor #7M pentatonic">minor #7M pentatonic</option>
+          <option value="super locrian pentatonic">super locrian pentatonic</option>
+
+          <option value="ionian pentatonic">ionian pentatonic</option>
+          <option value="mixolydian pentatonic">mixolydian pentatonic</option>
+          <option value="neopolitan major pentatonic">neopolitan major pentatonic</option>
+          <option value="lydian pentatonic">lydian pentatonic</option>
+          <option value="locrian pentatonic">locrian pentatonic</option>
+
+          <option value="locrian major">locrian major</option>
+          <option value="double harmonic lydian">double harmonic lydian</option>
+          <option value="locrian #2">locrian #2</option>
+          <option value="mixolydian b6">mixolydian b6</option>
+          <option value="lydian dominant">lydian dominant</option>
+          <option value="lydian augmented">lydian augmented</option>
+          <option value="dorian b2">dorian b2</option>
+          <option value="ultralocrian">ultralocrian</option>
+          <option value="locrian 6">locrian 6</option>
+          <option value="augmented heptatonic">augmented heptatonic</option>
+          <option value="romanian minor">romanian minor</option>
+          <option value="lydian diminished">lydian diminished</option>
+          <option value="leading whole tone">leading whole tone</option>
+          <option value="lydian minor">lydian minor</option>
+          <option value="balinese">balinese</option>
+          <option value="neopolitan major">neopolitan major</option>
+          <option value="hungarian minor">hungarian minor</option>
+          <option value="hungarian major">hungarian major</option>
+          <option value="oriental">oriental</option>
+          <option value="todi raga">todi raga</option>
+          <option value="major augmented">major augmented</option>
+           -->
+        </select> 
+
+        <style>
+          .scale-dependent { display: none; }
+          [data-scale="major"] .scale-dependent.Ion,
+          [data-scale="aeolian"] .scale-dependent.Aeo,
+          [data-scale="harmonic-minor"] .scale-dependent.HMin,
+          [data-scale="melodic-minor"] .scale-dependent.Mmin, 
+          [data-scale="lydian"] .scale-dependent.Lyd,
+          [data-scale="mixolydian"] .scale-dependent.Mix,
+          [data-scale="dorian"] .scale-dependent.Dor,
+          [data-scale="phrygian"] .scale-dependent.Phr,
+          [data-scale="locrian"] .scale-dependent.Loc,
+          [data-scale="major-pentatonic"] .scale-dependent.MajP,  
+          [data-scale="minor-pentatonic"] .scale-dependent.MinP,
+          [data-scale="blues"] .scale-dependent.Blu,
+          [data-scale="diminished"] .scale-dependent.Dim {
+            display: block;
+          }
+        </style>
+        <!-- Ion Lyd Mix MajP  HMin  Mmin  Blu MinP  Dim Dor Phr Aeo Loc -->
+
+
+        <!-- <label for="scale_tonic">Tonic</label> -->
+        <select name="scale_tonic" id="scale_tonic">
+
+          <option class="" value="C">C</option>
+          <option class="scale-dependent HMin Mmin  Blu MinP  Dim Dor Phr Aeo Loc" value="C#">C♯</option>
+          <option class="scale-dependent Ion  Lyd Mix MajP" value="Db">D♭</option>
+          <option class="" value="D">D</option>
+          <option class="scale-dependent Phr  Loc" value="D#">D♯</option>
+          <option class="scale-dependent Ion  Dor Lyd Mix Aeo HMin  Mmin  Blu MinP  Dim MajP" value="Eb">E♭</option>
+          <option class="" value="E">E</option>
+          <option class="" value="F">F</option>
+          <option class="scale-dependent" value="F#">F♯</option>
+          <option class="" value="G">G</option>
+          <option class="scale-dependent Phr  Aeo Loc HMin  Mmin  Blu MinP  Dim" value="G#">G♯</option>
+          <option class="scale-dependent Ion  Dor Lyd Mix MajP" value="Ab">A♭</option>
+          <option class="" value="A">A</option>
+          <option class="scale-dependent Loc" value="A#">A♯</option>
+          <option class="scale-dependent Ion  Dor Phr Lyd Mix Aeo HMin  Mmin  Blu MinP  Dim MajP" value="Bb">B♭</option>
+          <option class="" value="B">B</option>
+
+        </select> 
+      </div>
+
+      <div class="inline-block">
+        <!-- <label for="chord_types">Chord type:</label> -->
+        <select name="chord_types" id="chord_types">
+          <option value="triad">no chords</option>
+          <option value="triad">triad</option>
+          <option value="seventh" selected="">seventh</option>
+          <option value="ninth">ninth</option>
+          <option value="eleventh">eleventh</option>
+          <option value="thirteenth">thirteenth</option>
+        </select>      
+      </div>
+
+      <div class="inline-block">
+        <!-- <label for="bpm">BPM</label> -->
+        <input name="bpm" id="bpm" value="119" type="number">      
+      </div>
+
+      <div class="inline-block">
+        <!-- <label for="instrument">Instrument</label> -->
+        <!-- <select name="instrument" id="instrument" onChange="window.location.replace(this.options[this.selectedIndex].value)">
+          <option value="#view-chords" selected>Chords</option>
+          <option value="#view-fretboard">Bass</option>
+          <option value="#view-keyboard">Keyboard</option>
+        </select>   --> 
+        <select name="note_display" id="note_display">
+          <option value="note-names" selected>Notes</option>
+          <option value="note-numbers">Numbers</option>
+        </select>       
+      </div>
+
+      <button type="submit" style="margin-left: 30px;" onclick="alert('Bookmark the URL to save your settings');">Save</button>
+    </div><!-- right -->
+
+
+
+  </form>
+
+  <main id="instruments-container">
+
+
+
+    <div id="view-chords" class="section-wrap">
+      <div class="section">
+        <h2 style="margin: 0 0 10px;"><span id="name-of-scale"></span> chords</h2>
+        <!-- <div id="scale_notes"></div> -->
+        <!--<h2>Chords</h2> -->
+
+        <div id="scale_chords"></div>
+
+        <p class="if-eleventh">If 11th and 3rd are a semitone apart the 3rd is often skipped instead of the 5th.</p>
+      </div>
+    </div><!-- view-chords -->
+
+    <div id="view-fretboard" class="section-wrap">
+      <div class="section">
+        <div id="fretboard">
+          <h2>Bass</h2>
+          <div id="g-string" class="fret-container">
+            <div data-note="G2" class="fret-0 fret fret-G">G</div>
+            <div data-note="G#2" class="fret fret-G-sharp fret-A-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="A2" class="fret fret-A">A</div>
+            <div data-note="A#2" class="fret fret-A-sharp fret-B-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="B2" class="fret fret-B fret-C-flat">B</div>
+            <div data-note="C3" class="fret fret-C fret-B-sharp">C</div>
+            <div data-note="C#3" class="fret fret-C-sharp fret-D-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="D3" class="fret fret-D">D</div>
+            <div data-note="D#3" class="fret fret-D-sharp fret-E-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="E3" class="fret fret-E fret-F-flat">E</div>
+            <div data-note="F3" class="fret fret-F fret-E-sharp">F</div>
+            <div data-note="F#3" class="fret fret-F-sharp fret-G-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="G3" class="fret fret-G">G</div>
+          </div>
+          <div id="d-string">
+            <div data-note="D2" class="fret-0 fret fret-D">D</div>
+            <div data-note="D#2" class="fret fret-D-sharp fret-E-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="E2" class="fret fret-E fret-F-flat">E</div>
+            <div data-note="F2" class="fret fret-F fret-E-sharp">F</div>
+            <div data-note="F#2" class="fret fret-F-sharp fret-G-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="G2" class="fret fret-G">G</div>
+            <div data-note="G#2" class="fret fret-G-sharp fret-A-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="A2" class="fret fret-A">A</div>
+            <div data-note="A#2" class="fret fret-A-sharp fret-B-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="B2" class="fret fret-B fret-C-flat">B</div>
+            <div data-note="C3" class="fret fret-C fret-B-sharp">C</div>
+            <div data-note="C#3" class="fret fret-C-sharp fret-D-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="D3" class="fret fret-D">D</div>
+          </div>
+          <div id="a-string">
+            <div data-note="A1" class="fret-0 fret fret-A">A</div>
+            <div data-note="A#1" class="fret fret-A-sharp fret-B-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="B1" class="fret fret-B fret-C-flat">B</div>
+            <div data-note="C2" class="fret fret-C fret-B-sharp">C</div>
+            <div data-note="C#2" class="fret fret-C-sharp fret-D-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="D2" class="fret fret-D">D</div>
+            <div data-note="D#2" class="fret fret-D-sharp fret-E-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="E2" class="fret fret-E fret-F-flat">E</div>
+            <div data-note="F2" class="fret fret-F fret-E-sharp">F</div>
+            <div data-note="F#2" class="fret fret-F-sharp fret-G-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="G2" class="fret fret-G">G</div>
+            <div data-note="G#2" class="fret fret-G-sharp fret-A-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="A2" class="fret fret-A">A</div>
+          </div>
+          <div id="e-string">
+            <div data-note="E1" class="fret-0 fret fret-E fret-F-flat">E</div>
+            <div data-note="F1" class="fret fret-F fret-E-sharp">F</div>
+            <div data-note="F#1" class="fret fret-F-sharp fret-G-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="G1" class="fret fret-G">G</div>
+            <div data-note="G#1" class="fret fret-G-sharp fret-A-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="A1" class="fret fret-A">A</div>
+            <div data-note="A#1" class="fret fret-A-sharp fret-B-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="B1" class="fret fret-B fret-C-flat">B</div>
+            <div data-note="C1" class="fret fret-C fret-B-sharp">C</div>
+            <div data-note="C#1" class="fret fret-C-sharp fret-D-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="D1" class="fret fret-D">D</div>
+            <div data-note="D#1" class="fret fret-D-sharp fret-E-flat fret-enharmonic">&nbsp;</div>
+            <div data-note="E2" class="fret fret-E fret-F-flat">E</div>
+          </div>
+
+
+          <div id="fret-numbers">
+            <div class="fret fret-number">o</div>
+            <div class="fret fret-number">&nbsp;</div>
+            <div class="fret fret-number">&nbsp;</div>
+            <div class="fret fret-number">•</div>
+            <div class="fret fret-number">&nbsp;</div>
+            <div class="fret fret-number">•</div>
+            <div class="fret fret-number">&nbsp;</div>
+            <div class="fret fret-number">•</div>
+            <div class="fret fret-number">&nbsp;</div>
+            <div class="fret fret-number">•</div>
+            <div class="fret fret-number">&nbsp;</div>
+            <div class="fret fret-number">&nbsp;</div>
+            <div class="fret fret-number">••</div>
+          </div>
+        </div>                   
+      </div>
+    </div><!-- view-fretboard -->
+
+    <div id="view-keyboard" class="section-wrap">
+      <div class="section">
+        <div id="keyboard">
+          <h2>Keyboard</h2>
+          <div style="position:relative;overflow: hidden;top: -3px;">
+            <div data-note="C4" class="key key-C key-B-sharp"></div>
+            <div data-note="C#4" class="key key-C-sharp key-D-flat key-enharmonic"></div>
+            <div data-note="D4" class="key key-D"></div>
+            <div data-note="D#4" class="key key-D-sharp key-E-flat key-enharmonic"></div>
+            <div data-note="E4" class="key key-E key-F-flat"></div>
+            <div data-note="F4" class="key key-F key-E-sharp"></div>
+            <div data-note="F#4" class="key key-F-sharp key-G-flat key-enharmonic"></div>
+            <div data-note="G4" class="key key-G"></div>
+            <div data-note="G#4" class="key key-G-sharp key-A-flat key-enharmonic"></div>
+            <div data-note="A4" class="key key-A"></div>
+            <div data-note="A#4" class="key key-A-sharp key-B-flat key-enharmonic"></div>
+            <div data-note="B4" class="key key-B key-C-flat"></div>
+
+            <div data-note="C5" class="key key-C key-B-sharp"></div>
+            <div data-note="C#5" class="key key-C-sharp key-D-flat key-enharmonic"></div>
+            <div data-note="D5" class="key key-D"></div>
+            <div data-note="D#5" class="key key-D-sharp key-E-flat key-enharmonic"></div>
+            <div data-note="E5" class="key key-E key-F-flat"></div>
+            <div data-note="F5" class="key key-F key-E-sharp"></div>
+            <div data-note="F#5" class="key key-F-sharp key-G-flat key-enharmonic"></div>
+            <div data-note="G5" class="key key-G"></div>
+            <div data-note="G#5" class="key key-G-sharp key-A-flat key-enharmonic"></div>
+            <div data-note="A5" class="key key-A"></div>
+            <div data-note="A#5" class="key key-A-sharp key-B-flat key-enharmonic"></div>
+            <div data-note="B5" class="key key-B key-C-flat"></div>
+          </div>
+        </div>          
+      </div>
+    </div><!-- view-keyboard -->    
+
+
+        <div id="view-time" class="section-wrap">
+         <!-- <div style="width: 40%; float: right; display: none;">
+          <h2>Things to do</h2>
+          <ul>
+            <li>Save current</li>
+            <li>Save other??</li>
+            <li>Display correct note selection for given scale</li>
+            <li>Display chord values inna roman numeral </li>
+            <li>Restrict to sensible number of scales Major, Harm Min, Mel Min, Blues, Penta?</li>
+            <li>Tidy CSS</li>
+            <li>Tidy and annotate JS</li>
+            <li>Basic layout for iPad</li>
+            <li>Colour scheme</li>
+            <li>Indicate M m °</li>
+            <li>C O 5ths?</li>
+            <li>Printable?</li>
+            <li>Double width keyboard?</li>
+          </ul>      
+        </div> -->
+
+        <div id="bpm_output" class="-info">
+
+          <div style="display: inline-block; padding-right: 30px;">
+            <h2>Delay Times</h2>
+            <table>
+              <tbody>
+                <tr>
+                  <th>1</th><td id="delay_1"></td>
+                </tr>
+                <tr>
+                  <th>2</th><td id="delay_2"></td>
+                </tr>
+                <tr>
+                  <th>4</th><td id="delay_4"></td>
+                </tr>
+                <tr>
+                  <th>8.</th><td id="delay_8dot"></td>
+                </tr>
+                <tr>
+                  <th>8</th><td id="delay_8"></td>
+                </tr>
+                <tr>
+                  <th>16</th><td id="delay_16"></td>
+                </tr>
+              </tbody>
+            </table>            
+          </div>
+
+          <div style="display: inline-block;">
+            <h2>Reverb Times</h2>
+            <table>
+              <tbody>
+                <tr>
+                  <th>&nbsp;</th>
+                  <td>Pre-delay</td>
+                  <td>Decay</td>
+                </tr>
+                <tr>
+                  <th>Hall</th>
+                  <td id="reverb_pre_delay_h"></td>
+                  <td id="reverb_decay_h"></td>
+                </tr>
+                <tr>
+                  <th>Large Room</th>
+                  <td id="reverb_pre_delay_lr"></td>
+                  <td id="reverb_decay_lr"></td>
+                </tr>
+                <tr>
+                  <th>Small Room</th>
+                  <td id="reverb_pre_delay_sr"></td>
+                  <td id="reverb_decay_sr"></td>
+                </tr>
+                <tr>
+                  <th>Tight Ambience</th>
+                  <td id="reverb_pre_delay_ta"></td>
+                  <td id="reverb_decay_ta"></td>
+                </tr>
+              </tbody>
+            </table>            
+          </div>
+        </div>     
+    </div>
+
+    <!-- <div id="instruments-container" class="unselectable">
+    </div>instruments-container -->
+
+  </main>
+
+  <style>
+    .info {
+      display: table-cell;
+      ;
+    }
+</style>
+
+    
+  <script src="./js/nameGenerator.js"></script>  
+  <script src="./js/script-min.js"></script>
+
+<script type="module">
+/*
+ This code uses the pwa-update web component https://github.com/pwa-builder/pwa-update to register your service worker,
+ tell the user when there is an update available and let the user know when your PWA is ready to use offline.
+*/
+
+import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+const el = document.createElement('pwa-update');
+document.body.appendChild(el);
+
+  </script>
+</body>
+</html>

@@ -212,6 +212,14 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/offline.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/offline.html",
+		"oF": 0
+		},
 	"/pwa-min.js": {
 		"bF": 0,
 		"ft": 64,
