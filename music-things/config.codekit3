@@ -212,6 +212,14 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/manifest.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/manifest-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/offline.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -241,6 +249,17 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/TAM-SQ.jpg": {
+		"ft": 16384,
+		"iS": 166728,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/TAM-SQ.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		}
 	},
 "hooks": [
