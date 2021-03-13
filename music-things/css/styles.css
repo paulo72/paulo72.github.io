@@ -1,0 +1,479 @@
+:root {
+  --interval-1: #e6261f;
+  --interval-2: #eb5a32;
+  --interval-3: #eb7532;
+  --interval-4: #f7b138;
+  --interval-5: #f7d038;
+  --interval-6: #a3e048;
+  --interval-7: #66e048;
+  --interval-8: #49da9a;
+  --interval-9: #34bbe6;
+  --interval-10:#4355db;
+  --interval-11:#d23be7;
+  --interval-12:#e73b7c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-size: 18px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: "Avenir Next", "Arial Unicode MS", "DejaVu Sans", "Lucida Sans Unicode", "Segoe UI Symbol", "FreeSans", "Meiryo UI", "MS UI Gothic", "Everson Mono Unicode", Meiryo, "MS Gothic", "MS Mincho", "MS PGothic", "MS PMincho", "Meslo LG L", "Meslo LG L DZ", "Meslo M L", "Meslo M L DZ", "Meslo S L", "Meslo S L DZ", "Symbola", "DejaVu Sans Condensed", "DejaVu Sans Mono", Code2000, "Everson Mono", Quivira, sans-serif;
+  box-sizing: border-box;
+  background: #2d2d2d;
+  color: #fff;
+}
+
+body, *:before, *:after {
+  box-sizing: border-box;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  animation: fadein 1s;
+  animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  overflow: hidden;
+}
+
+#view-chords {
+  background: #111;
+}
+
+#view-keyboard {
+  background: #333;
+}
+
+#view-fretboard {
+  background: #222;
+}
+
+main {
+  padding-top: 55px;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.section-wrap {
+  padding: 20px;
+  height: calc(100vh - 55px);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  scroll-snap-align: center;
+}
+
+h2 {
+  color: #908d8d;
+}
+
+form {
+  padding: 10px;
+  color: #fff;
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}
+form * {
+  vertical-align: middle;
+}
+
+form select,
+form input,
+form button {
+  box-sizing: border-box;
+  margin-left: 5px;
+  max-width: 147px;
+  padding: 4px;
+  border: 3px solid #fff;
+  line-height: 20px;
+  font-size: 17px;
+  color: #fff;
+  background: #000;
+  border-radius: 8px;
+  opacity: 0.5;
+  transition: 0.2s;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+form select:hover,
+form input:hover,
+form button:hover {
+  opacity: 1;
+}
+
+#scale_type {
+  width: 147px;
+}
+
+#scale_tonic {
+  width: 56px;
+}
+
+#chord_types {
+  width: 100px;
+}
+
+#bpm {
+  width: 60px;
+}
+
+form input {
+  width: 50px;
+}
+
+form button {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#reload_name {
+  padding: 0;
+  line-height: 28px;
+  font-size: 28px;
+  border: 3px solid transparent;
+}
+#reload_name:active, #reload_name:focus {
+  outline: 0 none;
+}
+
+#song_name {
+  border: 0 none;
+  padding: 5px 0 0;
+  line-height: 1;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 900;
+  opacity: 1;
+  max-width: 200px;
+  width: auto;
+  border-bottom: 3px solid transparent;
+}
+#song_name:focus {
+  border-bottom: 3px solid #ddd;
+  border-radius: 0;
+  outline: none;
+}
+
+label {
+  font-weight: 700;
+  color: pink;
+  padding: 4px 0;
+  vertical-align: middle;
+}
+
+h1 {
+  margin: 0 10px 0 0;
+  font-size: 24px;
+  letter-spacing: -0.6px;
+}
+
+.ui-title {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.scale-tone {
+  background: pink;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 2px;
+}
+
+.scale-tone--1 {
+  background: red;
+}
+
+#keyboard {
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.key {
+  border: 2px solid #fff;
+  width: 61px;
+  height: 200px;
+  display: inline-block;
+  background: white;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+}
+
+.key-enharmonic {
+  border: 2px solid #000;
+  background: black;
+  margin: 0 -35px;
+  top: -80px;
+  position: relative;
+  z-index: 1;
+}
+
+.scale-tone[data-scale-interval],
+.fret[data-scale-interval],
+.key[data-scale-interval]:before {
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  color: black;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3), -1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.scale-tone[data-scale-interval="1P"],
+.fret[data-scale-interval="1P"],
+.key[data-scale-interval="1P"]:before {
+  background: var(--interval-1);
+}
+
+.scale-tone[data-scale-interval="2m"],
+.fret[data-scale-interval="2m"],
+.key[data-scale-interval="2m"]:before {
+  background: var(--interval-2);
+}
+
+.scale-tone[data-scale-interval="2M"],
+.fret[data-scale-interval="2M"],
+.key[data-scale-interval="2M"]:before {
+  background: var(--interval-3);
+}
+
+.scale-tone[data-scale-interval="3m"],
+.fret[data-scale-interval="3m"],
+.key[data-scale-interval="3m"]:before {
+  background: var(--interval-4);
+}
+
+.scale-tone[data-scale-interval="3M"],
+.fret[data-scale-interval="3M"],
+.key[data-scale-interval="3M"]:before {
+  background: var(--interval-5);
+}
+
+.scale-tone[data-scale-interval="4P"],
+.fret[data-scale-interval="4P"],
+.key[data-scale-interval="4P"]:before {
+  background: var(--interval-6);
+}
+
+.scale-tone[data-scale-interval="4A"],
+.fret[data-scale-interval="4A"],
+.key[data-scale-interval="4A"]:before {
+  background: var(--interval-7);
+}
+
+.scale-tone[data-scale-interval="5d"],
+.fret[data-scale-interval="5d"],
+.key[data-scale-interval="5d"]:before {
+  background: var(--interval-7);
+}
+
+.scale-tone[data-scale-interval="5P"],
+.fret[data-scale-interval="5P"],
+.key[data-scale-interval="5P"]:before {
+  background: var(--interval-8);
+  background: #29c7aa;
+}
+
+.scale-tone[data-scale-interval="6m"],
+.fret[data-scale-interval="6m"],
+.key[data-scale-interval="6m"]:before {
+  background: var(--interval-9);
+}
+
+.scale-tone[data-scale-interval="6M"],
+.fret[data-scale-interval="6M"],
+.key[data-scale-interval="6M"]:before {
+  background: var(--interval-10);
+}
+
+.scale-tone[data-scale-interval="7m"],
+.fret[data-scale-interval="7m"],
+.key[data-scale-interval="7m"]:before {
+  background: var(--interval-11);
+}
+
+.scale-tone[data-scale-interval="7M"],
+.fret[data-scale-interval="7M"],
+.key[data-scale-interval="7M"]:before {
+  background: var(--interval-12);
+}
+
+.key:before {
+  position: absolute;
+  content: attr(data-scale-number);
+  bottom: 5px;
+  left: 5px;
+  right: 0;
+  text-align: center;
+  font-size: 30px;
+  padding: 5px;
+  height: 50px;
+  width: 50px;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.fret {
+  font-size: 30px;
+  margin: 0 10px 13px;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  padding: 0;
+  text-align: center;
+  background: #5a5a5a;
+  border-radius: 50%;
+  display: inline-block;
+  font-weight: 500;
+  color: #2d2d2d;
+}
+
+.fret[data-scale-highlight] {
+  position: relative;
+  color: black;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3), -1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3);
+}
+.fret[data-scale-highlight]:after {
+  content: attr(data-scale-number);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  color: transparent;
+  text-shadow: none;
+}
+
+.fret.fret-enharmonic[data-scale-highlight]:after {
+  content: attr(data-note-display);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  color: black;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3), -1px -1px 0 rgba(255, 255, 255, 0.3), -1px 1px 0 rgba(255, 255, 255, 0.3), 1px -1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.fret:first-child {
+  font-weight: 700;
+}
+
+.fret-number {
+  background: transparent;
+  color: #5a5a5a;
+}
+
+.fret-0 {
+  border-radius: 16px;
+}
+
+table#the_chords {
+  width: 600px;
+}
+
+tr, td {
+  text-align: left;
+}
+
+td {
+  border: 0 none;
+  padding: 5px 10px;
+}
+td.chords {
+  font-size: 24px;
+  text-align: center;
+}
+
+[data-chord-type=triad] tr.chords_13th,
+[data-chord-type=triad] tr.chords_11th,
+[data-chord-type=triad] tr.chords_9th,
+[data-chord-type=triad] tr.chords_7th,
+[data-chord-type=seventh] tr.chords_13th,
+[data-chord-type=seventh] tr.chords_11th,
+[data-chord-type=seventh] tr.chords_9th,
+[data-chord-type=ninth] tr.chords_13th,
+[data-chord-type=ninth] tr.chords_11th,
+[data-chord-type=eleventh] tr.chords_13th {
+  display: none;
+}
+
+[data-chord-type=thirteenth] .chords_5th .chords,
+[data-chord-type=eleventh] .chords_5th .chords,
+[data-chord-type=ninth] .chords_5th .chords,
+[data-chord-type=seventh] .chords_5th .chords {
+  opacity: 0.5;
+}
+[data-chord-type=thirteenth] .chords_5th .chords[data-enharmonic="1"],
+[data-chord-type=eleventh] .chords_5th .chords[data-enharmonic="1"],
+[data-chord-type=ninth] .chords_5th .chords[data-enharmonic="1"],
+[data-chord-type=seventh] .chords_5th .chords[data-enharmonic="1"] {
+  opacity: 1;
+}
+
+[data-chord-type=eleventh] .chords_9th .chords {
+  opacity: 0.5;
+}
+[data-chord-type=eleventh] .chords_9th .chords[data-enharmonic="1"] {
+  opacity: 1;
+}
+
+[data-chord-type=thirteenth] .chords_9th .chords,
+[data-chord-type=thirteenth] .chords_11th .chords {
+  opacity: 0.5;
+}
+[data-chord-type=thirteenth] .chords_9th .chords[data-enharmonic="1"],
+[data-chord-type=thirteenth] .chords_11th .chords[data-enharmonic="1"] {
+  opacity: 1;
+}
+
+.if-eleventh {
+  display: none;
+}
+
+[data-chord-type=eleventh] .if-eleventh {
+  display: block;
+  opacity: 0.5;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.info {
+  color: #999;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.unselectable, .unselectable * {
+  user-select: none;
+}

@@ -1,0 +1,71 @@
+
+table#the_chords {
+  width: 600px;
+}
+tr, td {
+  text-align:left;
+}
+td {
+  border: 0 none;
+  padding: 5px 10px;
+  &.chords {
+    // font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+[data-chord-type="triad"] tr.chords_13th,
+[data-chord-type="triad"] tr.chords_11th,
+[data-chord-type="triad"] tr.chords_9th,
+[data-chord-type="triad"] tr.chords_7th,
+
+[data-chord-type="seventh"] tr.chords_13th,
+[data-chord-type="seventh"] tr.chords_11th,
+[data-chord-type="seventh"] tr.chords_9th,
+
+[data-chord-type="ninth"] tr.chords_13th,
+[data-chord-type="ninth"] tr.chords_11th,
+
+[data-chord-type="eleventh"] tr.chords_13th {
+  display: none;
+}
+
+[data-chord-type="thirteenth"],
+[data-chord-type="eleventh"],
+[data-chord-type="ninth"],
+[data-chord-type="seventh"], {
+  .chords_5th .chords {
+    opacity: 0.5;
+  }
+  .chords_5th .chords[data-enharmonic="1"] {
+    opacity: 1;
+  }
+} 
+
+[data-chord-type="ninth"] {
+
+}
+[data-chord-type="eleventh"] {
+  .chords_9th .chords {
+    opacity: 0.5;
+  }
+  .chords_9th .chords[data-enharmonic="1"] {
+    opacity: 1;
+  }
+}
+[data-chord-type="thirteenth"] {
+  .chords_9th .chords,
+  .chords_11th .chords {
+    opacity: 0.5;
+  }
+  .chords_9th .chords[data-enharmonic="1"],
+  .chords_11th .chords[data-enharmonic="1"] {
+    opacity: 1;
+  }
+}
+.if-eleventh { display: none; }
+[data-chord-type="eleventh"] .if-eleventh {
+  display: block;
+  opacity: 0.5;
+}
+

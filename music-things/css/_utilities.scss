@@ -1,0 +1,12 @@
+.bold {
+  font-weight: 700;
+}
+.info {
+  color: #999;
+}
+.inline-block{ 
+  display: inline-block; 
+}
+.unselectable,.unselectable * {
+  user-select: none;
+}

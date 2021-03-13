@@ -1,0 +1,204 @@
+.scale-tone {
+  background: pink;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 2px;
+}
+.scale-tone--1 {
+  background: red;
+}
+
+
+#keyboard {
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+.key {
+  border: 2px solid #fff;
+  width: 61px;
+  height: 200px;
+  display: inline-block;
+  background: white;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+}
+.key-enharmonic {
+  border: 2px solid #000;
+  background: black;
+  margin: 0 -35px;
+  top: -80px;
+  position: relative;
+  z-index: 1;
+}
+.scale-tone[data-scale-interval],
+.fret[data-scale-interval],
+.key[data-scale-interval]:before {
+ color: #fff;
+ font-weight: 700;
+ text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+ cursor: pointer;
+
+  color: black;
+  text-shadow: 
+     1px 1px 0 rgba(255,255,255,0.3), 
+    -1px -1px 0 rgba(255,255,255,0.3), 
+    -1px 1px 0 rgba(255,255,255,0.3), 
+     1px -1px 0 rgba(255,255,255,0.3)
+  ;
+}
+.scale-tone[data-scale-interval="1P"],
+.fret[data-scale-interval="1P"],
+.key[data-scale-interval="1P"]:before {
+  background: var(--interval-1);
+}
+.scale-tone[data-scale-interval="2m"],
+.fret[data-scale-interval="2m"],
+.key[data-scale-interval="2m"]:before {
+  background: var(--interval-2);
+}
+.scale-tone[data-scale-interval="2M"],
+.fret[data-scale-interval="2M"],
+.key[data-scale-interval="2M"]:before {
+  background: var(--interval-3);
+}
+.scale-tone[data-scale-interval="3m"],
+.fret[data-scale-interval="3m"],
+.key[data-scale-interval="3m"]:before {
+  background: var(--interval-4);
+}
+.scale-tone[data-scale-interval="3M"],
+.fret[data-scale-interval="3M"],
+.key[data-scale-interval="3M"]:before {
+  background: var(--interval-5);
+}
+.scale-tone[data-scale-interval="4P"],
+.fret[data-scale-interval="4P"],
+.key[data-scale-interval="4P"]:before {
+  background: var(--interval-6);
+}
+.scale-tone[data-scale-interval="4A"],
+.fret[data-scale-interval="4A"],
+.key[data-scale-interval="4A"]:before {
+  background: var(--interval-7);
+}
+.scale-tone[data-scale-interval="5d"],
+.fret[data-scale-interval="5d"],
+.key[data-scale-interval="5d"]:before {
+  background: var(--interval-7);
+}
+.scale-tone[data-scale-interval="5P"],
+.fret[data-scale-interval="5P"],
+.key[data-scale-interval="5P"]:before {
+  background: var(--interval-8);
+  background: #29c7aa;
+}
+.scale-tone[data-scale-interval="6m"],
+.fret[data-scale-interval="6m"],
+.key[data-scale-interval="6m"]:before {
+  background: var(--interval-9);
+}
+.scale-tone[data-scale-interval="6M"],
+.fret[data-scale-interval="6M"],
+.key[data-scale-interval="6M"]:before {
+  background: var(--interval-10);
+}
+.scale-tone[data-scale-interval="7m"],
+.fret[data-scale-interval="7m"],
+.key[data-scale-interval="7m"]:before {
+  background: var(--interval-11);
+}
+.scale-tone[data-scale-interval="7M"],
+.fret[data-scale-interval="7M"],
+.key[data-scale-interval="7M"]:before {
+  background: var(--interval-12);
+}
+
+
+
+
+
+
+.key:before {
+  position: absolute;
+  content: attr(data-scale-number);
+  bottom: 5px;
+  left: 5px;
+  right: 0;
+  text-align: center;
+  font-size: 30px;
+  padding:5px;
+  height:50px;
+  width:50px;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+
+.fret-container {
+
+}
+.fret {
+  font-size: 30px;
+  margin: 0 10px 13px;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  padding: 0;
+  text-align: center;
+  background: #5a5a5a;
+  border-radius: 50%;
+  display: inline-block;
+  font-weight: 500;
+  color: #2d2d2d;
+}
+.fret[data-scale-highlight] {
+  position: relative;
+  color: black;
+  text-shadow: 
+     1px 1px 0 rgba(255,255,255,0.3), 
+    -1px -1px 0 rgba(255,255,255,0.3), 
+    -1px 1px 0 rgba(255,255,255,0.3), 
+     1px -1px 0 rgba(255,255,255,0.3)
+  ;
+  &:after {
+    content: attr(data-scale-number);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    color: transparent;
+    text-shadow: none;
+  }
+}
+.fret.fret-enharmonic[data-scale-highlight]:after{
+  content: attr(data-note-display);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  color: black;
+  text-shadow: 
+     1px 1px 0 rgba(255,255,255,0.3), 
+    -1px -1px 0 rgba(255,255,255,0.3), 
+    -1px 1px 0 rgba(255,255,255,0.3), 
+     1px -1px 0 rgba(255,255,255,0.3)
+  ;
+}
+
+.fret:first-child {
+  font-weight: 700;
+}
+.fret-number {
+  background: transparent;
+  color: #5a5a5a;
+}
+.fret-0 {
+  border-radius: 16px;
+}
+
+
