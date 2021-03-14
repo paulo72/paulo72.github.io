@@ -97,6 +97,50 @@
 		"oS": 0,
 		"sct": 0
 		},
+	"/images/icon-192.jpg": {
+		"ft": 16384,
+		"iS": 41102,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/icon-192.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/icon-192.png": {
+		"ft": 32768,
+		"iS": 52731,
+		"oA": 0,
+		"oAP": "/images/icon-192.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/icon-512.jpg": {
+		"ft": 16384,
+		"iS": 166728,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/icon-512.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/icon-512.png": {
+		"ft": 32768,
+		"iS": 300220,
+		"oA": 0,
+		"oAP": "/images/icon-512.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -249,17 +293,6 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
-		},
-	"/TAM-SQ.jpg": {
-		"ft": 16384,
-		"iS": 166728,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/TAM-SQ.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
 		}
 	},
 "hooks": [

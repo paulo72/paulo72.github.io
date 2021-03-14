@@ -1,9 +1,26 @@
 {
-    "name": "MusicPal",
-    "short_name": "MusicPal",
-    "start_url": "https://actino.co.uk/music-things/",
-    "description": "Music utilities",
-    "lang": "English",
-    "orientation": "landscape-primary",
-    "display": "standalone"
+
+  "name": "MusicPal",
+  "short_name": "MusicPal",
+  "description": "Music utilities",
+  "lang": "English",
+  "theme_color": "#f7d038",
+  "background_color": "#111111",
+  "display": "standalone",
+  "orientation": "landscape",
+  "scope": "https://actino.co.uk/music-things/",
+  "start_url": "https://actino.co.uk/music-things/",
+  "icons": [
+    {
+      "src": "https://actino.co.uk/music-things/images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://actino.co.uk/music-things/images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+
 }
