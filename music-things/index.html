@@ -380,64 +380,70 @@ main::-webkit-scrollbar-thumb {
 
         <div id="bpm_output" class="-info">
 
-          <div style="display: inline-block; padding-right: 30px;">
-            <h2>Delay Times</h2>
-            <table>
-              <tbody>
-                <tr>
-                  <th>1</th><td id="delay_1"></td>
-                </tr>
-                <tr>
-                  <th>2</th><td id="delay_2"></td>
-                </tr>
-                <tr>
-                  <th>4</th><td id="delay_4"></td>
-                </tr>
-                <tr>
-                  <th>8.</th><td id="delay_8dot"></td>
-                </tr>
-                <tr>
-                  <th>8</th><td id="delay_8"></td>
-                </tr>
-                <tr>
-                  <th>16</th><td id="delay_16"></td>
-                </tr>
-              </tbody>
-            </table>            
+          <div id="bass_frequencies"></div>
+
+          <div>
+            <div style="display: inline-block; padding-right: 30px;">
+              <h2>Delay Times</h2>
+              <table>
+                <tbody>
+                  <tr>
+                    <th>1</th><td id="delay_1"></td>
+                  </tr>
+                  <tr>
+                    <th>2</th><td id="delay_2"></td>
+                  </tr>
+                  <tr>
+                    <th>4</th><td id="delay_4"></td>
+                  </tr>
+                  <tr>
+                    <th>8.</th><td id="delay_8dot"></td>
+                  </tr>
+                  <tr>
+                    <th>8</th><td id="delay_8"></td>
+                  </tr>
+                  <tr>
+                    <th>16</th><td id="delay_16"></td>
+                  </tr>
+                </tbody>
+              </table>            
+            </div>
+
+            <div style="display: inline-block;">
+              <h2>Reverb Times</h2>
+              <table>
+                <tbody>
+                  <tr>
+                    <th>&nbsp;</th>
+                    <td>Pre-delay</td>
+                    <td>Decay</td>
+                  </tr>
+                  <tr>
+                    <th>Hall</th>
+                    <td id="reverb_pre_delay_h"></td>
+                    <td id="reverb_decay_h"></td>
+                  </tr>
+                  <tr>
+                    <th>Large Room</th>
+                    <td id="reverb_pre_delay_lr"></td>
+                    <td id="reverb_decay_lr"></td>
+                  </tr>
+                  <tr>
+                    <th>Small Room</th>
+                    <td id="reverb_pre_delay_sr"></td>
+                    <td id="reverb_decay_sr"></td>
+                  </tr>
+                  <tr>
+                    <th>Tight Ambience</th>
+                    <td id="reverb_pre_delay_ta"></td>
+                    <td id="reverb_decay_ta"></td>
+                  </tr>
+                </tbody>
+              </table>            
+            </div>            
           </div>
 
-          <div style="display: inline-block;">
-            <h2>Reverb Times</h2>
-            <table>
-              <tbody>
-                <tr>
-                  <th>&nbsp;</th>
-                  <td>Pre-delay</td>
-                  <td>Decay</td>
-                </tr>
-                <tr>
-                  <th>Hall</th>
-                  <td id="reverb_pre_delay_h"></td>
-                  <td id="reverb_decay_h"></td>
-                </tr>
-                <tr>
-                  <th>Large Room</th>
-                  <td id="reverb_pre_delay_lr"></td>
-                  <td id="reverb_decay_lr"></td>
-                </tr>
-                <tr>
-                  <th>Small Room</th>
-                  <td id="reverb_pre_delay_sr"></td>
-                  <td id="reverb_decay_sr"></td>
-                </tr>
-                <tr>
-                  <th>Tight Ambience</th>
-                  <td id="reverb_pre_delay_ta"></td>
-                  <td id="reverb_decay_ta"></td>
-                </tr>
-              </tbody>
-            </table>            
-          </div>
+
         </div>     
     </div>
 

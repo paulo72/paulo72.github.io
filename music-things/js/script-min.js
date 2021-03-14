@@ -270,11 +270,17 @@
         scale_chords_table += '<tr class="chords_3rd"><td>3rd</td>'   + thirds_string + '</tr>';
         scale_chords_table += '<tr class="chords_1st"><td>Root</td>'  + roots_string + '</tr>';
         scale_chords_table += '<tr class="chord-numbers "><td>&nbsp;</td>' + count_string + '</tr>';
-        scale_chords_table += '<tr class=""><td class="info">Sub Hz</td>'          + sub_string + '</tr>';
-        scale_chords_table += '<tr class=""><td class="info">Bass Hz</td>'          + bass_string + '</tr>';
         scale_chords_table += '</tbody></table>';
 
+    var bass_table =  '<table id="the_bass"><tbody>';
+        bass_table += '<tr class="chords_1st"><td>Root</td>'  + roots_string + '</tr>';
+        bass_table += '<tr class=""><td class="info">Sub Hz</td>' + sub_string + '</tr>';
+        bass_table += '<tr class=""><td class="info">Bass Hz</td>' + bass_string + '</tr>';
+        bass_table += '</tbody></table>'; 
+
     $('#scale_chords').html(scale_chords_table);
+
+    $('#bass_frequencies').html(bass_table);    
 
 
   }
