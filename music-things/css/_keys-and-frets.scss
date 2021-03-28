@@ -135,6 +135,12 @@
 }
 
 
+
+[data-note-display="note-names"] .key:before {
+  content: attr(data-note-display) !important;
+}
+
+
 .fret-container {
 
 }
@@ -188,6 +194,23 @@
     -1px 1px 0 rgba(255,255,255,0.3), 
      1px -1px 0 rgba(255,255,255,0.3)
   ;
+}
+
+
+
+[data-note-display="note-numbers"] .fret {
+  color: transparent !important;
+  text-shadow: none !important;
+  &:after {
+    content: attr(data-scale-number) !important;
+    color: black;
+    text-shadow: 
+       1px 1px 0 rgba(255,255,255,0.3), 
+      -1px -1px 0 rgba(255,255,255,0.3), 
+      -1px 1px 0 rgba(255,255,255,0.3), 
+       1px -1px 0 rgba(255,255,255,0.3)
+    ;
+  }
 }
 
 .fret:first-child {

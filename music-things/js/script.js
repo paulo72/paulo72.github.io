@@ -138,13 +138,23 @@
 
       key_to_highlight.addClass('data-scale-number'+(index+1));
 
-      key_to_highlight.attr('data-scale-highlight','1').attr('data-scale-number', index+1 ).attr('data-scale-interval', intervalz[index] );
+      key_to_highlight
+        .attr('data-scale-highlight','1')
+        .attr('data-scale-number', index+1 )
+        .attr('data-scale-interval', intervalz[index] )
+        .attr('data-note-display', item.replace("#", "♯").replace("b", "♭") )
+      ;
       if (index === 0) {
         key_to_highlight.attr('data-scale-highlight-tonic','1');
       }
 
 
-      fret_to_highlight.attr('data-scale-highlight','1').attr('data-scale-number', index+1 ).attr('data-scale-interval', intervalz[index] ).attr('data-note-display', item.replace("#", "♯").replace("b", "♭") );
+      fret_to_highlight
+        .attr('data-scale-highlight','1')
+        .attr('data-scale-number', index+1 )
+        .attr('data-scale-interval', intervalz[index] )
+        .attr('data-note-display', item.replace("#", "♯").replace("b", "♭") )
+      ;
       if (index === 0) {
         fret_to_highlight.attr('data-scale-highlight-tonic','1');
       }

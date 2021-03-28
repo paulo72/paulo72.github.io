@@ -264,6 +264,17 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/me-orange.jpg": {
+		"ft": 16384,
+		"iS": 5219,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/me-orange.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/offline.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -279,6 +290,17 @@
 		"mi": 0,
 		"oA": 0,
 		"oAP": "/pwa-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/pwabuilder-sw-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 1,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/pwabuilder-sw-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
