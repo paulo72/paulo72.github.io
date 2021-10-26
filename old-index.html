@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-GB" prefix="og: http://ogp.me/ns#" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>var htmlElement = document.getElementsByTagName('html')[0]; htmlElement.className = 'has-js';</script>
+
+  <!-- Critical, over-the-fold styles -->
+    <style>
+    
+    body.home{background:#f6f8f9;margin:0;padding:0;line-height:1.25;font-size:18px;overflow-x:hidden;overflow-y:auto;font-family:"freight-text-pro","Georgia",Times,serif,"Arial Unicode MS","DejaVu Sans","Lucida Sans Unicode","Segoe UI Symbol","FreeSans","Meiryo UI","MS UI Gothic","Everson Mono Unicode",Meiryo,"MS Gothic","MS Mincho","MS PGothic","MS PMincho","Meslo LG L","Meslo LG L DZ","Meslo M L","Meslo M L DZ","Meslo S L","Meslo S L DZ","Symbola","DejaVu Sans Condensed","DejaVu Sans Mono",Code2000,"Everson Mono",Quivira,sans-serif}@media screen and (min-width: 940px){body.home{height:100vh;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}}body.home .primary-content{padding:16px;width:100%;overflow:hidden;max-width:400px;margin:0 auto;text-align:center}@media screen and (min-width: 940px){body.home .primary-content{width:100%;margin:0 40px;max-width:940px;overflow:visible;position:relative;padding:20px 0 0;margin-top:-40px;text-align:left}}body.home h1{color:#3b4356;font-size:30px;font-family:"freight-sans-pro",-apple-system,BlinkMacSystemFont,"avenir next",avenir,helvetica,"helvetica neue",ubuntu,roboto,noto,"segoe ui","Arial Unicode MS","DejaVu Sans","Lucida Sans Unicode","Segoe UI Symbol","FreeSans","Meiryo UI","MS UI Gothic","Everson Mono Unicode",Meiryo,"MS Gothic","MS Mincho","MS PGothic","MS PMincho","Meslo LG L","Meslo LG L DZ","Meslo M L","Meslo M L DZ","Meslo S L","Meslo S L DZ","Symbola","DejaVu Sans Condensed","DejaVu Sans Mono",Code2000,"Everson Mono",Quivira,sans-serif}@media screen and (min-width: 940px){body.home h1{font-size:60px;line-height:1.1666666667;margin:17px 0 6px}}body.home .heading-accent{color:#e59dc5;display:block}@media screen and (min-width: 940px){body.home .heading-accent{padding:0 0 20px}}body.home .angry-bunnyman{width:80%;height:auto;max-width:280px;position:relative;right:-60px}@media screen and (min-width: 940px){body.home .angry-bunnyman{max-width:999px;position:absolute;top:0;right:-280px;width:auto !important;height:500px;z-index:-2}}body.home p{color:#3b4356;font-size:21px;margin:16px 0;line-height:1.3333333333}@media screen and (min-width: 940px){body.home p{font-size:28px;margin:24px 0px 30px;max-width:20em}}body.home a,body.home a:visited{text-decoration:none;box-sizing:border-box;overflow:hidden;vertical-align:bottom;display:inline-block;position:relative;color:#da7eb1;-webkit-transition:all 0.2s;transition:all 0.2s}body.home a::after{content:' ';position:absolute;bottom:4px;height:2px;left:0;right:100%;background:#da7eb1;z-index:-1;-webkit-transition:all 0.2s;transition:all 0.2s}body.home a:hover{color:#000}body.home a:hover::after{right:0}body.home .social-icons a{display:inline-block;margin-right:26px;width:42px;height:42px;overflow:hidden;padding:8px;-webkit-transition:all 0.2s;transition:all 0.2s}@media screen and (min-width: 940px){body.home .social-icons a{margin-right:32px;width:48px;height:52px}}body.home .social-icons svg{cursor:pointer;width:100%;height:auto;opacity:0.38;-webkit-transition:all 0.3s;transition:all 0.3s}body.home .social-icons a:hover svg{opacity:1}
+/*# sourceMappingURL=over-the-fold--front-page.css.map */  
+
+    @keyframes fade{ 0% {opacity:0;} 100% {opacity:1;} }
+
+    @keyframes fadeAndHide{ 0% {opacity:1;} 99% {opacity:0;} 100% {display: none; height:0; width:0; overflow: hidden;} }
+
+
+    /* Loading logo: size and position */
+      .loader-logo svg {
+        color: #000;
+        width: 38% !important;
+        max-width: 200px !important;
+        top: 50%;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        animation:fadeAndHide 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.5s 1 normal forwards;     
+      }
+
+
+    /* Home Page: Content: animation */
+      body.home .primary-content {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.3s 1 normal forwards;
+      }
+
+      body.search div, body.search footer,
+      body.error404 div, body.error404 footer {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.6s 1 normal forwards;
+      } 
+
+    /*  Archive, 
+        Single,
+        Page: 
+
+        content: animation 
+    */
+      body.single .page-hd,
+      body.single .page-bd,
+      body.single .page-ft,
+      body.archive .page-hd,
+      body.archive .page-bd,
+      body.archive .page-ft {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.9s 1 normal forwards;
+      } 
+
+    /* Archive: cover: animation */
+      body.archive .cover-inner {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        /*animation:fade 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.3s 1 normal forwards;*/
+        animation:fade 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.7s 1 normal forwards;
+      }
+
+    /* Single: cover: animation */
+      body.single .cover-inner {
+        opacity: 0;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+        /*animation:fade 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s 1 normal forwards;*/
+        animation:fade 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s 1 normal forwards;
+      }
+
+    /* Archive: cover: animation */
+    /*body.archive .cover__logo-wrap .logo-with-strap {
+      animation:fade 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1.3s 1 reverse forwards;     
+    }*/
+
+  </style>  
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="//use.typekit.net">
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'kck4dwb',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+  <!-- Icons -->
+  
+<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/photo/favicons/actino/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/photo/favicons/actino/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/themes/photo/favicons/actino/favicon-16x16.png">
+<link rel="manifest" href="/wp-content/themes/photo/favicons/actino/manifest.json">
+<link rel="mask-icon" href="/wp-content/themes/photo/favicons/actino/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/wp-content/themes/photo/favicons/actino/favicon.ico">
+<meta name="msapplication-config" content="/wp-content/themes/photo/favicons/actino/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+  <!-- WP Head stuff -->
+  <title>Home - Actino</title>
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v4.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="/" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Home - Actino" />
+<meta property="og:url" content="http://actino.local/" />
+<meta property="og:site_name" content="Actino" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Home - Actino" />
+<meta property="DC.date.issued" content="2011-11-04T02:03:41+00:00" />
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"http:\/\/actino.local\/","name":"Actino","potentialAction":{"@type":"SearchAction","target":"http:\/\/actino.local\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Actino &raquo; Home Comments Feed" href="/home/feed/" />
+<link rel='stylesheet' id='wp-block-library-css'  href='/wp-includes/css/dist/block-library/style.min.css?ver=5.5.3' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="/wp-json/" /><link rel="alternate" type="application/json" href="/wp-json/wp/v2/pages/640" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='/' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F&#038;format=xml" />
+  <!-- Art Direction Styles -->
+
+
+
+
+
+</head>
+
+
+
+<body class="home page-template-default page page-id-640  category-" id="top">
+  <!-- Get SVG as symbol so we can use in several places without adding to page weight -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="logo-with-strap" class="logo-with-strap" viewbox="0 0 568 192">
+  <g fill="none" fill-rule="evenodd">
+    <circle class="logo-with-strap__accent" fill="#E86145" cx="536.924" cy="31.172" r="30.728"></circle>
+    <path class="logo-with-strap__strap" fill="#998F52" 
+      
+      d="M25.308 191v-25.346h-5.434v9.956H7.904v-9.956H2.508V191h5.396v-10.64h11.97V191h5.434zm20.616.456c7.714 0 11.438-4.294 11.438-10.602v-15.2h-5.51v15.048c0 3.534-2.014 5.966-5.928 5.966s-5.966-2.432-5.966-5.966v-15.048h-5.472v15.238c0 6.232 3.724 10.564 11.438 10.564zm48.09-.456v-25.346h-7.6l-6.156 15.314-6.156-15.314H66.54V191h5.396v-17.746L79.08 191h2.356l7.144-17.746V191h5.434zm32.852 0l-9.766-25.346h-6.764L100.532 191h6.156l1.596-4.294h10.868L120.71 191h6.156zm-9.196-9.044h-7.904l3.952-10.906 3.952 10.906zM156.108 191v-25.346h-5.396v15.922l-11.742-15.922h-5.548V191h5.396v-16.53L150.902 191h5.206zm35.418.456c5.586 0 8.778-3.078 10.602-6.232l-4.636-2.242c-1.064 2.09-3.344 3.686-5.966 3.686-4.598 0-7.942-3.534-7.942-8.322 0-4.788 3.344-8.322 7.942-8.322 2.622 0 4.902 1.634 5.966 3.686l4.636-2.28c-1.786-3.154-5.016-6.194-10.602-6.194-7.6 0-13.49 5.32-13.49 13.11 0 7.79 5.89 13.11 13.49 13.11zm35.968-.456v-4.75h-12.54v-5.738h12.274v-4.75h-12.274v-5.358h12.54v-4.75h-17.936V191h17.936zm31.104 0v-25.346h-5.396v15.922l-11.742-15.922h-5.548V191h5.396v-16.53L253.392 191h5.206zm20.502 0v-20.596h7.372v-4.75h-20.216v4.75h7.41V191h5.434zm35.55 0l-5.7-9.652c2.736-.646 5.548-3.04 5.548-7.524 0-4.712-3.23-8.17-8.512-8.17H294.13V191h5.396v-9.006h3.952l4.978 9.006h6.194zm-9.462-13.756h-5.662v-6.84h5.662c2.166 0 3.8 1.292 3.8 3.42s-1.634 3.42-3.8 3.42zM340.7 191v-4.75h-12.54v-5.738h12.274v-4.75H328.16v-5.358h12.54v-4.75h-17.936V191H340.7zm18.412 0c7.942 0 13.452-5.016 13.452-12.654s-5.51-12.692-13.452-12.692h-9.994V191h9.994zm0-4.75h-4.598v-15.846h4.598c5.206 0 7.942 3.458 7.942 7.942 0 4.294-2.926 7.904-7.942 7.904zm45.412 4.75c7.942 0 13.452-5.016 13.452-12.654s-5.51-12.692-13.452-12.692h-9.994V191h9.994zm0-4.75h-4.598v-15.846h4.598c5.206 0 7.942 3.458 7.942 7.942 0 4.294-2.926 7.904-7.942 7.904zM443.95 191v-4.75h-12.54v-5.738h12.274v-4.75H431.41v-5.358h12.54v-4.75h-17.936V191h17.936zm17.424.456c6.84 0 10.146-3.496 10.146-8.132 0-9.462-14.554-6.764-14.554-10.792 0-1.52 1.292-2.546 3.61-2.546 2.584 0 5.32.874 7.372 2.774l3.002-3.952c-2.508-2.318-5.852-3.534-9.88-3.534-5.966 0-9.614 3.496-9.614 7.714 0 9.538 14.592 6.46 14.592 10.944 0 1.444-1.444 2.812-4.408 2.812-3.496 0-6.27-1.558-8.056-3.42l-2.926 4.104c2.356 2.394 5.852 4.028 10.716 4.028zm23.39-.456v-25.346h-5.396V191h5.396zm21.49.494c4.598 0 8.208-1.9 10.792-4.788v-9.728h-12.084v4.712h6.688v3.04c-1.026.95-3.154 1.938-5.396 1.938-4.598 0-7.942-3.534-7.942-8.322 0-4.788 3.344-8.322 7.942-8.322 2.698 0 4.864 1.52 6.004 3.306l4.484-2.432c-1.9-3.002-5.206-5.662-10.488-5.662-7.41 0-13.49 5.092-13.49 13.11 0 7.98 6.08 13.148 13.49 13.148zm41.972-.494v-25.346h-5.396v15.922l-11.742-15.922h-5.548V191h5.396v-16.53L543.02 191h5.206z" id="logo-strap"/>
+    <path class="logo-with-strap__main" fill="currentColor" 
+        
+      d="M99.165 137.535c-.33-.66-.825-.495-1.485-.165-.99.66-2.64 1.65-4.455 1.65-2.31 0-2.805-1.485-2.805-3.465v-39.93c0-16.17-15.84-26.07-45.045-26.07-24.915 0-39.6 8.085-39.6 19.635 0 7.92 6.93 12.87 14.355 12.87 7.59 0 14.19-4.95 14.19-11.88 0-7.26-6.765-7.92-6.765-12.705 0-2.64 2.805-6.105 15.345-6.105 3.96 0 8.91.495 8.91 5.775v15.51c0 3.135-2.475 5.28-7.755 7.095-4.95 1.65-12.375 3.135-21.45 4.785-15.345 2.64-20.955 9.735-20.955 19.47 0 14.85 15.015 18.975 27.06 18.975 16.665 0 21.78-3.96 24.09-9.075h.165c3.465 5.94 11.055 9.075 25.905 9.075 8.58 0 15.015-.825 19.635-3.795.825-.495.99-.99.66-1.65zM51.81 128.46c0 7.425-4.125 10.395-6.765 10.395-3.3 0-4.62-2.145-4.62-5.94-.165-4.455 0-12.21 0-17.655.165-9.57 2.475-12.375 11.385-17.82v31.02zm199.98-1.65c-1.98 0-1.485 2.145-1.485 3.465 0 5.94-4.125 8.91-7.425 8.91-4.62 0-5.775-2.805-5.775-9.735V74.505c0-.495.33-.99 1.65-.99h10.56c1.32 0 1.65-.495 1.65-.99s-.165-.99-1.65-.99h-10.56c-1.32 0-1.65-.66-1.65-1.155V58.995c0-27.225-21.285-36.465-49.995-36.465-32.01 0-36.3 16.17-36.3 26.895 0 7.59 2.805 16.995 9.9 21.12v.165c-2.475-.66-5.94-1.155-9.9-1.155-34.32 0-48.675 18.15-48.675 36.96 0 17.985 13.695 36.465 48.675 36.465 24.585 0 34.98-12.54 34.98-27.225 0-1.32-.495-1.815-1.485-1.815-1.65 0-1.485 1.155-1.485 2.64 0 16.995-15.675 23.43-24.42 23.43-12.375 0-14.52-9.9-14.685-20.46-.165-9.9-.33-24.585.33-34.32.495-7.095 1.155-13.695 9.735-13.695 6.105 0 8.58 2.31 8.58 5.115 0 3.63-8.25 6.27-8.25 15.51 0 9.57 7.755 14.355 15.18 14.355 7.92 0 15.345-5.115 15.345-14.685 0-10.065-7.92-16.17-17.49-19.635-9.9-3.465-13.695-13.035-13.695-22.44 0-15.345 9.075-23.76 25.905-23.76 13.365 0 19.305 5.115 19.305 16.335v28.05c0 .495-.33 1.155-1.65 1.155h-5.28c-1.32 0-1.65.495-1.65.99s.165.99 1.65.99h5.28c1.32 0 1.65.495 1.65.99v47.52c0 13.86 14.19 20.955 30.36 20.955 10.89 0 24.255-.165 24.255-14.355 0-1.32-.495-1.815-1.485-1.815zm52.14-85.305c0-10.395-9.075-18.975-20.295-18.975-11.22 0-20.625 8.58-20.625 18.975 0 10.395 9.405 18.81 20.625 18.81s20.295-8.415 20.295-18.81zm7.92 98.505c0-.495-.165-.99-1.65-.99h-4.95c-1.65 0-1.815-.33-1.815-6.105v-60.39c0-.495-.33-.99-1.65-.99H258.06c-1.32 0-1.65.495-1.65.99s.165.99 1.65.99h4.95c1.65 0 1.815.165 1.815 5.94v53.46c0 5.775-.165 6.105-1.815 6.105h-4.95c-1.485 0-1.65.495-1.65.99s.33.99 1.65.99h52.14c1.32 0 1.65-.495 1.65-.99zm113.52 0c0-.495-.165-.99-1.65-.99h-4.125c-1.65 0-1.98-.33-1.98-6.105V95.79c0-20.955-20.79-26.235-32.835-26.235-8.415 0-17.82.495-23.1 8.085h-.33v-5.115c0-.495-.33-.99-1.65-.99h-43.065c-1.32 0-1.65.495-1.65.99s.165.99 1.65.99h4.95c1.65 0 1.815.165 1.815 5.94v53.46c0 5.775-.165 6.105-1.815 6.105h-4.95c-1.485 0-1.65.495-1.65.99s.33.99 1.65.99h50.16c1.32 0 1.65-.495 1.65-.99s-.165-.99-1.65-.99h-2.97c-1.65 0-1.815-.33-1.815-6.105v-48.84c0-6.105 4.95-11.55 10.89-11.55 4.455 0 6.105 2.805 6.105 9.735v50.655c0 5.775-.33 6.105-1.98 6.105h-2.805c-1.485 0-1.65.495-1.65.99s.33.99 1.65.99h49.5c1.32 0 1.65-.495 1.65-.99zm105.765-34.155c0-19.8-19.305-36.3-51.15-36.3-33 0-50.985 16.665-50.985 36.96 0 19.8 19.305 36.465 51.15 36.465 33 0 50.985-16.83 50.985-37.125zm-41.58 14.52c-.33 6.93.66 20.625-9.57 20.625-9.075 0-8.91-13.695-9.24-19.965-.495-9.57-.495-19.305 0-28.875.33-6.93-.825-20.625 9.405-20.625 9.075 0 9.075 13.695 9.405 19.965.495 9.57.495 19.305 0 28.875z"/>
+  </g>
+</symbol>
+      </svg>
+  
+    <!-- logo displays when page is loading -->
+  <div class="loader-logo">
+    <svg>
+      <use xlink:href="#logo-with-strap" />
+    </svg>  
+  </div>
+  
+
+  <style>
+  @media (min-width: 900px) {
+    .angry-bunnyman {
+      padding-top: 10px;
+    }
+  }
+</style>
+
+  <div role="main" class="primary-content">
+
+    <img src="/wp-content/themes/photo/images/angry-bunny-x1.jpg" srcset="/wp-content/themes/photo/images/angry-bunny-x1.jpg 612w, /wp-content/themes/photo/images/angry-bunny-x2.jpg 1224w" class="angry-bunnyman">
+    <h1>
+      <span class="heading-accent">
+        Hello, I’m Paul.
+      </span> 
+      A digital designer <br>
+      based in Brighton.       
+    </h1>
+
+    <!-- <p>I’m a thought leader, obvs.</p> -->
+
+    <p>This is where I keep my <a href="/design">notes on design</a>, <a href="/photos">some photos</a>, a bit of  <a href="/music">music stuff</a> and, occasionally, notes on <a href="/other">other matters</a>.</p>
+
+
+    <div class="social-icons">
+      <a title="Email" href="mailto:paul@actino.co.uk">
+        <span class="icon-mail">
+          <svg  width="16" height="16" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <g id="email" fill-rule="nonzero" fill="#565d77">
+    <path d="M16 3v10c0 .567-.433 1-1 1h-1V4.925L8 9.233 2 4.925V14H1c-.567 0-1-.433-1-1V3c0-.283.108-.533.287-.712C.467 2.107.718 2 1 2h.333L8 6.833 14.667 2H15c.283 0 .533.108.713.288.179.179.287.429.287.712z" fill-rule="evenodd"/>
+  </g>
+</svg>
+        </span>
+      </a>
+      <a title="Instagram" href="https://www.instagram.com/_paul_davison_/">
+        <span class="icon-instagram">
+          <svg  width="16" height="16" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+  <g id="instagram" fill-rule="nonzero" fill="#565d77">
+    <path d="M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42c-.526.204-.973.478-1.417.923-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174 1.942-.372.526-.204.973-.478 1.417-.923.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942-.204-.526-.478-.973-.923-1.417-.444-.445-.89-.72-1.417-.923-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.05 3.233c-.04.78-.17 1.203-.28 1.485-.15.374-.32.64-.6.92-.28.28-.55.453-.92.598-.28.11-.71.24-1.49.276-.85.038-1.1.047-3.24.047s-2.39-.01-3.24-.05c-.78-.04-1.21-.17-1.49-.28-.38-.15-.64-.32-.92-.6-.28-.28-.46-.55-.6-.92-.11-.28-.24-.71-.28-1.49-.03-.84-.04-1.1-.04-3.23s.01-2.39.04-3.24c.04-.78.17-1.21.28-1.49.14-.38.32-.64.6-.92.28-.28.54-.46.92-.6.28-.11.7-.24 1.48-.28.85-.03 1.1-.04 3.24-.04zm0 2.452c-2.27 0-4.108 1.84-4.108 4.108 0 2.27 1.84 4.108 4.108 4.108 2.27 0 4.108-1.84 4.108-4.108 0-2.27-1.84-4.108-4.108-4.108zm0 6.775c-1.473 0-2.667-1.194-2.667-2.667 0-1.473 1.194-2.667 2.667-2.667 1.473 0 2.667 1.194 2.667 2.667 0 1.473-1.194 2.667-2.667 2.667zm5.23-6.937c0 .53-.43.96-.96.96s-.96-.43-.96-.96.43-.96.96-.96.96.43.96.96z"/>
+  </g>
+</svg>        </span>
+      </a>
+      <a title="Twitter" href="https://twitter.com/actino/">
+        <span class="icon-twitter">
+          <svg   width="16" height="16" viewbox="0 0 16 16"  xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+  <g id="twitter" fill-rule="nonzero" fill="#565d77">
+    <path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.37-1.337.64-2.085.79-.598-.64-1.45-1.04-2.396-1.04-1.812 0-3.282 1.47-3.282 3.28 0 .26.03.51.085.75-2.728-.13-5.147-1.44-6.766-3.42C.83 2.58.67 3.14.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42 1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z" fill-rule="nonzero"/>
+  </g>
+</svg>        </span>
+      </a>
+      <!-- <a title="On Lanyrd" href="http://lanyrd.com/profile/actino/">
+        <span class="icon-lanyrd">
+          <svg  width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M7.21 15.725c-1.658.542-1.824.456-2.573-1.867l-1.835-5.68c-.436-1.345-1.77-4.97-1.995-5.666C.392 1.22.392 1.15 2.827.357c1.91-.626 1.986-.605 2.68 1.548.56 1.735.918 3.132 1.49 4.904l1.563 4.83L13.553 10c.985-.325 1.314-.31 1.59.902l.202.915c.23 1.066-.308 1.337-.877 1.522L7.21 15.72z" fill-rule="nonzero" fill="#565d77"/></svg>        </span>
+      </a> -->
+      <a title="LinkedIn" href="http://uk.linkedin.com/in/paulo72">
+        <span class="icon-linkedin">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewbox="0 0 16 16">
+  <g id="linkedin" fill-rule="nonzero" fill="#565d77">
+    <path d="M5.71428571,4.61538462 L8.87657143,4.61538462 L8.87657143,6.25153846 L8.92228571,6.25153846 C9.36228571,5.45423077 10.4388571,4.61538462 12.0445714,4.61538462 C15.3828571,4.61538462 16,6.71307692 16,9.44192308 L16,15 L12.7028571,15 L12.7028571,10.0730769 C12.7028571,8.89846154 12.6788571,7.38576923 10.9885714,7.38576923 C9.272,7.38576923 9.00914286,8.66538462 9.00914286,9.98769231 L9.00914286,15 L5.71428571,15 L5.71428571,4.61538462 L5.71428571,4.61538462 Z" id="Shape"></path>
+    <polygon id="Shape" points="0 4.61538462 3.42857143 4.61538462 3.42857143 15 0 15"></polygon>
+    <path d="M3.42857143,1.73076923 C3.42857143,2.68615385 2.66057143,3.46153846 1.71428571,3.46153846 C0.768,3.46153846 0,2.68615385 0,1.73076923 C0,0.775384615 0.768,0 1.71428571,0 C2.66057143,0 3.42857143,0.775384615 3.42857143,1.73076923 Z" id="Shape"></path>
+  </g>
+</svg>
+        </span>
+      </a>
+    </div>
+  </div><!-- primary-content -->
+       
+        
+  
+  <noscript id="deferred-styles">
+    <link rel="stylesheet" type="text/css" href="/wp-content/themes/photo/stylesheets-1-0-1/css/style.css"/>
+      </noscript>
+  <script>
+    var loadDeferredStyles = function() {
+      var addStylesNode = document.getElementById("deferred-styles");
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+  </script>
+  
+  <!-- wp_footer -->
+  <script type='text/javascript' src='/wp-content/plugins/ab-audio-sync-master/libs/device/device.min.js?ver=5.5.3' id='device-js-js'></script>
+<script type='text/javascript' src='/wp-content/plugins/ab-audio-sync-master/libs/howler/howler.core.min.js?ver=5.5.3' id='howler-js-js'></script>
+<script type='text/javascript' src='/wp-content/themes/photo/javascripts-1-0-1/min/general.js' id='jquery-js'></script>
+<script type='text/javascript' src='/wp-content/plugins/ab-audio-sync-master/ab-audio-sync.js?ver=5.5.3' id='ab-audio-sync-js'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=5.5.3' id='wp-embed-js'></script>
+  <!-- / wp_footer -->
+  
+  
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-99105445-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
